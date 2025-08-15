@@ -33,6 +33,14 @@ public class GetRaidOverride
             {
                 Event = new KnightRaid(LevelData, Options);
             }
+            else
+            {
+                Event = GameRandom.globalRandom.getOneOf
+                (
+                    new RuneboundRaidEvent(LevelData, Options),
+                    new NecromancerRaid(LevelData, Options)
+                );
+            }
         }
     }
 }

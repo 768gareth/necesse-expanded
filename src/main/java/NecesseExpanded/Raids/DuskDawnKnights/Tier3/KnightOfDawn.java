@@ -10,7 +10,7 @@ import necesse.inventory.lootTable.lootItem.OneOfLootItems;
 
 public class KnightOfDawn extends HumanRaiderMob
 {
-    KnightOfDawn()
+    public KnightOfDawn()
     {
         super();
         this.setMaxHealth(2000);

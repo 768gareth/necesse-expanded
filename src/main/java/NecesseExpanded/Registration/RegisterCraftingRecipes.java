@@ -4,7 +4,6 @@ import necesse.engine.registries.RecipeTechRegistry;
 import necesse.inventory.recipe.Ingredient;
 import necesse.inventory.recipe.Recipe;
 import necesse.inventory.recipe.Recipes;
-import necesse.inventory.recipe.Tech;
 
 public class RegisterCraftingRecipes 
 {
