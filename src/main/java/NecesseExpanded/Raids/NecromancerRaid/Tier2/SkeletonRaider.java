@@ -36,7 +36,7 @@ public class SkeletonRaider extends ItemAttackerRaiderMob
     public SkeletonRaider() 
     {
         super(false);
-        setMaxHealth(300);
+        setMaxHealth(400);
         setSpeed(30.0F);
         setArmor(50);
         setFriction(3.0F);

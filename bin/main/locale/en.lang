@@ -52,3 +52,13 @@ knightsraid=The Knights of Dusk and Dawn
 [settlement]
 progression_bonus_2=Defeated the Fallen Wizard!
 progression_bonus_1=Defeated the Pirate Captain!
+booze_bonus=Recently drank alcohol!
+
+[object]
+keg=Keg
+
+[item]
+beer=Beer
+cider=Cider
+mead=Mead
+wine=Wine

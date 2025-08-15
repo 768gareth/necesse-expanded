@@ -1,5 +1,6 @@
 package NecesseExpanded.Registration;
 
+import NecesseExpanded.Settlements.Objects.Keg;
 import necesse.engine.registries.ObjectRegistry;
 
 public class RegisterObjects 
@@ -8,7 +9,7 @@ public class RegisterObjects
     {
         if (NecesseExpanded.Main.Options.isSettlementChangesEnabled)
         {
-            ObjectRegistry.registerObject("keg", null, 0, false)
+            ObjectRegistry.registerObject("keg", new Keg(), 10, true);
         }
     }
 }

@@ -1,5 +1,0 @@
-// PLANNED CHANGES
-1. A minimum of three raid types for v0.2. Each raid should have three tiers of content, with a mini-boss in at least some
-capacity.
-
-2. Alcohol brewing system! Place berries, wheat, apples, etc, into a 

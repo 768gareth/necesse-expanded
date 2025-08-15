@@ -15,6 +15,8 @@ public class Main
     {
         System.out.println("[NECESSE EXPANDED] Initialising mod...");
 
+        RegisterObjects.Register();
+        RegisterItems.Register();
         RegisterEvents.Register();
         RegisterMobs.Register();
         RegisterCraftingRecipes.Register();

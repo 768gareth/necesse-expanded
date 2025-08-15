@@ -4,6 +4,7 @@ import necesse.engine.registries.RecipeTechRegistry;
 import necesse.inventory.recipe.Ingredient;
 import necesse.inventory.recipe.Recipe;
 import necesse.inventory.recipe.Recipes;
+import necesse.inventory.recipe.Tech;
 
 public class RegisterCraftingRecipes 
 {
@@ -87,13 +88,16 @@ public class RegisterCraftingRecipes
         }
         if (NecesseExpanded.Main.Options.isSettlementChangesEnabled)
         {
-            //Tech Keg = RecipeTechRegistry.registerTech("keg", "keg");
-            //Recipes.registerModRecipe(new Recipe("drink_mead", Keg, new Ingredient[] { new Ingredient("honey", 3) }));
-            //Recipes.registerModRecipe(new Recipe("drink_wine", Keg, new Ingredient[] { new Ingredient("raspberry", 3) }));
-            //Recipes.registerModRecipe(new Recipe("drink_wine", Keg, new Ingredient[] { new Ingredient("blueberry", 3) }));
-            //Recipes.registerModRecipe(new Recipe("drink_wine", Keg, new Ingredient[] { new Ingredient("blackberry", 3) }));
-            //Recipes.registerModRecipe(new Recipe("drink_beer", Keg, new Ingredient[] { new Ingredient("wheat", 3) }));
-            //Recipes.registerModRecipe(new Recipe("drink_cider", Keg, new Ingredient[] { new Ingredient("apple", 3) }));
+            Tech Keg = RecipeTechRegistry.registerTech("keg", "keg");
+
+            Recipes.registerModRecipe(new Recipe("keg", 1, RecipeTechRegistry.WORKSTATION, new Ingredient[] { new Ingredient("anylog", 10), new Ingredient("ironbar", 5) }));
+
+            Recipes.registerModRecipe(new Recipe("mead", Keg, new Ingredient[] { new Ingredient("honey", 2) }));
+            Recipes.registerModRecipe(new Recipe("wine", Keg, new Ingredient[] { new Ingredient("raspberry", 2) }));
+            Recipes.registerModRecipe(new Recipe("wine", Keg, new Ingredient[] { new Ingredient("blueberry", 2) }));
+            Recipes.registerModRecipe(new Recipe("wine", Keg, new Ingredient[] { new Ingredient("blackberry", 2) }));
+            Recipes.registerModRecipe(new Recipe("beer", Keg, new Ingredient[] { new Ingredient("wheat", 2) }));
+            Recipes.registerModRecipe(new Recipe("cider", Keg, new Ingredient[] { new Ingredient("apple", 2) }));
         }
     }
 }

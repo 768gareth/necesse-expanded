@@ -1,14 +1,17 @@
 package NecesseExpanded.Settlements;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Stream;
 
 import necesse.engine.localization.message.GameMessage;
 import necesse.engine.localization.message.LocalMessage;
 import necesse.engine.modLoader.annotations.ModMethodPatch;
+import necesse.engine.registries.ItemRegistry;
 import necesse.entity.mobs.friendly.human.HappinessModifier;
 import necesse.entity.mobs.friendly.human.HumanMob;
-
+import necesse.inventory.InventoryItem;
 import necesse.level.maps.levelData.settlementData.SettlementBed;
 import necesse.level.maps.levelData.settlementData.settler.DietThought;
 import necesse.level.maps.levelData.settlementData.settler.FoodQuality;
@@ -79,6 +82,12 @@ public class HappinessModifiersPatch
             else if (ThisSettler.levelSettler.data.hasCompletedQuestTier("piratecaptain"))
             {
                 Modifiers.add(new HappinessModifier(5, (GameMessage)new LocalMessage("settlement", "progression_bonus_1")));
+            }
+
+            // Get alcohol bonus if any recent 'food' item is alcohol.
+            if (ThisSettler.recentFoodItemIDsEaten.stream().distinct().mapToInt(Integer::intValue).anyMatch(BoozeCheck::Check))
+            {
+                Modifiers.add(new HappinessModifier(5, (GameMessage)new LocalMessage("settlement", "booze_bonus")));
             }
     
             List = Modifiers;
