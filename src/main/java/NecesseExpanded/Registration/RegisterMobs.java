@@ -1,5 +1,7 @@
 package NecesseExpanded.Registration;
 
+import NecesseExpanded.Raids.DuskDawnKnights.Tier3.KnightOfDawn;
+import NecesseExpanded.Raids.DuskDawnKnights.Tier3.KnightOfDusk;
 import NecesseExpanded.Raids.NecromancerRaid.Tier1.NecromancerTier1;
 import NecesseExpanded.Raids.NecromancerRaid.Tier1.ZombieRaider;
 
@@ -72,6 +74,10 @@ public class RegisterMobs
             MobRegistry.registerMob("zombie_raider", ZombieRaider.class, true);
             MobRegistry.registerMob("skeleton_raider", SkeletonRaider.class, true);
             MobRegistry.registerMob("ancient_skeleton_raider", AncientSkeletonRaider.class, true);
+
+            // Knights of Dusk and Dawn
+            MobRegistry.registerMob("dawn_knight", KnightOfDawn.class, true);
+            MobRegistry.registerMob("dusk_knight", KnightOfDusk.class, true);
         }
         // Secret boss!
         MobRegistry.registerMob("secret_boss", SecretBoss.class, true);

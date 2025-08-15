@@ -1,5 +1,6 @@
 package NecesseExpanded.Raids;
 
+import NecesseExpanded.Raids.DuskDawnKnights.KnightRaid;
 import NecesseExpanded.Raids.NecromancerRaid.NecromancerRaid;
 import NecesseExpanded.Raids.RuneboundRaid.RuneboundRaidEvent;
 import necesse.engine.modLoader.annotations.ModMethodPatch;
@@ -28,11 +29,10 @@ public class GetRaidOverride
         if (NecesseExpanded.Main.Options.isNewRaidSystemEnabled)
         {
             System.out.println("[NECESSE EXPANDED] Generating new complex raid...");
-            Event = GameRandom.globalRandom.getOneOf
-            (
-                new RuneboundRaidEvent(LevelData, Options),
-                new NecromancerRaid(LevelData, Options)
-            );
+            if (Options.wealthCounter.getBestWeaponValue() > 1750.0)
+            {
+                Event = new KnightRaid(LevelData, Options);
+            }
         }
     }
 }

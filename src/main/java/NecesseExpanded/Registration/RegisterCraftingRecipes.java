@@ -88,13 +88,13 @@ public class RegisterCraftingRecipes
         }
         if (NecesseExpanded.Main.Options.isSettlementChangesEnabled)
         {
-            Tech Keg = RecipeTechRegistry.registerTech("keg", "keg");
-            Recipes.registerModRecipe(new Recipe("drink_mead", Keg, new Ingredient[] { new Ingredient("honey", 3) }));
-            Recipes.registerModRecipe(new Recipe("drink_wine", Keg, new Ingredient[] { new Ingredient("raspberry", 3) }));
-            Recipes.registerModRecipe(new Recipe("drink_wine", Keg, new Ingredient[] { new Ingredient("blueberry", 3) }));
-            Recipes.registerModRecipe(new Recipe("drink_wine", Keg, new Ingredient[] { new Ingredient("blackberry", 3) }));
-            Recipes.registerModRecipe(new Recipe("drink_beer", Keg, new Ingredient[] { new Ingredient("wheat", 3) }));
-            Recipes.registerModRecipe(new Recipe("drink_cider", Keg, new Ingredient[] { new Ingredient("apple", 3) }));
+            //Tech Keg = RecipeTechRegistry.registerTech("keg", "keg");
+            //Recipes.registerModRecipe(new Recipe("drink_mead", Keg, new Ingredient[] { new Ingredient("honey", 3) }));
+            //Recipes.registerModRecipe(new Recipe("drink_wine", Keg, new Ingredient[] { new Ingredient("raspberry", 3) }));
+            //Recipes.registerModRecipe(new Recipe("drink_wine", Keg, new Ingredient[] { new Ingredient("blueberry", 3) }));
+            //Recipes.registerModRecipe(new Recipe("drink_wine", Keg, new Ingredient[] { new Ingredient("blackberry", 3) }));
+            //Recipes.registerModRecipe(new Recipe("drink_beer", Keg, new Ingredient[] { new Ingredient("wheat", 3) }));
+            //Recipes.registerModRecipe(new Recipe("drink_cider", Keg, new Ingredient[] { new Ingredient("apple", 3) }));
         }
     }
 }

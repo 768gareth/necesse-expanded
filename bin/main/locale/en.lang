@@ -37,12 +37,13 @@ zombie_raider=Zombie Villager
 skeleton_raider=Skeleton Villager
 ancient_skeleton_raider=Ancient Skeleton Villager
 
-// Secret boss
+// Secret boss!?!?!?!
 secret_boss=The Mad Cow
 
 [misc]
 runeboundraidertype=The Runebound Raiders
 necromancerraidertype=Necromancers
+knightsraid=The Knights of Dusk and Dawn
 
 [settlement]
 progression_bonus_2=Defeated the Fallen Wizard!

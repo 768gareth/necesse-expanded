@@ -8,12 +8,12 @@ import necesse.inventory.lootTable.LootTable;
 import necesse.inventory.lootTable.lootItem.LootItem;
 import necesse.inventory.lootTable.lootItem.OneOfLootItems;
 
-public class KnightOfDawn extends HumanRaiderMob
+public class KnightOfDusk extends HumanRaiderMob
 {
-    KnightOfDawn()
+    KnightOfDusk()
     {
         super();
-        this.setMaxHealth(2000);
+        this.setMaxHealth(1800);
         this.setArmor(30);
 
         KnightOfDawn.lootTable = new LootTable
@@ -32,24 +32,24 @@ public class KnightOfDawn extends HumanRaiderMob
                 (LootItemInterface) new OneOfLootItems
                 (
                     (LootItemInterface) LootItem.between("superiorhealthpotion", 1, 2),
-                    (LootItemInterface) LootItem.between("greaterresistancepotion", 1, 2),
-                    (LootItemInterface) LootItem.between("greaterhealthregenpotion", 1, 2)
+                    (LootItemInterface) LootItem.between("superiormanapotion", 1, 2),
+                    (LootItemInterface) LootItem.between("greatermanaregenpotion", 1, 2)
                 )
             }
         );
 
         this.weapon = GameRandom.globalRandom.getOneOf
         (
-            new InventoryItem("causticexecutioner"), 
-            new InventoryItem("slimeglaive"),
-            new InventoryItem("arachnidwebbow")
+            new InventoryItem("webweaver"), 
+            new InventoryItem("phantompopper"),
+            new InventoryItem("slimestaff")
         );
 
         this.setArmorItems
         (
-            new InventoryItem("dawnhelmet"), 
-            new InventoryItem("dawnchestplate"), 
-            new InventoryItem("dawnboots")
+            new InventoryItem("duskhelmet"), 
+            new InventoryItem("duskchestplate"), 
+            new InventoryItem("duskboots")
         );
     }
 }

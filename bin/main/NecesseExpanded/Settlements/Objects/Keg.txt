@@ -1,0 +1,12 @@
+package NecesseExpanded.Settlements.Objects;
+
+import necesse.engine.registries.RecipeTechRegistry;
+import necesse.entity.objectEntity.ProcessingTechInventoryObjectEntity;
+import necesse.level.gameObject.GameObject;
+import necesse.level.maps.Level;
+import necesse.level.maps.levelData.settlementData.SettlementWorkstationObject;
+
+public class Keg extends GameObject implements SettlementWorkstationObject
+{
+    
+}
