@@ -70,8 +70,8 @@ public class RaiderMeleeTier2 extends HumanRaiderMob
         this.setArmorItems
         (
             new InventoryItem("runeboundhelmet"), 
-            new InventoryItem("runeboundleatherchest"), 
-            new InventoryItem("runeboundboots")
+            new InventoryItem("runicchestplate"), 
+            new InventoryItem("runicboots")
         );
     }
 }

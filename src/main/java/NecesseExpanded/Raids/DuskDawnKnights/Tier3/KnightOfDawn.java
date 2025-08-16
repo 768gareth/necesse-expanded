@@ -1,6 +1,8 @@
 package NecesseExpanded.Raids.DuskDawnKnights.Tier3;
 
+import necesse.engine.registries.BuffRegistry;
 import necesse.engine.util.GameRandom;
+import necesse.entity.mobs.buffs.ActiveBuff;
 import necesse.entity.mobs.hostile.HumanRaiderMob;
 import necesse.inventory.InventoryItem;
 import necesse.inventory.lootTable.LootItemInterface;
@@ -51,5 +53,18 @@ public class KnightOfDawn extends HumanRaiderMob
             new InventoryItem("dawnchestplate"), 
             new InventoryItem("dawnboots")
         );
+    }
+
+    public void serverTick()
+    {
+        super.serverTick();
+        if (!this.getLevel().getWorldEntity().isNight())
+        {
+            this.addBuff(new ActiveBuff(BuffRegistry.getBuff("firestonetrinket"), this, 10, null), true);
+        }
+        else
+        {
+            this.buffManager.removeBuff("firestonetrinket", true);
+        }
     }
 }

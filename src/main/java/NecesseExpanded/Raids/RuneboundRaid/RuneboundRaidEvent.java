@@ -66,11 +66,15 @@ public class RuneboundRaidEvent extends SettlementRaidLevelEvent
 
         if (Data.hasCompletedQuestTier("fallenwizard"))
         {
-            for (int Raiders = 0; Raiders < RaidSize; Raiders++)
+            for (int Raiders = 0; Raiders < RaidSize + 8; Raiders++)
             {
                 if (Raiders == 0)
                 {
                     this.loadouts.add(new SettlementRaidLoadout("raider_summoner_tier3"));
+                }
+                else if (Raiders % 6 == 0)
+                {
+                    this.loadouts.add(new SettlementRaidLoadout("raider_berserker_tier3"));
                 }
                 this.loadouts.add
                 (
@@ -78,9 +82,7 @@ public class RuneboundRaidEvent extends SettlementRaidLevelEvent
                     (
                         new SettlementRaidLoadout("raider_magic_tier3"),
                         new SettlementRaidLoadout("raider_melee_tier3"),
-                        new SettlementRaidLoadout("raider_ranged_tier3"),
-                        new SettlementRaidLoadout("raider_berserker_tier3"),
-                        new SettlementRaidLoadout("raider_trapper")
+                        new SettlementRaidLoadout("raider_ranged_tier3")
                     )
                 );
             };
@@ -88,11 +90,15 @@ public class RuneboundRaidEvent extends SettlementRaidLevelEvent
 
         else if (Data.hasCompletedQuestTier("piratecaptain"))
         {
-            for (int Raiders = 0; Raiders < RaidSize; Raiders++)
+            for (int Raiders = 0; Raiders < RaidSize + 4; Raiders++)
             {
                 if (Raiders == 0)
                 {
                     this.loadouts.add(new SettlementRaidLoadout("raider_summoner_tier2"));
+                }
+                else if (Raiders % 6 == 0)
+                {
+                    this.loadouts.add(new SettlementRaidLoadout("raider_berserker_tier2"));
                 }
                 this.loadouts.add
                 (
@@ -100,9 +106,7 @@ public class RuneboundRaidEvent extends SettlementRaidLevelEvent
                     (
                         new SettlementRaidLoadout("raider_magic_tier2"),
                         new SettlementRaidLoadout("raider_melee_tier2"),
-                        new SettlementRaidLoadout("raider_ranged_tier2"),
-                        new SettlementRaidLoadout("raider_berserker_tier2"),
-                        new SettlementRaidLoadout("raider_trapper")
+                        new SettlementRaidLoadout("raider_ranged_tier2")
                     )
                 );
             };
@@ -110,11 +114,15 @@ public class RuneboundRaidEvent extends SettlementRaidLevelEvent
 
         else
         {
-            for (int Raiders = 0; Raiders < RaidSize; Raiders++)
+            for (int Raiders = 0; Raiders < RaidSize + 2; Raiders++)
             {
                 if (Raiders == 0)
                 {
                     this.loadouts.add(new SettlementRaidLoadout("raider_summoner_tier1"));
+                }
+                else if (Raiders % 6 == 0)
+                {
+                    this.loadouts.add(new SettlementRaidLoadout("raider_berserker_tier1"));
                 }
                 this.loadouts.add
                 (
@@ -122,8 +130,7 @@ public class RuneboundRaidEvent extends SettlementRaidLevelEvent
                     (
                         new SettlementRaidLoadout("raider_magic_tier1"),
                         new SettlementRaidLoadout("raider_melee_tier1"),
-                        new SettlementRaidLoadout("raider_ranged_tier1"),
-                        new SettlementRaidLoadout("raider_berserker_tier1")
+                        new SettlementRaidLoadout("raider_ranged_tier1")
                     )
                 );
             };

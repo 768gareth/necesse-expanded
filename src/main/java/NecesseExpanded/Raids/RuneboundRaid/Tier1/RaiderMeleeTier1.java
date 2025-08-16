@@ -78,9 +78,9 @@ public class RaiderMeleeTier1 extends HumanRaiderMob
 
         this.setArmorItems
         (
-            new InventoryItem(GameRandom.globalRandom.getOneOf("runeboundhelmet", "wig")), 
-            new InventoryItem("runeboundleatherchest"), 
-            new InventoryItem("runeboundboots")
+            new InventoryItem("wig"), 
+            new InventoryItem("leathershirt"), 
+            new InventoryItem("leatherboots")
         );
     }
 }

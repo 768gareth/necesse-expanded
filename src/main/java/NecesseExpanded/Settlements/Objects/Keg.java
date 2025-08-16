@@ -12,7 +12,6 @@ import necesse.entity.objectEntity.ObjectEntity;
 import necesse.entity.objectEntity.ProcessingTechInventoryObjectEntity;
 import necesse.gfx.camera.GameCamera;
 import necesse.gfx.drawOptions.texture.TextureDrawOptions;
-import necesse.gfx.drawOptions.texture.TextureDrawOptionsEnd;
 import necesse.gfx.drawables.LevelSortedDrawable;
 import necesse.gfx.drawables.OrderableDrawables;
 import necesse.gfx.gameTexture.GameTexture;

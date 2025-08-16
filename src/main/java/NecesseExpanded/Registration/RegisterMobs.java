@@ -10,8 +10,8 @@ import NecesseExpanded.Raids.NecromancerRaid.Tier2.SkeletonRaider;
 
 import NecesseExpanded.Raids.NecromancerRaid.Tier3.AncientSkeletonRaider;
 import NecesseExpanded.Raids.NecromancerRaid.Tier3.NecromancerTier3;
+
 import NecesseExpanded.Other.SecretBoss;
-import NecesseExpanded.Raids.RuneboundRaid.Other.RaiderTrapper;
 
 import NecesseExpanded.Raids.RuneboundRaid.Tier1.RaiderBerserkerTier1;
 import NecesseExpanded.Raids.RuneboundRaid.Tier1.RaiderMagicTier1;
@@ -56,9 +56,6 @@ public class RegisterMobs
             MobRegistry.registerMob("raider_melee_tier3", RaiderMeleeTier3.class, true);
             MobRegistry.registerMob("raider_ranged_tier3", RaiderRangedTier3.class, true);
             MobRegistry.registerMob("raider_berserker_tier3", RaiderBerserkerTier3.class, true);
-    
-            // Additional types of Runebound Raiders.
-            MobRegistry.registerMob("raider_trapper", RaiderTrapper.class, true);
     
             // Runebound mini-bosses.
             MobRegistry.registerMob("raider_summoner_tier1", RaiderSummonerTier1.class, true);

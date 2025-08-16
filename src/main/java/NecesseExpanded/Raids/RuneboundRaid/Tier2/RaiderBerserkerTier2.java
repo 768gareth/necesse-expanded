@@ -1,5 +1,6 @@
 package NecesseExpanded.Raids.RuneboundRaid.Tier2;
 
+import necesse.engine.registries.BuffRegistry;
 import necesse.entity.mobs.buffs.ActiveBuff;
 import necesse.entity.mobs.hostile.HumanRaiderMob;
 import necesse.inventory.InventoryItem;
@@ -48,7 +49,7 @@ public class RaiderBerserkerTier2 extends HumanRaiderMob
             }
         );
 
-        this.weapon = new InventoryItem("brutesbattleaxe");
+        this.weapon = new InventoryItem("quartzglaive");
         this.helmet = new InventoryItem("runeboundhornhelmet");
         this.chest = new InventoryItem("runeboundleatherchest");
         this.boots = new InventoryItem("runeboundboots");
@@ -57,6 +58,6 @@ public class RaiderBerserkerTier2 extends HumanRaiderMob
     public void serverTick()
     {
         super.serverTick();
-        this.buffManager.addBuff(new ActiveBuff("frenzyorbtrinket", this, 99, this), false);
+        this.addBuff(new ActiveBuff(BuffRegistry.getBuff("frenzyorbtrinket"), this, 10, null), true);
     }
 }

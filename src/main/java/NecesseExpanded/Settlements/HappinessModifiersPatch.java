@@ -1,17 +1,13 @@
 package NecesseExpanded.Settlements;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Stream;
 
 import necesse.engine.localization.message.GameMessage;
 import necesse.engine.localization.message.LocalMessage;
 import necesse.engine.modLoader.annotations.ModMethodPatch;
-import necesse.engine.registries.ItemRegistry;
 import necesse.entity.mobs.friendly.human.HappinessModifier;
 import necesse.entity.mobs.friendly.human.HumanMob;
-import necesse.inventory.InventoryItem;
 import necesse.level.maps.levelData.settlementData.SettlementBed;
 import necesse.level.maps.levelData.settlementData.settler.DietThought;
 import necesse.level.maps.levelData.settlementData.settler.FoodQuality;

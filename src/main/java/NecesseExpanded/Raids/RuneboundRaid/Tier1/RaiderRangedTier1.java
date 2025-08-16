@@ -78,9 +78,9 @@ public class RaiderRangedTier1 extends HumanRaiderMob
 
         this.setArmorItems
         (
-            new InventoryItem(GameRandom.globalRandom.getOneOf("leatherhood", "wig")),
-            new InventoryItem("runeboundleatherchest"), 
-            new InventoryItem("runeboundboots")
+            new InventoryItem("leatherhood"),
+            new InventoryItem("leathershirt"), 
+            new InventoryItem("leatherboots")
         );
     }
 }

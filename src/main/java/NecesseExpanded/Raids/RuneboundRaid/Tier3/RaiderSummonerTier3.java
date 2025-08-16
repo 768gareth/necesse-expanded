@@ -1,8 +1,10 @@
 package NecesseExpanded.Raids.RuneboundRaid.Tier3;
 
 import necesse.engine.eventStatusBars.EventStatusBarManager;
+import necesse.engine.registries.BuffRegistry;
 import necesse.engine.util.GameRandom;
 import necesse.entity.mobs.Mob;
+import necesse.entity.mobs.buffs.ActiveBuff;
 import necesse.entity.mobs.hostile.HumanRaiderMob;
 import necesse.inventory.InventoryItem;
 import necesse.inventory.lootTable.LootItemInterface;
@@ -37,8 +39,8 @@ public class RaiderSummonerTier3 extends HumanRaiderMob
         this.setArmorItems
         (
             new InventoryItem("runiccrown"), 
-            new InventoryItem("runicchestplate"), 
-            new InventoryItem("runicboots")
+            new InventoryItem("tungstenchestplate"), 
+            new InventoryItem("tungstenboots")
         );
     }
 
@@ -46,6 +48,7 @@ public class RaiderSummonerTier3 extends HumanRaiderMob
     {
         super.serverTick();
         EventStatusBarManager.registerMobHealthStatusBar((Mob)this);
+        this.addBuff(new ActiveBuff(BuffRegistry.getBuff("ivyhoodsetbonus"), this, 10, null), true);
 
         if (this.SummonTimer > 200 && this.isInCombat() == true && NumberOfSummons < 8)
         {

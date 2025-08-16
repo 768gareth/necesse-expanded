@@ -31,7 +31,12 @@ public class GetRaidOverride
             System.out.println("[NECESSE EXPANDED] Generating new complex raid...");
             if (Options.wealthCounter.getBestWeaponValue() > 1750.0)
             {
-                Event = new KnightRaid(LevelData, Options);
+                Event = GameRandom.globalRandom.getOneOf
+                (
+                    new RuneboundRaidEvent(LevelData, Options),
+                    new NecromancerRaid(LevelData, Options),
+                    new KnightRaid(LevelData, Options)
+                );
             }
             else
             {

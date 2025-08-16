@@ -1,6 +1,8 @@
 package NecesseExpanded.Raids.RuneboundRaid.Tier3;
 
+import necesse.engine.registries.BuffRegistry;
 import necesse.engine.util.GameRandom;
+import necesse.entity.mobs.buffs.ActiveBuff;
 import necesse.entity.mobs.hostile.HumanRaiderMob;
 import necesse.inventory.InventoryItem;
 import necesse.inventory.lootTable.LootItemInterface;
@@ -80,9 +82,15 @@ public class RaiderMagicTier3 extends HumanRaiderMob
 
         this.setArmorItems
         (
-            new InventoryItem("leatherhood"), 
-            new InventoryItem(GameRandom.globalRandom.getOneOf("runeboundrobe", "runeboundbonesrobe")),
-            new InventoryItem("runeboundboots")
+            new InventoryItem("runichat"), 
+            new InventoryItem("tungstenchestplate"), 
+            new InventoryItem("tungstenboots")
         );
+    }
+
+    public void serverTick()
+    {
+        super.serverTick();
+        this.addBuff(new ActiveBuff(BuffRegistry.getBuff("ivyhoodsetbonus"), this, 10, null), true);
     }
 }

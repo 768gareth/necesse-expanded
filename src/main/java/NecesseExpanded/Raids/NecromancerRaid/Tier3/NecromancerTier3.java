@@ -1,6 +1,8 @@
 package NecesseExpanded.Raids.NecromancerRaid.Tier3;
 
+import necesse.engine.registries.BuffRegistry;
 import necesse.engine.util.GameRandom;
+import necesse.entity.mobs.buffs.ActiveBuff;
 import necesse.entity.mobs.hostile.HumanRaiderMob;
 import necesse.inventory.InventoryItem;
 import necesse.inventory.lootTable.LootItemInterface;
@@ -52,6 +54,7 @@ public class NecromancerTier3 extends HumanRaiderMob
     public void serverTick()
     {
         super.serverTick();
+        this.addBuff(new ActiveBuff(BuffRegistry.getBuff("widowsetbonus"), this, 10, null), true);
         if (this.SummonTimer > 400 && NumberOfSummons < 8)
         {
             Level LocalLevel = this.getLevel();

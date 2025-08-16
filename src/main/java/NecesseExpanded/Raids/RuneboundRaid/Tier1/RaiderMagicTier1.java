@@ -79,9 +79,9 @@ public class RaiderMagicTier1 extends HumanRaiderMob
 
         this.setArmorItems
         (
-            new InventoryItem(GameRandom.globalRandom.getOneOf("leatherhood", "wig")),
-            new InventoryItem(GameRandom.globalRandom.getOneOf("runeboundrobe", "runeboundbonesrobe")),
-            new InventoryItem("runeboundboots")
+            new InventoryItem("leatherhood"),
+            new InventoryItem("leathershirt"), 
+            new InventoryItem("leatherboots")
         );
     }
 }

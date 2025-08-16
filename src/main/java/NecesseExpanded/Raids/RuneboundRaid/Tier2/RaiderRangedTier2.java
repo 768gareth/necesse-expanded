@@ -73,8 +73,8 @@ public class RaiderRangedTier2 extends HumanRaiderMob
         this.setArmorItems
         (
             new InventoryItem("leatherhood"), 
-            new InventoryItem("runeboundleatherchest"), 
-            new InventoryItem("runeboundboots")
+            new InventoryItem("runicchestplate"), 
+            new InventoryItem("runicboots")
         );
     }
 }
