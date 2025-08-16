@@ -43,9 +43,7 @@ public class RaiderBerserkerTier2 extends HumanRaiderMob
 
                 (LootItemInterface)new ChanceLootItem(0.5F, "tungstenbar"),
 
-                (LootItemInterface)new ChanceLootItem(0.05F, "lifeelixir"),
-
-                (LootItemInterface)new ChanceLootItem(0.05F, "challengersbanner")
+                (LootItemInterface)new ChanceLootItem(0.05F, "lifeelixir")
             }
         );
 

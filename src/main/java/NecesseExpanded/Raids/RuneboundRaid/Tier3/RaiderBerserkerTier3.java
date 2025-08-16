@@ -41,7 +41,19 @@ public class RaiderBerserkerTier3 extends HumanRaiderMob
                     }
                 ),
 
-                (LootItemInterface)new ChanceLootItem(0.05F, "challengersbanner")
+                (LootItemInterface)new ChanceLootItemList
+                (
+                    0.1F, new LootItemInterface[] 
+                    { 
+                        (LootItemInterface) new OneOfLootItems
+                        (
+                            (LootItemInterface) LootItem.between("tungstenbar", 1, 2),
+                            (LootItemInterface) LootItem.between("glacialbar", 1, 2),
+                            (LootItemInterface) LootItem.between("myceliumbar", 1, 2),
+                            (LootItemInterface) LootItem.between("ancientfossilbar", 1, 2)
+                        )
+                    }
+                ),
             }
         );
 

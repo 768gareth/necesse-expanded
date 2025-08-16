@@ -37,8 +37,6 @@ public class RaiderRangedTier1 extends HumanRaiderMob
                     }
                 ),
 
-                (LootItemInterface)new ChanceLootItem(0.05F, "challengersbanner"),
-
                 (LootItemInterface)new ChanceLootItemList
                 (
                     0.5F, new LootItemInterface[] 

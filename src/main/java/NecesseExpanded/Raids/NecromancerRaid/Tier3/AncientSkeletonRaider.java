@@ -79,15 +79,15 @@ public class AncientSkeletonRaider extends ItemAttackerRaiderMob
                     { 
                         (LootItemInterface) new OneOfLootItems
                         (
-                            (LootItemInterface) LootItem.between("shadowessence", 1, 2),
-                            (LootItemInterface) LootItem.between("cryoessence", 1, 2),
-                            (LootItemInterface) LootItem.between("bioessence", 1, 2),
-                            (LootItemInterface) LootItem.between("primordialessence", 1, 2)
+                            (LootItemInterface) LootItem.between("tungstenbar", 1, 2),
+                            (LootItemInterface) LootItem.between("glacialbar", 1, 2),
+                            (LootItemInterface) LootItem.between("myceliumbar", 1, 2),
+                            (LootItemInterface) LootItem.between("ancientfossilbar", 1, 2)
                         )
                     }
                 ),
 
-                (LootItemInterface)new ChanceLootItem(0.005F, "challengersbanner")
+                (LootItemInterface)new ChanceLootItem(0.01F, "dynamitestick", 1)
             }
 
             

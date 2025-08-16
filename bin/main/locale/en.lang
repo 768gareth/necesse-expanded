@@ -45,8 +45,8 @@ dusk_knight=Knight of Dusk
 secret_boss=The Mad Cow
 
 [bufftooltip]
-sunscorched=Armour reduced!
-moonscorched=Maximum health reduced!
+sunscorched=Receive twice the damage!
+moonscorched=Movement speed significantly reduced!
 
 [buff]
 sunscorched=Sunscorched

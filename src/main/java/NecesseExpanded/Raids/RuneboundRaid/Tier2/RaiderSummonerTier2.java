@@ -27,6 +27,7 @@ public class RaiderSummonerTier2 extends HumanRaiderMob
             new LootItemInterface[] 
             { 
                 (LootItemInterface)LootItem.between("coin", getMaxHealth() / 10, getMaxHealth() / 5),
+                (LootItemInterface)LootItem.between("tungstenbar", 2, 4),
             }
         );
 

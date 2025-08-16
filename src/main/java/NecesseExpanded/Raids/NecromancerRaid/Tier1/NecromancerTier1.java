@@ -7,7 +7,9 @@ import necesse.entity.mobs.hostile.HumanRaiderMob;
 import necesse.inventory.InventoryItem;
 import necesse.inventory.lootTable.LootItemInterface;
 import necesse.inventory.lootTable.LootTable;
+import necesse.inventory.lootTable.lootItem.ChanceLootItemList;
 import necesse.inventory.lootTable.lootItem.LootItem;
+import necesse.inventory.lootTable.lootItem.OneOfLootItems;
 import necesse.level.maps.Level;
 
 public class NecromancerTier1 extends HumanRaiderMob
@@ -29,6 +31,19 @@ public class NecromancerTier1 extends HumanRaiderMob
             new LootItemInterface[] 
             { 
                 (LootItemInterface)LootItem.between("coin", getMaxHealth() / 10, getMaxHealth() / 5),
+
+                (LootItemInterface)new ChanceLootItemList
+                (
+                    0.05F, new LootItemInterface[] 
+                    { 
+                        (LootItemInterface) new OneOfLootItems
+                        (
+                            (LootItemInterface) new LootItem("dreamcatcher", 1),
+                            (LootItemInterface) new LootItem("magicfoci", 1),
+                            (LootItemInterface) new LootItem("summonfoci", 1)
+                        )
+                    }
+                )
             }
         );
 

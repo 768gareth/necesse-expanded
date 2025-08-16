@@ -41,8 +41,6 @@ public class RaiderMeleeTier2 extends HumanRaiderMob
 
                 (LootItemInterface)new ChanceLootItem(0.05F, "lifeelixir"),
 
-                (LootItemInterface)new ChanceLootItem(0.05F, "challengersbanner"),
-
                 (LootItemInterface)new ChanceLootItemList
                 (
                     0.05F, new LootItemInterface[] 

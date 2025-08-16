@@ -74,10 +74,8 @@ public class SkeletonRaider extends ItemAttackerRaiderMob
 
                 (LootItemInterface)new ChanceLootItem(0.25F, "spoiledfood", 1),
 
-                (LootItemInterface)new ChanceLootItem(0.005F, "challengersbanner")
+                (LootItemInterface)new ChanceLootItem(0.01F, "dynamitestick", 1)
             }
-
-            
         );
     }
 

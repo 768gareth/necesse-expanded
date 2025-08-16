@@ -71,8 +71,6 @@ public class ZombieRaider extends ItemAttackerRaiderMob
 
                 (LootItemInterface)new ChanceLootItem(0.25F, "spoiledfood", 1),
 
-                (LootItemInterface)new ChanceLootItem(0.005F, "challengersbanner"),
-
                 (LootItemInterface)new ChanceLootItemList
                 (
                     0.10F, new LootItemInterface[] 
@@ -84,7 +82,9 @@ public class ZombieRaider extends ItemAttackerRaiderMob
                             (LootItemInterface) LootItem.between("goldore", 1, 4)
                         )
                     }
-                )
+                ),
+
+                (LootItemInterface)new ChanceLootItem(0.01F, "ironbomb", 1)
             }
 
             

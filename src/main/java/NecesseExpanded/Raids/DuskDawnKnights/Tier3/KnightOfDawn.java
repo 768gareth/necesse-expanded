@@ -1,10 +1,7 @@
 package NecesseExpanded.Raids.DuskDawnKnights.Tier3;
 
-import java.util.stream.Stream;
-
 import necesse.engine.registries.BuffRegistry;
 import necesse.engine.util.GameRandom;
-import necesse.entity.mobs.PlayerMob;
 import necesse.entity.mobs.buffs.ActiveBuff;
 import necesse.entity.mobs.hostile.HumanRaiderMob;
 import necesse.inventory.InventoryItem;
@@ -47,8 +44,8 @@ public class KnightOfDawn extends HumanRaiderMob
         this.weapon = GameRandom.globalRandom.getOneOf
         (
             new InventoryItem("causticexecutioner"), 
-            new InventoryItem("slimeglaive"),
-            new InventoryItem("arachnidwebbow")
+            new InventoryItem("ravenbeakspear"),
+            new InventoryItem("antiquesword")
         );
 
         this.setArmorItems
@@ -62,13 +59,6 @@ public class KnightOfDawn extends HumanRaiderMob
     public void serverTick()
     {
         super.serverTick();
-        if (this.getLevel().getWorldEntity().isNight())
-        {
-            this.addBuff(new ActiveBuff(BuffRegistry.getBuff("firestonetrinket"), this, 10, null), true);
-        }
-        else
-        {
-            this.buffManager.removeBuff("firestonetrinket", true);
-        }
+        this.addBuff(new ActiveBuff(BuffRegistry.getBuff("knightofdawnbuff"), this, 10, null), true);
     }
 }

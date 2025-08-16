@@ -1,4 +1,4 @@
-package NecesseExpanded.Raids.DuskDawnKnights.Tier3.Buffs;
+package NecesseExpanded.Raids.DuskDawnKnights.Buffs;
 
 import necesse.engine.localization.Localization;
 import necesse.engine.util.GameBlackboard;
@@ -20,13 +20,13 @@ public class Sunscorched extends Buff
     @Override
     public void init(ActiveBuff Buff, BuffEventSubscriber Subscriber) 
     {
-        Buff.setModifier(BuffModifiers.ARMOR_FLAT, -10);
+        Buff.setModifier(BuffModifiers.INCOMING_DAMAGE_MOD, 2F);
     }
 
     public ListGameTooltips getTooltip(ActiveBuff ab, GameBlackboard blackboard) 
     {
         ListGameTooltips tooltips = super.getTooltip(ab, blackboard);
-        tooltips.add(Localization.translate("bufftooltip", "sunscorching"));
+        tooltips.add(Localization.translate("bufftooltip", "sunscorched"));
         return tooltips;
     }
 }

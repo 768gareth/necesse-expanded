@@ -1,4 +1,4 @@
-package NecesseExpanded.Raids.DuskDawnKnights.Tier3.Buffs;
+package NecesseExpanded.Raids.DuskDawnKnights.Buffs;
 
 import necesse.engine.localization.Localization;
 import necesse.engine.util.GameBlackboard;
@@ -20,7 +20,7 @@ public class Moonscorched extends Buff
     @Override
     public void init(ActiveBuff Buff, BuffEventSubscriber Subscriber) 
     {
-        Buff.setModifier(BuffModifiers.MAX_HEALTH_FLAT, -30);
+        Buff.setModifier(BuffModifiers.SLOW, 0.5F);
     }
 
     public ListGameTooltips getTooltip(ActiveBuff ab, GameBlackboard blackboard) 

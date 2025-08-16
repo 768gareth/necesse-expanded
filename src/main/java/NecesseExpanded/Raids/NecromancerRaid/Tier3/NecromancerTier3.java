@@ -7,6 +7,7 @@ import necesse.entity.mobs.hostile.HumanRaiderMob;
 import necesse.inventory.InventoryItem;
 import necesse.inventory.lootTable.LootItemInterface;
 import necesse.inventory.lootTable.LootTable;
+import necesse.inventory.lootTable.lootItem.ChanceLootItemList;
 import necesse.inventory.lootTable.lootItem.LootItem;
 import necesse.inventory.lootTable.lootItem.OneOfLootItems;
 import necesse.level.maps.Level;
@@ -33,10 +34,23 @@ public class NecromancerTier3 extends HumanRaiderMob
 
                 (LootItemInterface) new OneOfLootItems
                 (
-                    (LootItemInterface) LootItem.between("shadowessence", 4, 8),
-                    (LootItemInterface) LootItem.between("cryoessence", 4, 8),
-                    (LootItemInterface) LootItem.between("bioessence", 4, 8),
-                    (LootItemInterface) LootItem.between("primordialessence", 4, 8)
+                    (LootItemInterface) LootItem.between("tungstenbar", 1, 2),
+                    (LootItemInterface) LootItem.between("glacialbar", 1, 2),
+                    (LootItemInterface) LootItem.between("myceliumbar", 1, 2),
+                    (LootItemInterface) LootItem.between("ancientfossilbar", 1, 2)
+                ),
+
+                (LootItemInterface)new ChanceLootItemList
+                (
+                    0.05F, new LootItemInterface[] 
+                    { 
+                        (LootItemInterface) new OneOfLootItems
+                        (
+                            (LootItemInterface) new LootItem("forbiddenspellbook", 1),
+                            (LootItemInterface) new LootItem("scryingmirror", 1),
+                            (LootItemInterface) new LootItem("summonersbestiary", 1)
+                        )
+                    }
                 )
             }
         );

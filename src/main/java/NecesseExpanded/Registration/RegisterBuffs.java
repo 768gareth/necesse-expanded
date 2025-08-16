@@ -1,7 +1,6 @@
 package NecesseExpanded.Registration;
 
-import NecesseExpanded.Raids.DuskDawnKnights.Tier3.Buffs.Moonscorched;
-import NecesseExpanded.Raids.DuskDawnKnights.Tier3.Buffs.Sunscorched;
+import NecesseExpanded.Raids.DuskDawnKnights.Buffs.*;
 import necesse.engine.registries.BuffRegistry;
 
 public class RegisterBuffs 
@@ -12,6 +11,8 @@ public class RegisterBuffs
         {
             BuffRegistry.registerBuff("moonscorched", new Moonscorched());
             BuffRegistry.registerBuff("sunscorched", new Sunscorched());
+            BuffRegistry.registerBuff("knightofdawnbuff", new KnightOfDawnBuff());
+            BuffRegistry.registerBuff("knightofduskbuff", new KnightOfDuskBuff());
         }
     }
 }
