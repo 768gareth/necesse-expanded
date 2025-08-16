@@ -21,6 +21,7 @@ public class Main
         RegisterMobs.Register();
         RegisterCraftingRecipes.Register();
         SettlerHappiness.Update();
+        RegisterBuffs.Register();
     }
 
     public void postInit()

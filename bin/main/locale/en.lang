@@ -44,6 +44,14 @@ dusk_knight=Knight of Dusk
 // Secret boss
 secret_boss=The Mad Cow
 
+[bufftooltip]
+sunscorched=Armour reduced!
+moonscorched=Maximum health reduced!
+
+[buff]
+sunscorched=Sunscorched
+moonscorched=Moonscorched
+
 [misc]
 runeboundraidertype=The Runebound Raiders
 necromancerraidertype=Necromancers

@@ -1,7 +1,10 @@
 package NecesseExpanded.Raids.DuskDawnKnights.Tier3;
 
+import java.util.stream.Stream;
+
 import necesse.engine.registries.BuffRegistry;
 import necesse.engine.util.GameRandom;
+import necesse.entity.mobs.PlayerMob;
 import necesse.entity.mobs.buffs.ActiveBuff;
 import necesse.entity.mobs.hostile.HumanRaiderMob;
 import necesse.inventory.InventoryItem;
@@ -12,6 +15,7 @@ import necesse.inventory.lootTable.lootItem.OneOfLootItems;
 
 public class KnightOfDawn extends HumanRaiderMob
 {
+    
     public KnightOfDawn()
     {
         super();
@@ -58,7 +62,7 @@ public class KnightOfDawn extends HumanRaiderMob
     public void serverTick()
     {
         super.serverTick();
-        if (!this.getLevel().getWorldEntity().isNight())
+        if (this.getLevel().getWorldEntity().isNight())
         {
             this.addBuff(new ActiveBuff(BuffRegistry.getBuff("firestonetrinket"), this, 10, null), true);
         }
