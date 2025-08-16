@@ -1,0 +1,9 @@
+{
+	id = mynydd.necesse.expanded,
+	name = Necesse Expanded,
+	version = 0.2.0,
+	gameVersion = 0.33.1,
+	author = Eryr yr Mynyddoedd,
+	description = Overhauls the vanilla Necesse experience. See workshop page for details.,
+	clientside = false
+}

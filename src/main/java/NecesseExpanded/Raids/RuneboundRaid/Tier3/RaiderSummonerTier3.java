@@ -49,6 +49,7 @@ public class RaiderSummonerTier3 extends HumanRaiderMob
         super.serverTick();
         EventStatusBarManager.registerMobHealthStatusBar((Mob)this);
         this.addBuff(new ActiveBuff(BuffRegistry.getBuff("ivyhoodsetbonus"), this, 10, null), true);
+        this.addBuff(new ActiveBuff(BuffRegistry.getBuff("spiritboardtrinket"), this, 10, null), true);
 
         if (this.SummonTimer > 200 && this.isInCombat() == true && NumberOfSummons < 8)
         {

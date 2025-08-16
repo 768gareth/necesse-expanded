@@ -1,0 +1,64 @@
+[mob]
+// Runebound Raiders
+// Tier 1
+raider_magic_tier1=Runebound Mage
+raider_melee_tier1=Runebound Warrior
+raider_ranged_tier1=Runebound Ranger
+raider_berserker_tier1=Runebound Berserker
+
+// Tier 2
+raider_magic_tier2=Veteran Runebound Mage
+raider_melee_tier2=Veteran Runebound Warrior
+raider_ranged_tier2=Veteran Runebound Ranger
+raider_berserker_tier2=Veteran Runebound Berserker
+
+// Tier 3
+raider_magic_tier3=Master Runebound Mage
+raider_melee_tier3=Runebound Champion
+raider_ranged_tier3=Runebound Sharpshooter
+raider_berserker_tier3=Runebound Barbarian
+
+// Misc Units
+raider_trapper=Runebound Hunter
+
+// Mini-bosses.
+raider_summoner_tier1=Runebound Summoner
+raider_summoner_tier2=Veteran Runebound Summoner
+raider_summoner_tier3=Master Runebound Summoner
+
+// Necromancers Raid
+// Necromancers
+necromancer_tier1=Necromancer Apprentice
+necromancer_tier2=Necromancer Adept
+necromancer_tier3=Necromancer Master
+
+// Summons
+zombie_raider=Zombie Villager
+skeleton_raider=Skeleton Villager
+ancient_skeleton_raider=Ancient Skeleton Villager
+
+// Knights 
+dawn_knight=Knight of Dawn
+dusk_knight=Knight of Dusk
+
+// Secret boss
+secret_boss=The Mad Cow
+
+[misc]
+runeboundraidertype=The Runebound Raiders
+necromancerraidertype=Necromancers
+knightsraid=The Knights of Dusk and Dawn
+
+[settlement]
+progression_bonus_2=Defeated the Fallen Wizard!
+progression_bonus_1=Defeated the Pirate Captain!
+booze_bonus=Recently drank alcohol!
+
+[object]
+keg=Keg
+
+[item]
+beer=Beer
+cider=Cider
+mead=Mead
+wine=Wine
