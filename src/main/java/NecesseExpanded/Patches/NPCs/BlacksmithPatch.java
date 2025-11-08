@@ -40,6 +40,7 @@ public class BlacksmithPatch
       Mob.shop.addBuyingItem("amethyst", new BuyingShopItem()).setPriceBasedOnHappiness(35, 25, 5);
       Mob.shop.addBuyingItem("ruby", new BuyingShopItem()).setPriceBasedOnHappiness(35, 25, 5);
       Mob.shop.addBuyingItem("emerald", new BuyingShopItem()).setPriceBasedOnHappiness(35, 25, 5);
+      Mob.shop.addBuyingItem("topaz", new BuyingShopItem()).setPriceBasedOnHappiness(35, 25, 5);
       Mob.shop.addBuyingItem("pearl", new BuyingShopItem()).setPriceBasedOnHappiness(125, 75, 5);
       Mob.shop.addBuyingItem("glacialshard", new BuyingShopItem()).setPriceBasedOnHappiness(20, 12, 2).addKilledMobRequirement("piratecaptain");
       Mob.shop.addBuyingItem("amber", new BuyingShopItem()).setPriceBasedOnHappiness(25, 15, 2).addKilledMobRequirement("piratecaptain");

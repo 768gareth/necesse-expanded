@@ -56,8 +56,8 @@ public class UpdateLootTables
         VampireMob.lootTable.items.add(new ChanceLootItemList(0.05f, CaveCryptLootTable.uniqueItems));
 
         // Snow
-        SnowWolfMob.lootTable.items.add(LootItem.between("leather", 1, 2));
-        SnowWolfMob.lootTable.items.add(LootItem.between("rawmutton", 1, 2));
+        SnowWolfMob.lootTable.items.add(new LootItem("leather"));
+        SnowWolfMob.lootTable.items.add(new LootItem("rawmutton"));
 
         // Dungeon
         VoidApprentice.lootTable.items.add(new ChanceLootItemList(0.05f, DungeonChestLootTable.mainItems));
@@ -66,27 +66,20 @@ public class UpdateLootTables
         SwampSlimeMob.lootTable.items.add(new ChanceLootItem(0.25f, "slime", GameRandom.globalRandom.getIntBetween(1, 2)));
 
         // Desert
-        JackalMob.lootTable.items.add(LootItem.between("leather", 1, 2));
-        JackalMob.lootTable.items.add(LootItem.between("rawmutton", 1, 2));
+        JackalMob.lootTable.items.add(new LootItem("leather"));
+        JackalMob.lootTable.items.add(new LootItem("rawmutton"));
 
         // Pirates
         PirateMob.lootTable.items.add(new ChanceLootItem(0.25f, "rum"));
 
         // Deep swamp
         GiantSwampSlimeMob.lootTable.items.add(new LootItem("slime", GameRandom.globalRandom.getIntBetween(2, 4)));
-        SwampDwellerMob.lootTable.items.add(new ChanceLootItem(0.25f, "swampsludge", GameRandom.globalRandom.getIntBetween(2, 4)));
-        FishianHookWarriorMob.lootTable.items.add(new ChanceLootItem(0.15f, "seaweed", GameRandom.globalRandom.getIntBetween(3, 6)));
-        FishianHealerMob.lootTable.items.add(new ChanceLootItem(0.15f, "seaweed", GameRandom.globalRandom.getIntBetween(3, 6)));
 
         // Deep desert
         SandwormHead.lootTable.items.add(new ChanceLootItem(0.05F, "sandworm_tooth"));
 
-        // Temple
-        AncientSkeletonMageMob.lootTable.items.add(new ChanceLootItem(0.1f, "greatermanapotion"));
-        AncientArmoredSkeletonMob.lootTable.items.add(new ChanceLootItem(0.1f, "greaterhealthpotion"));
-
         // Incursions
-        GraveyardIncursionBiome.graveyardMobDrops.add(new ChanceLootItem(0.05F, "blood_crystal"));
+        GraveyardIncursionBiome.graveyardMobDrops.add(new ChanceLootItem(0.01F, "blood_crystal"));
         SlimeWormHead.lootTable.items.add(new LootItem("slime", GameRandom.globalRandom.getIntBetween(4, 8)));
 
         // Bosses

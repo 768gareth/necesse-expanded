@@ -23,9 +23,9 @@ public class DryadHouseWorldPreset extends WorldPreset {
   }
   
   public void addToRegion(GameRandom random, LevelPresetsRegion presetsRegion, final BiomeGeneratorStack generatorStack, PerformanceTimerManager performanceTimer) {
-    int total = getTotalBiomePoints(random, presetsRegion, BiomeRegistry.PLAINS, 0.064F);
+    int total = getTotalBiomePoints(random, presetsRegion, BiomeRegistry.PLAINS, 0.008F);
     for (int i = 0; i < total; i++) {
-      final Point tile = findRandomBiomePresetTile(random, presetsRegion, generatorStack, BiomeRegistry.SWAMP, 50, this.size, new String[] { "loot", "villages" }, new WorldPreset.ValidTilePredicate() {
+      final Point tile = findRandomBiomePresetTile(random, presetsRegion, generatorStack, BiomeRegistry.PLAINS, 50, this.size, new String[] { "loot", "villages" }, new WorldPreset.ValidTilePredicate() {
             public boolean isValidPosition(int tileX, int tileY) {
               return (!generatorStack.isSurfaceExpensiveWater(tileX, tileY) && generatorStack
               .getLazyBiomeID(tileX, tileY) == BiomeRegistry.PLAINS.getID());

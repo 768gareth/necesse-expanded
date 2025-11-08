@@ -24,7 +24,7 @@ public class FishianDeepCaveEntranceWorldPreset extends WorldPreset {
   }
   
   public void addToRegion(GameRandom random, LevelPresetsRegion presetsRegion, final BiomeGeneratorStack generatorStack, PerformanceTimerManager performanceTimer) {
-    int total = getTotalBiomePoints(random, presetsRegion, BiomeRegistry.SWAMP, 0.032F);
+    int total = getTotalBiomePoints(random, presetsRegion, BiomeRegistry.SWAMP, 0.006F);
     for (int i = 0; i < total; i++) {
       final Point tile = findRandomBiomePresetTile(random, presetsRegion, generatorStack, BiomeRegistry.SWAMP, 50, this.size, new String[] { "loot", "villages" }, new WorldPreset.ValidTilePredicate() {
             public boolean isValidPosition(int tileX, int tileY) {
