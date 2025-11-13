@@ -141,14 +141,22 @@ public class TropicalBiome extends Biome
     @Override
     public int getGenerationCaveRockObjectID() 
     {
-        return ObjectRegistry.sandstoneRockID;
+        return ObjectRegistry.swampRockID;
     }
 
     @Override
     public int getGenerationCaveTileID() 
     {
-        return TileRegistry.waterID;
+        return TileRegistry.overgrownGrassID;
     }
+
+    public int getGenerationDeepCaveTileID() {
+        return TileRegistry.overgrownGrassID;
+     }
+  
+     public int getGenerationDeepCaveRockObjectID() {
+        return ObjectRegistry.deepSwampRockID;
+     }
 
     public int getGenerationBeachTileID() 
     {
@@ -165,16 +173,18 @@ public class TropicalBiome extends Biome
     {
         super.initializeGeneratorStack(stack);
         stack.addRandomSimplexVeinsBranch("tropicalPalmTrees", 2.0F, 0.2F, 0.4F, 0);
-        stack.addRandomVeinsBranch("tropicalBushes", 0.045F, 4, 8, 0.6F, 0, false);
+        stack.addRandomVeinsBranch("tropicalBushes", 0.045F, 3, 5, 0.6F, 0, false);
         stack.addRandomSimplexVeinsBranch("tropicalMudPatches", 2.0F, 0.5F, 0.7F, 2);
+        stack.addRandomSimplexVeinsBranch("tropicalGrassPatches", 2.5F, 0.45F, 0.7F, 2);
     }
 
     @Override
     public void generateRegionSurfaceTerrain(Region region, BiomeGeneratorStack stack, GameRandom random) 
     {
         super.generateRegionSurfaceTerrain(region, stack, random);
+        stack.startPlaceOnVein(this, region, random, "tropicalGrassPatches").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.699999988079071D).placeTile(TileRegistry.grassID);
         stack.startPlaceOnVein(this, region, random, "tropicalPalmTrees").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.15).placeObject("palmtree");
-        stack.startPlaceOnVein(this, region, random, "tropicalPalmTrees").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.03).placeObject("bambootree");
+        stack.startPlaceOnVein(this, region, random, "tropicalPalmTrees").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.01).placeObject("bambootree");
         stack.startPlaceOnVein(this, region, random, "tropicalPalmTrees").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.01).placeObject("bananatree");
         stack.startPlaceOnVein(this, region, random, "tropicalBushes").onlyOnTile(TileRegistry.overgrownGrassID).placeObjectFruitGrower("blueberrybush");
         stack.startPlaceOnVein(this, region, random, "tropicalBushes").onlyOnTile(TileRegistry.overgrownGrassID).placeObjectFruitGrower("blackberrybush");
@@ -203,13 +213,25 @@ public class TropicalBiome extends Biome
     @Override
     public void generateRegionCaveTerrain(Region region, BiomeGeneratorStack stack, GameRandom random) {
         super.generateRegionCaveTerrain(region, stack, random);
-        
+        stack.startPlace(this, region, random).chance(0.004).onlyOnTile(TileRegistry.overgrownGrassID).placeObject("willowtree");
+        stack.startPlace(this, region, random).chance(0.003).placeObject("swampsurfacerock");
+        stack.startPlace(this, region, random).chance(0.005).placeObject("swampsurfacerocksmall");
+        stack.startPlace(this, region, random).chance(0.001).onlyOnTile(TileRegistry.waterID).placeObject("glowcoral");
+        region.simulateWorldTime(1000000000, true);
     }
 
     @Override
     public void generateRegionDeepCaveTerrain(Region region, BiomeGeneratorStack stack, GameRandom random) {
         super.generateRegionDeepCaveTerrain(region, stack, random);
-        
+        stack.startPlace(this, region, random).chance(0.003).placeObject("swampsurfacerock");
+        stack.startPlace(this, region, random).chance(0.005).placeObject("swampsurfacerocksmall");
+        stack.startPlace(this, region, random).chance(0.004).onlyOnTile(TileRegistry.overgrownGrassID).placeObject("willowtree");
+        stack.startPlace(this, region, random).chance(0.002).onlyOnTile(TileRegistry.overgrownGrassID).placeObject("life_quartz_cluster_small");
+        stack.startPlace(this, region, random).chance(0.002).onlyOnTile(TileRegistry.overgrownGrassID).placeObject("emeraldclustersmall");
+        stack.startPlace(this, region, random).chance(0.001).onlyOnTile(TileRegistry.waterID).placeObject("glowcoral");
+        stack.startPlace(this, region, random).chance(0.0005).onlyOnTile(TileRegistry.overgrownGrassID).placeObject("life_quartz_cluster");
+        stack.startPlace(this, region, random).chance(0.0005).onlyOnTile(TileRegistry.overgrownGrassID).placeObject("emeraldcluster");
+        region.simulateWorldTime(1000000000, true);
     }
 
     @Override

@@ -79,6 +79,9 @@ public class Main
         .addBooleanSetting("happiness_changes_enabled", true)
         .addParagraph("happiness_changes_tip")
 
+        .addBooleanSetting("settlers_share_rooms_without_penalty", false)
+        .addParagraph("settlers_sharing_room_tip")
+
         // Miscellaneous Settings
         .addTextSeparator("ne_settings_separator_3")
 
@@ -106,6 +109,7 @@ public class Main
             "raider_bombs_destructive", 
             "raid_size_multiplier",
             "happiness_changes_enabled",
+            "settlers_share_rooms_without_penalty",
             "starter_equipment_enabled",
             "starter_kit_enabled",
             "player_speed_patch",

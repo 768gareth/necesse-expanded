@@ -15,10 +15,13 @@ bombs_tip=If enabled, certain custom raiders can use vanilla explosives, and wil
 raid_size_multiplier=Raid size multiplier:
 raid_size_tip=Raid size calculation: Settlement population * raid size multiplier * raid success factor. The raid success factor is based on how the settlement has previously fared against raiders, ranging from 0.5 (very poorly) to 1.25 (perfect).
 
-ne_settings_separator_2=Settlements and Settlers
+ne_settings_separator_2=Settlements
 
 happiness_changes_enabled=Enable modified settler happiness system?
 happiness_changes_tip=If enabled, rebalances settler happiness calculations and implements new happiness modifiers. Settlers have reduced expectations regarding room size and diet variety, and gain happiness from larger settlement population.
+
+settlers_share_rooms_without_penalty=Disable shared bedroom happiness penalty?
+settlers_sharing_room_tip=If enabled, any number of settlers can share a bedroom without suffering a happiness penalty. This can make settlement building significantly easier, but is unbalanced. Disabled by default in accordance with vanilla. Requires modified happiness system to be enabled.
 
 ne_settings_separator_3=Miscellaneous
 
@@ -32,7 +35,7 @@ player_speed_patch=Increase player movement speed?
 player_speed_tip=If enabled, player character speed can be modified using the entry below.
 
 player_speed_value=Player movement speed:
-player_speed_value_tip=The default vanilla value is 40. 40 to 60 is recommended. Restart the game to apply.
+player_speed_value_tip=The default vanilla value is 40. 40 to 60 is recommended.
 
 chest_size_value=Chest storage slots:
 chest_size_tip=Default vanilla value is 40. 40 to 80 slots recommended. Remove items from added slots before decreasing value. If an added slot is removed with an item inside, the item is permanently lost. Reload the world to apply.

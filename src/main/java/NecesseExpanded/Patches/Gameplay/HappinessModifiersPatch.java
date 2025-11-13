@@ -70,7 +70,7 @@ public class HappinessModifiersPatch
                     if (Room != null) 
                     {
                         int NumberOfOccupiedBeds = Bed.getRoom().getOccupiedBeds();
-                        if (NumberOfOccupiedBeds > 1)
+                        if (NumberOfOccupiedBeds > 1 && !NecesseExpanded.Main.SettingsGetter.getBoolean("settlers_share_rooms_without_penalty"))
                         {
                             Modifiers.add(new HappinessModifier(-5 * NumberOfOccupiedBeds, (GameMessage) (new GameMessageBuilder()).append("settlement", "sharingroom").append(" (" + (NumberOfOccupiedBeds - 1) + ")")));
                         }
