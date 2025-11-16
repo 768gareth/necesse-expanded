@@ -25,7 +25,7 @@ import necesse.level.maps.presets.RandomCaveChestRoom;
 import necesse.level.maps.presets.caveRooms.CaveRuins;
 import necesse.level.maps.regionSystem.Region;
 
-public class TropicalBiome extends Biome 
+public class HauntedForestBiome extends Biome 
 {
     public static FishingLootTable SurfaceFish = new FishingLootTable().addAll(Biome.defaultSurfaceFish);
     public static FishingLootTable CaveFish = new FishingLootTable().addAll(Biome.defaultCaveFish);
@@ -42,7 +42,7 @@ public class TropicalBiome extends Biome
     public static MobSpawnTable CaveCritters = new MobSpawnTable().add(100, "crab");
     public static MobSpawnTable DeepCaveCritters = new MobSpawnTable().add(100, "crab");
 
-    public TropicalBiome() {  }
+    public HauntedForestBiome() {  }
 
     @Override
     public boolean canRain(Level level) 
@@ -110,7 +110,7 @@ public class TropicalBiome extends Biome
     @Override
     public GameTile getUnderLiquidTile(Level level, int tileX, int tileY) 
     {
-        return TileRegistry.getTile(TileRegistry.sandID);
+        return TileRegistry.getTile(TileRegistry.dirtID);
     }
 
     @Override
@@ -122,35 +122,35 @@ public class TropicalBiome extends Biome
     @Override
     public int getGenerationCaveLavaTileID() 
     {
-        return TileRegistry.waterID;
+        return TileRegistry.lavaID;
     }
 
     @Override
     public int getGenerationDeepCaveLavaTileID() 
     {
-        return TileRegistry.waterID;
+        return TileRegistry.lavaID;
     }
 
     @Override
     public int getGenerationTerrainTileID() 
     {
-        return TileRegistry.overgrownGrassID;
+        return TileRegistry.getTileID("haunted_grass_tile");
     }
 
     @Override
     public int getGenerationCaveRockObjectID() 
     {
-        return ObjectRegistry.swampRockID;
+        return ObjectRegistry.rockID;
     }
 
     @Override
     public int getGenerationCaveTileID() 
     {
-        return TileRegistry.overgrownGrassID;
+        return TileRegistry.cryptAshID;
     }
 
     public int getGenerationDeepCaveTileID() {
-        return TileRegistry.overgrownGrassID;
+        return TileRegistry.cryptAshID;
      }
   
      public int getGenerationDeepCaveRockObjectID() {
@@ -171,37 +171,17 @@ public class TropicalBiome extends Biome
     public void initializeGeneratorStack(BiomeGeneratorStack stack) 
     {
         super.initializeGeneratorStack(stack);
-        stack.addRandomSimplexVeinsBranch("tropicalPalmTrees", 2.0F, 0.2F, 0.4F, 0);
-        stack.addRandomVeinsBranch("tropicalBushes", 0.045F, 3, 5, 0.3F, 0, false);
-        stack.addRandomSimplexVeinsBranch("tropicalMudPatches", 2.0F, 0.5F, 0.7F, 2);
-        stack.addRandomSimplexVeinsBranch("tropicalGrassPatches", 3.5F, 0.85F, 0.9F, 2);
+        stack.addRandomSimplexVeinsBranch("deadwoodTrees", 2.0F, 0.2F, 0.4F, 0);
+        stack.addRandomSimplexVeinsBranch("hauntedMudPatches", 2.0F, 0.5F, 0.7F, 2);
     }
 
     @Override
     public void generateRegionSurfaceTerrain(Region region, BiomeGeneratorStack stack, GameRandom random) 
     {
         super.generateRegionSurfaceTerrain(region, stack, random);
-        stack.startPlaceOnVein(this, region, random, "tropicalGrassPatches").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.8).placeTile(TileRegistry.grassID);
-        stack.startPlaceOnVein(this, region, random, "tropicalPalmTrees").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.2).placeObject("palmtree");
-        stack.startPlaceOnVein(this, region, random, "tropicalPalmTrees").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.01).placeObject("bananatree");
-        stack.startPlaceOnVein(this, region, random, "tropicalBushes").onlyOnTile(TileRegistry.overgrownGrassID).placeObjectFruitGrower("blueberrybush");
-        stack.startPlaceOnVein(this, region, random, "tropicalBushes").onlyOnTile(TileRegistry.overgrownGrassID).placeObjectFruitGrower("blackberrybush");
-        final GameObject wildMushroom = ObjectRegistry.getObject("wildmushroom");
-        stack.startPlaceOnVein(this, region, random, "tropicalMudPatches").onlyOnTile(TileRegistry.overgrownGrassID)
-        .customPlace(new GeneratorPlaceFactory.RegionPlaceFunction() 
-        {
-            public void place(GameRandom random, Region region, int regionTileX, int regionTileY, Level level, int tileX, int tileY) 
-            {
-                if (random.getChance(0.6F))
-                {
-                    region.tileLayer.setTileByRegion(regionTileX, regionTileY, TileRegistry.mudID);
-                }
-                if (region.objectLayer.getObjectIDByRegion(ObjectLayerRegistry.BASE_LAYER, regionTileX, regionTileY) == 0 && random.getChance(0.15F) && wildMushroom.canPlace(level, tileX, tileY, 0, false) == null)
-                {
-                    wildMushroom.placeObject(level, tileX, tileY, 0, false);
-                }
-          }
-        });
+        int GrassTile = TileRegistry.getTileID("haunted_grass_tile");
+        stack.startPlaceOnVein(this, region, random, "hauntedMudPatches").onlyOnTile(GrassTile).chance(0.8).placeTile(TileRegistry.mudID);
+        stack.startPlaceOnVein(this, region, random, "deadwoodTrees").onlyOnTile(GrassTile).chance(0.2).placeObject("deadwoodtree");
         stack.startPlace(this, region, random).chance(0.003).placeObject("swampsurfacerock");
         stack.startPlace(this, region, random).chance(0.005).placeObject("swampsurfacerocksmall");
         region.updateLiquidManager();

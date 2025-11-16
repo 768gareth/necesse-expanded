@@ -91,19 +91,13 @@ Settler happiness mechanics have been significantly reworked for balancing and g
 | 8    | +28   |
 
 ### Modified World Generation
-This mod also significantly changes the vanilla world generation system for gameplay purposes.
+This mod also changes the vanilla world generation system for gameplay purposes.
 
 - The density of rock walls in caves and deep caves has been reduced for ease of exploration. In other words, both types of caves should be more spacious and easier to navigate. This does not affect incursions, due to them using a different generation system.
 
-- Frost Shard clusters have a small chance to spawn in Snow Caves, providing a little variety in how to acquire frost shards. There's also a very, very rare chance for a snowman to spawn.
+- Frost shard cluster mini-biomes have a rare chance to spawn in the snow caves, providing a large amount of frost shards.
 
-- Life Quartz clusters have a small chance to spawn in all deep cave types.
-
-- Plains Deep Cave generation code has been modified. Topaz clusters have a small chance to spawn on rock tiles. Lava tiles have been replaced with spirit water, matching the original biome art style from before 1.0. Leaf piles also appear occasionally as decorations.
-
-- In Swamp Deep Caves, lava tiles have been replaced with water tiles, and emerald clusters have a small chance to spawn on rock tiles.
-
-- In Desert Deep Caves, lava tiles have been replaced with quicksand, and ruby clusters have a small chance to spawn on rock tiles.
+- Life quartz cluster mini-biomes have a chance to spawn in any deep cave, providing a large amount of life quartz.
 
 ### Hostile mob/boss loot changes
 Necesse Expanded modifies certain vanilla hostile mob loot tables to make acquiring certain items easier.

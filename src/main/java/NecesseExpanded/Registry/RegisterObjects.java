@@ -4,8 +4,10 @@ import java.awt.Color;
 
 import NecesseExpanded.Objects.*;
 import necesse.engine.registries.ObjectRegistry;
+import necesse.level.gameObject.CryptGrassObject;
 import necesse.level.gameObject.CrystalClusterObject;
 import necesse.level.gameObject.CrystalClusterSmallObject;
+import necesse.level.gameObject.GameObject;
 import necesse.level.gameObject.WallObject;
 
 public class RegisterObjects 
@@ -30,5 +32,7 @@ public class RegisterObjects
         ObjectRegistry.registerObject("fishian_venom_trap", new VenomTrapObject(FishWall), 50.0f, true);
         ObjectRegistry.registerObject("fishian_brazier", new FishianBrazierObject(), 10f, true);
         ObjectRegistry.registerObject("fishian_entrance", new FishianDeepCaveEntranceObject(), 0, false);
+
+        ObjectRegistry.registerObject("haunted_grass", (GameObject)new HauntedGrassObject(), -1.0F, true);
     }
 }

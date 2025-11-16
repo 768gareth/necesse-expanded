@@ -6,6 +6,7 @@ import necesse.inventory.item.Item;
 import necesse.inventory.item.Item.Rarity;
 import necesse.inventory.item.matItem.FishItem;
 import necesse.inventory.item.matItem.MatItem;
+import necesse.inventory.item.placeableItem.tileItem.GrassSeedItem;
 
 public class RegisterItems 
 {
@@ -32,5 +33,6 @@ public class RegisterItems
         ItemRegistry.registerItem("seaweed", (new MatItem(1000, Rarity.NORMAL, "compostabletip", new String[]{"anycompostable"})).setItemCategory(new String[]{"materials"}), 2F, true);
         ItemRegistry.registerItem("slime", (new MatItem(1000, Rarity.NORMAL, "compostabletip", new String[]{"anycompostable"})).setItemCategory(new String[]{"materials"}), 2F, true);
         ItemRegistry.registerItem("pearl", (new MatItem(250, Rarity.RARE, new String[0])).setItemCategory(new String[]{"materials", "minerals"}), 400.0F, true);
+        ItemRegistry.registerItem("haunted_grass_seed", new GrassSeedItem("haunted_grass_tile"), 2.0F, true);
     }
 }
