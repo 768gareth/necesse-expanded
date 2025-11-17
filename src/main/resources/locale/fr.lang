@@ -1,29 +1,37 @@
+# Traduction réalisée par Eryr (https://steamcommunity.com/profiles/76561198175462403) et Caranud (https://steamcommunity.com/id/Caranud/)
+# Version de mod : 0.6 [05/11/25]
+# Version de jeu : 1.0.2 [27/10/25]
+# Date de la dernière traduction : 17/11/2025
+# Note de Caranud : n’hésitez pas à reprendre cette traduction si je ne suis plus actif et disponible depuis un moment ! :) Je suis également sur le serveur Discord (https://discord.com/invite/HSvuUuA).
+
 [settingsui]
-ne_settings_separator_1=Necesse Expanded: Paramètres de raid personnalisés
-raids_enabled=Activer les raids personnalisés?
-raids_tip=Si activé, remplace le système de raids vanilla par celui de Necesse Expanded, offrant huit nouveaux raids complexes avec plusieurs types d'ennemis.
+ne_settings_separator_1=Necesse Expanded : Paramètres de raid personnalisés
+raids_enabled=Activer les raids personnalisés ?
+raids_tip=Si activé, remplace le système de raids du jeu de base par celui de Necesse Expanded, offrant huit nouveaux raids complexes avec plusieurs types d'ennemis.
 
-include_vanilla_raids=Les raids vanilla peuvent-ils apparaître?
-vanilla_raids_tip=Si activé, les raids vanilla ont une chance configurable d'apparaître, contrairement aux raids personnalisés. Veuillez noter que le multiplicateur de raid n'affecte pas les raids vanilla ; le nombre de raiders est calculé différemment.
+include_vanilla_raids=Les raids de base peuvent-ils apparaître ?
+vanilla_raids_tip=Si activé, les raids du jeu de base ont une chance configurable d'apparaître à la place des raids personnalisés. Veuillez noter que le multiplicateur de raid n'affecte PAS les raids du jeu de base ; le nombre de raiders est calculé différemment.
 
-vanilla_raid_chance=Pourcentage de chances d'apparition des raids vanilla (%):
-vanilla_raid_chance_tip=Si les raids personnalisés et les raids vanilla sont activés, cette valeur détermine la chance d'apparition des raids vanilla.
+vanilla_raid_chance=Pourcentage de chances d'apparition des raids du jeu de base (%):
+vanilla_raid_chance_tip=Si les raids personnalisés et les raids du jeu de base sont activés, cette valeur détermine la chance d'apparition des raids du jeu de base.
 
 raider_bombs_destructive=Les bombes lancées par les raiders personnalisés peuvent-elles détruire des objets ?
-bombs_tip=Si cette option est activée, certains raiders personnalisés peuvent utiliser des explosifs classiques et détruire les murs et autres objets lors des raids. Si elle est désactivée, ils utiliseront des explosifs personnalisés qui n'infligent aucun dégât.
+bombs_tip=Si cette option est activée, certains raiders personnalisés peuvent utiliser des explosifs classiques et détruire les murs et autres objets lors des raids. Si elle est désactivée, ils utiliseront des explosifs personnalisés qui n'infligent aucun dégât aux objets.
 
-raid_size_multiplier=Multiplicateur de taille du raid:
+raid_size_multiplier=Multiplicateur de taille du raid :
 raid_size_tip=Calcul de la taille du raid: Population de la colonie * Multiplicateur de taille du raid * Facteur de réussite du raid. Le facteur de réussite du raid est basé sur les performances précédentes de la colonie face aux pillards, allant de 0,5 (très mauvais) à 1,25 (parfait).
 
-ne_settings_separator_2=Necesse Expanded: Ajustements du gameplay
+ne_settings_separator_2=Colonies et colons
 
-happiness_changes_enabled=Activer le système de bonheur des colons modifié?
-happiness_changes_tip=Si cette option est activée, rééquilibre les calculs du bonheur des colons et implémente de nouveaux modificateurs de bonheur. Les colons ont des attentes réduites concernant la taille des pièces et la variété de leur alimentation, et leur bonheur augmente avec une population de colonie plus importante.
+happiness_changes_enabled=Nouveau système de bonheur des colons ?
+happiness_changes_tip=Si activé, rééquilibre les calculs de bonheur et ajoute de nouveaux modificateurs de bonheur. Les colons ont des attentes réduites concernant la taille des pièces et la variété de leur alimentation et leur bonheur est augmenté par une population plus importante.
 
-starter_equipment_enabled=Activer un meilleur équipement de départ?
-starter_equipment_tip=Si cette option est activée, les nouveaux joueurs commencent avec des fournitures de base, des outils en fer, un livre de recettes et des épées en cuir.
+ne_settings_separator_3=Divers
 
-starter_kit_enabled=Activer le kit de démarrage de colonie?
+starter_equipment_enabled=Activer un meilleur équipement de départ ?
+starter_equipment_tip=Si cette option est activée, les nouveaux joueurs commencent avec des fournitures de base, des outils en fer, un livre de recettes et des bottes de course en cuir.
+
+starter_kit_enabled=Activer le kit de démarrage de colonie ?
 starter_kit_tip=Si activé, la maison de l'ancien contiendra un drapeau de colonie, ainsi que des matériaux de construction, des ateliers d'artisanat, des graines et des terres agricoles.
 
 player_speed_patch=Augmenter la vitesse de déplacement du joueur ?
@@ -32,36 +40,36 @@ player_speed_tip=Si cette option est activée, la vitesse du personnage peut êt
 player_speed_value=Vitesse de déplacement du joueur :
 player_speed_value_tip=La valeur par défaut est de 40. Une valeur de 40 à 60 est recommandée. Redémarrez le jeu pour appliquer la valeur.
 
-chest_size_value=Emplacements de rangement du coffre:
+chest_size_value=Emplacements de rangement du coffre :
 chest_size_tip=La valeur par défaut est de 40. 40 à 80 emplacements sont recommandés. Retirez les objets des emplacements ajoutés avant de réduire la valeur. Si un emplacement ajouté est retiré avec un objet à l'intérieur, celui-ci est définitivement perdu. Rechargez le monde pour appliquer la valeur.
 
 [ui]
-keg_active=Fermentation...
-keg_inactive=Disponible pour la fermentation!
+keg_active=En train de fermenter...
+keg_inactive=Disponible pour la fermentation !
 
 [itemtooltip]
-// Bibelots
+// Accessoires (Trinkets)
 blood_crystal_tooltip=Restaure 5% de votre santé maximale après avoir tué un ennemi.
 shadow_crystal_tooltip=Accorde un bonus de 20% aux dégâts d'attaque pendant dix secondes après avoir tué un ennemi.
 shadow_crystal_bonus=Bonus temporaire de 20% aux dégâts.
 sandworm_tooth_tooltip=Les attaques au corps à corps ont 25% de chances d'infliger un poison mortel aux cibles.
-lucky_ring_tip=Tuer un ennemi (hors boss) vous fait perdre 10% de votre santé maximale en pièces.
+lucky_ring_tip=Tuer un ennemi (hors boss) vous fait obtenir 10% de sa santé maximale en pièces.
 necromancer_ring_tip=Tuer un ennemi (hors boss) vous confère une invocation temporaire pendant 8 secondes.
 forgotten_relic_tooltip=Lorsque vous subissez des dégâts, votre mana est restauré à hauteur de 10 % des dégâts reçus, avec un minimum de 1 point de mana par coup.
-forgotten_relic_lore_tooltip=Une petite statue d'une ancienne divinité fishienne associée à la mer.
-berserker_ring_tooltip=Lorsque vous subissez des dégâts, vous gagnez un cumul d'Endurance, augmentant votre gain de résilience de 10 % par cumul.
+forgotten_relic_lore_tooltip=Une petite statue d'une ancienne divinité poissonneuse, associée à la mer.
+berserker_ring_tooltip=Lorsque vous subissez des dégâts, vous gagnez une charge d'Endurance du berserker, augmentant votre gain de résilience de 10 % par charge.
 
 // Consommables
 mana_elixir_tip=Augmente votre mana maximum de 10, jusqu'à un maximum de 200.
 greater_mana_elixir_tip=Augmente votre mana maximum de 10, jusqu'à un maximum de 300.
-pearl_oyster=Contient une perle précieuse!
-pearl_oyster_tip=Équipez-vous et utilisez cet objet pour l'ouvrir!
-chest_tip=Équipez-vous et utilisez cet objet pour l'ouvrir!
-treasure_chest=Contient un objet unique rare, ainsi que des pièces.
+pearl_oyster=Contient une perle précieuse !
+pearl_oyster_tip=Équipez et utilisez cet objet pour l'ouvrir !
+chest_tip=Équipez et utilisez cet objet pour l'ouvrir !
+treasure_chest=Contient un objet unique rare ainsi que des pièces.
 stamina_potion=Augmente la capacité d'endurance et la régénération.
 
 // Armes
-juggernaut_axe_tooltip=Pour les moments où la puissance de la musique ne suffit pas.
+juggernaut_axe_tooltip=Pour les moments où la puissance de la musique ne suffit plus.
 frostbolt_tip=Lance un projectile givrant à tête chercheuse qui ralentit les ennemis pendant deux secondes.
 inferno_tip=Lance un jet de lave en fusion, infligeant un malus de brûlure aux ennemis.
 winterwrath_tip=Lance trois glaçons à tête chercheuse pour transpercer et ralentir les ennemis.
@@ -75,45 +83,51 @@ murasama_tip_2=Possédée par un esprit sanguinaire, cette lame maudite confère
 // Munitions
 venom_bullet_tip=10 % de chances d'infliger un puissant poison à l'impact, augmentant les dégâts infligés à la victime de 20 % pendant cinq secondes.
 vampire_bullet_tip=10 % de chances d'absorber l'essence vitale de la cible à l'impact, vous soignant de 1 % de vos points de vie maximum.
-solar_bullet_tip=10% chance on hit for the target to gain a stack of Sunlight's Judgement, dealing increasing damage over time based on the number of stacks, and lasting until all stacks have depleted.
-lunar_bullet_tip=Inflicts the Moonlight Curse, halving the victim's armour, and causing them to take 25% more damage for five seconds.
+solar_bullet_tip=10 % de chances, à l’impact, que la cible obtienne une charge de Jugement solaire, infligeant des dégâts croissants au fil du temps en fonction du nombre de charges, et ce jusqu’à épuisement de toutes les charge.
+lunar_bullet_tip=Inflige la Malédiction du clair de lune, réduisant de moitié l’armure de la victime et lui faisant subir 25 % de dégâts supplémentaires pendant cinq secondes.
+
+[tile]
+fishian_tile=Sol poiscaille en écailles
 
 [object]
 keg=Baril
 
 frostshard_cluster=Amas d'éclats de givre
-frostshard_cluster_pure=Amas d'éclats de givre purs
+frostshard_cluster_pure=Amas pur d'éclats de givre
 frostshard_cluster_small=Petit amas d'éclats de givre
 
 life_quartz_cluster=Amas de quartz de vie
-life_quartz_cluster_pure=Amas de quartz de vie pur
+life_quartz_cluster_pure=Amas pur de quartz de vie
 life_quartz_cluster_small=Petit amas de quartz de vie
 
-fishian_wall=Fishian Wall
-fishian_door=Fishian Door
-fishian_arrowtrap=Fishian Arrow Trap
+fishian_wall=Mur poiscaille
+fishian_door=Porte poiscaille
+fishian_arrowtrap=Piège poiscaille à flèche
+fishian_venom_trap=Piège poiscaille à venin
+fishian_brazier=Brasier poiscaille
 
 [buff]
-murasama_revenge_buff=La vengeance de Murasama
-endurance_stack_buff=Endurance
+murasama_revenge_buff=Vengeance de Murasama
+endurance_stack_buff=Endurance de berserker
 
 [item]
-// Bibelots
+// Accessoires (trinkets)
 blood_crystal=Cristal de sang
 shadow_crystal=Cristal d'ombre
 sandworm_tooth=Dent de ver des sables
 lucky_ring=Bague porte-bonheur
 necromancer_ring=Anneau de nécromancien
-lensmaker_glasses=Lunettes de fabricant de lentilles
+lensmaker_glasses=Lunettes d’opticien
 ancient_tablet=Tablette ancienne
 warrior_ring=Anneau de guerrier
 summoner_grimoire=Grimoire d'invocateur
-berserker_ring=Anneau de berserker
+berserker_ring=Anneau berserk
 forgotten_relic=Relique oubliée
 leather_scabbard=Fourreau en cuir
+void_amulet=Amulette du Vide
 
 // Armes de corps à corps
-juggernaut_axe=Hache de mastodonte
+juggernaut_axe=Hache du Fléau
 glacial_spear=Lance de glace
 murasama=Murasama
 
@@ -122,51 +136,51 @@ murasama=Murasama
 // Armes magiques
 frostbolt=Éclair de givre
 inferno=Enfer
-winterwrath=La colère de l'hiver
-brimstone=Soufre
+winterwrath=Colère de l'hiver
+brimstone=Boule de soufre
 
 // Armes d'invocation
 
 // Munitions
-vampire_bullet=Balle de vampire
-venom_bullet=Balle de venin
-solar_bullet=
-lunar_bullet=
+vampire_bullet=Balle vampire
+venom_bullet=Balle venimeuse
+solar_bullet=Balle solaire
+lunar_bullet=Balle lunaire
 
 // Outils
 crystal_fishing_rod=Canne à pêche en cristal
 
 // Consommables
-greater_mana_elixir=Élixir de mana supérieur
-mana_elixir=Élixir de mana
+greater_mana_elixir=Élixir majeure de réserve arcanique
+mana_elixir=Élixir de réserve arcanique
 oyster=Huître
 pearl_oyster=Huître perlée
 fruit_jam=Confiture de fruits
 jam_donut=Beignet à la confiture
 angler_fish_stew=Ragoût de pêche
-heartfish_stew=Ragoût de Poisson-cœur
-pearlfish_stew=Ragoût de Poisson-perle
+heartfish_stew=Ragoût de poisson-cœur
+pearlfish_stew=Ragoût de poisson-perle
 mushroom_stew=Ragoût de champignons
-beer=Bière
-cider=Cidre
-mead=Hydromel
+beer=Bière blonde
+cider=Cidre fermier
+mead=Hydromel sec
 blueberry_wine=Vin de myrtille
 raspberry_wine=Vin de framboise
 blackberry_wine=Vin de mûre
 whiskey=Whisky
-elder_coffee=Café de sureau
-miner_brew=Bière de mineur
-pearlescent_wine=Nacre Vin
+elder_coffee=Café de l’Ancien
+miner_brew=Breuvage de mineur
+pearlescent_wine=Vin nacré
 rum=Rhum de pirate
 surface_treasure_chest=Coffre au trésor de surface
-cave_treasure_chest=Coffre au trésor de la grotte
-deep_treasure_chest=Coffre au trésor de la grotte profonde
-incursion_treasure_chest=Coffre au trésor de l'incursion
+cave_treasure_chest=Coffre au trésor de grotte
+deep_treasure_chest=Coffre au trésor de grotte profonde
+incursion_treasure_chest=Coffre au trésor d'incursion
 stamina_potion=Potion d'endurance
 
 // Effets de statut
 shadow_crystal_bonus=Bonus aux dégâts du cristal d'ombre
-venom_bullet_debuff=Débuff de balle venimeuse
+venom_bullet_debuff=Malus de balle venimeuse
 stamina_potion_buff=Potion d'endurance
 
 // Matériaux d'artisanat
@@ -174,129 +188,129 @@ lunar_essence=Essence lunaire
 solar_essence=Essence solaire
 demonfish=Poisson-démon
 heartfish=Poisson-cœur
-glacierfish=Poisson-glacier
+glacierfish=Omble des glaciers
 pearlfish=Poisson-perle
 swamp_eel=Anguille des marais
-slimefish=Poisson-boue
+slimefish=Poisson-limon
 saltwater_shark=Requin marin
 pearl=Perle
 seaweed=Algue
-slime=Boue
+slime=Substance gélatineuse
+
+// Misc
+dryad_map=Carte de la dryade
+fishian_map=Carte de l’entrée du biome poiscaille
 
 [mob]
 // Forêt
 zombie_miner=Mineur zombie
 
 // Neige
-frozen_dwarf=Nain gelé
-frozen_dwarf_mage=Mage nain gelé
+frozen_dwarf=Nain de glace
+frozendwarf=Nain de glace frondeur
+frozen_dwarf_mage=Nain de glace mage
 ice_golem=Golem de glace
 
 // Donjon
 
 // Plaines
+friendly_dryad=Dryade amicale
+friendly_dryadname=Dryade amicale
 
 // Marais
 
 // Désert
 ancient_warrior=Guerrier ancien
 
+// Friendly
+settlement_dog=Chien
+settlement_dogname=Chien
+
 // Créatures
-crystal_caveling=Cave de cristal
-shard_caveling=Cave d'éclat
-slime_caveling=Cave de boue
+crystal_caveling=Cavernier crystalin
+shard_caveling=Cavernier des éclats
+slime_caveling=Limon cavernier
 
 // Invocations
-necromancer_minion=Serviteur nécromantique
+necromancer_minion=Serviteur du nécromancien
 
 // Raiders
-stabby_bush_raider=Guerrier du buisson poignardé
+stabby_bush_raider=Pillard des ronces embusqué
 
 // Raiders zombies
-zombie_raider=Raider zombie
-zombie_archer_raider=Raiders archers zombies
+zombie_raider=Zombie pillard
+zombie_archer_raider=Zombie pillard archer
 
 // Runebound Raiders
-runebound_boss=Capitaine Runebound
-runebound_berserker=Berserker Runebound
-runebound_trapper=Trappeur Runebound
-runebound_warrior=Guerrier Runebound
+runebound_boss=Capitaine runique pillard
+runebound_berserker=Berserker runique pillard
+runebound_trapper=Trappeur runique pillard
+runebound_warrior=Guerrier runique pillard
 
 // Pirate raiders
-pirate_brawler=Pirate Brawler
-pirate_sharpshooter=Pirate Sharpshooter
-pirate_grenadier=Pirate Grenadier
-pirate_gunner=Pirate Gunner
+pirate_brawler=Bretteur pirate pillard
+pirate_sharpshooter=Franc-tireur pirate pillard
+pirate_grenadier=Grenadier pirate pillard
+pirate_gunner=Artilleur pirate pillard
 
 // Skeleton raiders
-skeleton_raider=Skeleton Raider
-skeleton_summoner_raider=Skeleton Summoner Raider
-skeleton_miner_raider=Skeleton Miner Raider
-
-// Pirates pillards
-pirate_brawler=Pirate bagarreur
-pirate_sharpshooter=Pirate tireur d'élite
-pirate_grenadier=Pirate grenadier
-pirate_gunner=Pirate artilleur
-
-// Squelettes pillards
 skeleton_raider=Squelette pillard
-skeleton_summoner_raider=Squelette pillard invocateur
-skeleton_miner_raider=Squelette pillard mineur
+skeleton_summoner_raider=Squelette invocateur pillard
+skeleton_miner_raider=Squelette mineur pillard
 
-// Ninja pillards
+// Ninja raiders
 ninja_raider=Ninja pillard
 
 // Squelettes pillards anciens
 ancient_skeleton_raider=Squelette pillard ancien
-ancient_skeleton_summoner_raider=Squelette pillard invocateur ancien
-ancient_skeleton_miner_raider=Squelette pillard mineur ancien
+ancient_skeleton_summoner_raider=Squelette invocateur pillard ancien
+ancient_skeleton_miner_raider=Squelette mineur pillard ancien
 
 // Squelettes pillards de cimetière
 vampire_raider=Vampire pillard ancien
 
 // Spiderkin Raiders
-spiderkin_warrior_raider=Raider Guerrier Spiderkin
-spiderkin_archer_raider=Raider Archer Spiderkin
-spiderkin_mage_raider=Raider Mage Spiderkin
-spiderkin_summoner_raider=Invocateur Spiderkin
-spiderkin_healer_raider=Soigneur Spiderkin
+spiderkin_warrior_raider=Guerrier tisseur d’ombre pillard
+spiderkin_archer_raider=Archer tisseur d’ombre pillard
+spiderkin_mage_raider=Mage tisseur d’ombre pillard
+spiderkin_summoner_raider=Invocateur tisseur d’ombre pillard
+spiderkin_healer_raider=Soigneur tisseur d’ombre tisseur d’ombre
 
 // Raiders Slime
-mage_slime_raider=Raider Mage Slime
-warrior_slime_raider=Raider Guerrier Slime
+mage_slime_raider=Mage limon pillard
+warrior_slime_raider=Guerrier limon pillard
 
 [misc]
-zombie_raiders=Zombies
-runebound_raiders=Le Runebound
-pirate_raiders=Pirates
-skeleton_raiders=Squelettes
-ninja_raiders=Ninjas
-ancient_skeleton_raiders=Squelettes anciens
-spiderkin_raiders=Raiders du Royaume des Araignées
-slimecave_raiders=Raiders des Grottes de Gelée
-graveyard_raiders=Puissants pillards morts-vivants
+zombie_raiders=Pillards zombies
+runebound_raiders=Pillards runiques
+pirate_raiders=Pillards pirates
+skeleton_raiders=Pillards squelettes
+ninja_raiders=Pillards ninjas
+ancient_skeleton_raiders=Pillards squelettes anciens
+spiderkin_raiders=Pillards arachnéen
+slimecave_raiders=Pillards limons
+graveyard_raiders=Pillards des cimetières
 
 [journal]
-snow_defeatmages=[mob=frozen_dwarf_mage]Vaincre trois mages nains gelés.
-defepiratecaptain=[mob=piratecaptain]Vaincre le capitaine pirate !
-findpiratetrinket=[item=foolsgambit]Trouvez un bijou unique dans un village pirate.
-snow_defeatgolems=[mob=ice_golem]Vaincre cinq golems de glace.
+snow_defeatmages=[mob=frozen_dwarf_mage] Vaincre trois mages nains gelés.
+defepiratecaptain=[mob=piratecaptain] Vaincre le capitaine pirate !
+findpiratetrinket=[item=foolsgambit] Trouvez un bijou unique dans un village pirate.
+snow_defeatgolems=[mob=ice_golem] Vaincre cinq golems de glace.
 
 [settlement]
 pensées=Modificateurs de bonheur :
 
 moodveryunhappy=misérable
-moodunhappy=malheureux
-moodsomewhathappy=content
-moodveryhappy=très heureux
-moodextremelyhappy=extrêmement heureux
-moodhappiness=Ce colon est <happiness>.
+moodunhappy=malheureux !
+moodsomewhathappy=content.
+moodveryhappy=très heureux.
+moodextremelyhappy=extrêmement heureux ! [MAX]
+moodhappiness=Ce colon est <happiness>
 
 nobed=Aucun lit n'a été attribué à ce colon !
 bedoutside=Le lit de ce colon est à l'extérieur !
 
-roommissingfloor=La chambre de ce colon n'a pas un étage complet.
+roommissingfloor=Le sol de la chambre de ce colon n'est pas complètement posé.
 roommissinglights=La chambre de ce colon manque de lumière.
 
 sharingroom=Ce colon partage sa chambre avec d'autres colons.
@@ -308,32 +322,32 @@ sizesmall=petite.
 sizemediocre=de taille moyenne.
 sizedecent=assez grande.
 sizelarge=très grande !
-sizehuge=énorme !
-sizemood=La chambre de ce colon mesure <taille>
+sizehuge=énorme !! [MAX]
+sizemood=La chambre de ce colon est <taille>
 
 nofoodmood=Ce colon n'a pas mangé récemment.
 dietsame=Le régime alimentaire de ce colon n'a pas varié du tout.
 dietslightly=Le régime alimentaire de ce colon a été légèrement varié.
 dietsomewhat=Le régime alimentaire de ce colon a été quelque peu varié.
 dietnicely=Le régime alimentaire de ce colon a été agréablement varié.
-dietextremely=Le régime alimentaire de ce colon était extrêmement varié.
+dietextremely=Le régime alimentaire de ce colon était extrêmement varié. [MAX]
 
 // Qualité de la chambre.
-roomplain=minimal
-roomdull=terne
-roomsimple=simple
-roomnormal=normal
-roomgood=bon
-roomimpressive=impressionnant
-roomwonderful=merveilleux
-roomunrivaled=inégalable
-roommood=La chambre de ce colon possède une variété de meubles de <quality>.
+roomplain=minimale.
+roomdull=terne.
+roomsimple=simple.
+roomnormal=normale.
+roomgood=bonne.
+roomimpressive=impressionnante !
+roomwonderful=merveilleuse !
+roomunrivaled=inégalable !! [MAX]
+roommood=La chambre de ce colon possède une variété de meubles <quality>
 
 // Régime alimentaire
 simplemeal=Ce colon a consommé pour la dernière fois un repas simple de qualité.
 finemeal=Ce colon a consommé pour la dernière fois un repas raffiné.
 gourmetmeal=Ce colon a consommé pour la dernière fois un repas gastronomique.
-perfectmeal=Ce colon a mangé pour la dernière fois un repas de qualité parfaite!
+perfectmeal=Ce colon a mangé pour la dernière fois un repas de qualité parfaite !
 
 foodperfect=Parfait
 
@@ -342,6 +356,7 @@ progression_bonus=Vous avez terminé plusieurs niveaux de quête pour cette colo
 
 // Effets de raid
 well_defended_bonus=Cette colonie a été bien défendue contre les pillards.
+poorly_defended_penalty=Cette colonie a été mal défendue contre les pillards.
 settlement_survived_raid=Cette colonie a récemment survécu à un raid.
 
 // Taille de la colonie.
@@ -353,4 +368,30 @@ hugesettlement=Ce colon vit dans une immense colonie.
 
 // Misc happiness effects
 travel_bonus=Cette colonie a accès à un réseau de transport rapide.
-recent_settler_death=A settler recently died at this settlement.
+recent_settler_death=Un colon est récemment tombé au combat dans cette colonie
+settlement_pet_bonus=Cette colonie possède au moins un animal de compagnie.
+
+// Food happiness effects.
+
+[mobmsg]
+// Dryad
+dryadgreeting1=Ne compte que les heures de joie.
+dryadgreeting2=Mieux vaut subir une injustice que la commettre.
+dryadgreeting3=Grave dans ton regard l’image de l’injustice.
+
+// Elder general talk.
+elder_daytalk_1=Bonne journée, <player> ! Avais-tu besoin de quelque chose ?
+elder_daytalk_2=Assure-toi d’être bien préparé avant de partir. As-tu tout ce qu’il te faut ?
+elder_daytalk_3=La préparation est la clé du succès, <player>. Sois prêt à affronter les défis à venir.
+
+elder_nighttalk_1=Voyage avec prudence la nuit, <player>. Qui sait ce qui rôde dans l’obscurité ?
+elder_nighttalk_2=N’oublie pas de te reposer régulièrement, <player>. Ta santé est précieuse !
+elder_nighttalk_3=Quand as-tu bu de l’eau pour la dernière fois, <player> ?
+
+// Elder mod references
+elder_aphorea_mod=J’ai entendu des rumeurs sur des forêts frappées par une étrange malédiction. Cette lueur inquiétante… Peut-être devrais-tu enquêter ?
+elder_scorched_mod=J’ai entendu parler de créatures dangereuses vivant dans les terres volcaniques, là où la lave affleure. Marche avec prudence !
+
+[biome]
+dryad_house=Maison de la dryade
+fishian_biome_entrance=Entrée du biome poiscaille
