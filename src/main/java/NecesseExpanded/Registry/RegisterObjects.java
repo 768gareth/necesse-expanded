@@ -4,7 +4,6 @@ import java.awt.Color;
 
 import NecesseExpanded.Objects.*;
 import necesse.engine.registries.ObjectRegistry;
-import necesse.level.gameObject.CryptGrassObject;
 import necesse.level.gameObject.CrystalClusterObject;
 import necesse.level.gameObject.CrystalClusterSmallObject;
 import necesse.level.gameObject.GameObject;

@@ -4,7 +4,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import necesse.engine.AbstractMusicList;
 import necesse.engine.MusicList;
 import necesse.engine.registries.MusicRegistry;
-import necesse.engine.registries.ObjectLayerRegistry;
 import necesse.engine.registries.ObjectRegistry;
 import necesse.engine.registries.TileRegistry;
 import necesse.engine.sound.SoundSettings;
@@ -12,9 +11,7 @@ import necesse.engine.sound.SoundSettingsRegistry;
 import necesse.engine.util.GameRandom;
 import necesse.engine.util.LevelIdentifier;
 import necesse.engine.world.biomeGenerator.BiomeGeneratorStack;
-import necesse.engine.world.biomeGenerator.GeneratorPlaceFactory;
 import necesse.entity.mobs.PlayerMob;
-import necesse.level.gameObject.GameObject;
 import necesse.level.gameTile.GameTile;
 import necesse.level.maps.Level;
 import necesse.level.maps.biomes.Biome;
@@ -30,17 +27,16 @@ public class HauntedForestBiome extends Biome
     public static FishingLootTable SurfaceFish = new FishingLootTable().addAll(Biome.defaultSurfaceFish);
     public static FishingLootTable CaveFish = new FishingLootTable().addAll(Biome.defaultCaveFish);
     public static FishingLootTable DeepCaveFish = new FishingLootTable().addWater(100, "heartfish");
-    public static MobSpawnTable SurfaceMobs = new MobSpawnTable().add(25, "zombie");
-    public static MobSpawnTable CaveMobs = new MobSpawnTable().add(25, "zombie");
-    public static MobSpawnTable DeepCaveMobs = new MobSpawnTable().add(25, "zombie");
+    public static MobSpawnTable SurfaceMobs = new MobSpawnTable().add(25, "haunted_zombie").add(25, "voidapprentice");
+    public static MobSpawnTable CaveMobs = new MobSpawnTable().add(25, "enchantedzombie").add(25, "enchantedzombiearcher");
+    public static MobSpawnTable DeepCaveMobs = new MobSpawnTable().add(25, "skeleton");
     public static MobSpawnTable SurfaceCritters = new MobSpawnTable()
     .add(100, "swampslug")
-    .add(100, "crab")
     .add(80, "frog")
     .add(40, "bird")
     .add(40, "cardinalbird");
-    public static MobSpawnTable CaveCritters = new MobSpawnTable().add(100, "crab");
-    public static MobSpawnTable DeepCaveCritters = new MobSpawnTable().add(100, "crab");
+    public static MobSpawnTable CaveCritters = new MobSpawnTable().include(defaultCaveCritters);
+    public static MobSpawnTable DeepCaveCritters = new MobSpawnTable().include(defaultCaveCritters);
 
     public HauntedForestBiome() {  }
 
@@ -104,7 +100,7 @@ public class HauntedForestBiome extends Biome
     @Override
     public AbstractMusicList getLevelMusic(Level level, PlayerMob perspective) 
     {
-        return new MusicList(MusicRegistry.ByTheField);
+        return new MusicList(MusicRegistry.InvasionoftheCrypt);
     }
 
     @Override
@@ -185,16 +181,21 @@ public class HauntedForestBiome extends Biome
         stack.startPlace(this, region, random).chance(0.003).placeObject("swampsurfacerock");
         stack.startPlace(this, region, random).chance(0.005).placeObject("swampsurfacerocksmall");
         region.updateLiquidManager();
+        region.simulateWorldTime(10000000, true);
     }
 
     @Override
     public void generateRegionCaveTerrain(Region region, BiomeGeneratorStack stack, GameRandom random) {
         super.generateRegionCaveTerrain(region, stack, random);
+        region.updateLiquidManager();
+        region.simulateWorldTime(10000000, true);
     }
 
     @Override
     public void generateRegionDeepCaveTerrain(Region region, BiomeGeneratorStack stack, GameRandom random) {
         super.generateRegionDeepCaveTerrain(region, stack, random);
+        region.updateLiquidManager();
+        region.simulateWorldTime(10000000, true);
     }
 
     @Override

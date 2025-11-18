@@ -185,6 +185,9 @@ public class RegisterRecipes
         // Bait
         Recipes.registerModRecipe(new Recipe("anglersbait", 1, RecipeTechRegistry.WORKSTATION, new Ingredient[] { new Ingredient("wormbait", 1), new Ingredient("seaweed", 1)}));
 
+        // Crafting Materials
+        Recipes.registerModRecipe(new Recipe("sugar", 2, RecipeTechRegistry.COMPOST_BIN, new Ingredient[] { new Ingredient("honey_plort", 1)}));
+
         // Misc
         Recipes.registerModRecipe(new Recipe("voidshard", 3, RecipeTechRegistry.DEMONIC_WORKSTATION, new Ingredient[] { new Ingredient("demonfish", 1)}));
         Recipes.registerModRecipe(new Recipe("lifequartz", 3, RecipeTechRegistry.TUNGSTEN_WORKSTATION, new Ingredient[] { new Ingredient("heartfish", 1)}));

@@ -3,9 +3,9 @@ package NecesseExpanded;
 import customsettingslib.components.settings.IntSetting;
 import customsettingslib.settings.CustomModSettings;
 import customsettingslib.settings.CustomModSettingsGetter;
+import NecesseExpanded.Mobs.Friendly.Husbandry.HoneySlimeHusbandryMob;
 import NecesseExpanded.Mobs.Hostile.Snow.IceGolemMob;
 import NecesseExpanded.Registry.*;
-
 import necesse.engine.modLoader.ModSettings;
 import necesse.engine.modLoader.annotations.ModEntry;
 import necesse.gfx.gameTexture.GameTexture;
@@ -17,14 +17,14 @@ public class Main
 
     public void preInit()
     {
-        RegisterMobs.Register();
-        RegisterItems.Register();
+        PreRegisterMobs.Register();
+        PreRegisterItems.Register();
     }
 
     public void init() 
     {
-        RegisterItems2.Register();
-        RegisterMobs2.Register();
+        RegisterItems.Register();
+        RegisterMobs.Register();
         RegisterObjects.Register();
         RegisterEvents.Register();
         RegisterBuffs.Register();
@@ -40,6 +40,7 @@ public class Main
     public void initResources()
     {
         IceGolemMob.texture = GameTexture.fromFile("mobs/ice_golem");
+        HoneySlimeHusbandryMob.Texture = GameTexture.fromFile("mobs/honey_slime");
     }
 
     public void postInit()

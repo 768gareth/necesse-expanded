@@ -83,6 +83,9 @@ vampire_bullet_tip=10% chance on hit to absorb the target's life essence, healin
 
 [tile]
 fishian_tile=Fishian Tile
+frost_shard_gravel=Frost Shard Gravel
+life_quartz_gravel=Life Quartz Gravel
+
 
 [object]
 keg=Keg
@@ -99,6 +102,9 @@ fishian_wall=Fishian Wall
 fishian_door=Fishian Door
 fishian_venom_trap=Fishian Venom Trap
 fishian_brazier=Fishian Brazier
+fishian_walltrap=Fishian Trap
+
+haunted_grass=Haunted Grass
 
 [buff]
 murasama_revenge_buff=Murasama's Revenge
@@ -190,10 +196,12 @@ saltwater_shark=Saltwater Shark
 pearl=Pearl
 seaweed=Seaweed
 slime=Slime
+honey_plort=Honey Plort
 
 // Misc
 dryad_map=Dryad's Map
 fishian_map=Fishian Biome Entrance Map
+haunted_grass_seed=Haunted Grass Seed
 
 [mob]
 // Forest
@@ -204,6 +212,9 @@ frozendwarf=Frozen Dwarf Thrower
 frozen_dwarf=Frozen Dwarf
 frozen_dwarf_mage=Frozen Dwarf Mage
 ice_golem=Ice Golem
+
+// Haunted Forest
+haunted_zombie=Haunted Zombie
 
 // Dungeon
 
@@ -219,6 +230,7 @@ ancient_warrior=Ancient Warrior
 // Friendly
 settlement_dog=Dog
 settlement_dogname=Dog
+honey_slime=Honey Slime
 
 // Critters
 crystal_caveling=Crystal Caveling

@@ -39,8 +39,8 @@ public class TropicalBiome extends Biome
     .add(80, "frog")
     .add(40, "bird")
     .add(40, "cardinalbird");
-    public static MobSpawnTable CaveCritters = new MobSpawnTable().add(100, "crab");
-    public static MobSpawnTable DeepCaveCritters = new MobSpawnTable().add(100, "crab");
+    public static MobSpawnTable CaveCritters = new MobSpawnTable().include(defaultCaveCritters);
+    public static MobSpawnTable DeepCaveCritters = new MobSpawnTable().include(defaultCaveCritters);
 
     public TropicalBiome() {  }
 
@@ -205,16 +205,21 @@ public class TropicalBiome extends Biome
         stack.startPlace(this, region, random).chance(0.003).placeObject("swampsurfacerock");
         stack.startPlace(this, region, random).chance(0.005).placeObject("swampsurfacerocksmall");
         region.updateLiquidManager();
+        region.simulateWorldTime(10000000, true);
     }
 
     @Override
     public void generateRegionCaveTerrain(Region region, BiomeGeneratorStack stack, GameRandom random) {
         super.generateRegionCaveTerrain(region, stack, random);
+        region.updateLiquidManager();
+        region.simulateWorldTime(10000000, true);
     }
 
     @Override
     public void generateRegionDeepCaveTerrain(Region region, BiomeGeneratorStack stack, GameRandom random) {
         super.generateRegionDeepCaveTerrain(region, stack, random);
+        region.updateLiquidManager();
+        region.simulateWorldTime(10000000, true);
     }
 
     @Override
