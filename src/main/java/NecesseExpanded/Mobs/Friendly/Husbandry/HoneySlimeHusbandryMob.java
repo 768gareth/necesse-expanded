@@ -3,7 +3,6 @@ package NecesseExpanded.Mobs.Friendly.Husbandry;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.util.List;
-import necesse.engine.GameTileRange;
 import necesse.engine.gameLoop.tickManager.TickManager;
 import necesse.engine.registries.MobRegistry;
 import necesse.engine.sound.SoundSettings;

@@ -150,7 +150,7 @@ public class HauntedForestBiome extends Biome
      }
   
      public int getGenerationDeepCaveRockObjectID() {
-        return ObjectRegistry.deepSwampRockID;
+        return ObjectRegistry.deepRockID;
      }
 
     public int getGenerationBeachTileID() 
@@ -177,9 +177,9 @@ public class HauntedForestBiome extends Biome
         super.generateRegionSurfaceTerrain(region, stack, random);
         int GrassTile = TileRegistry.getTileID("haunted_grass_tile");
         stack.startPlaceOnVein(this, region, random, "hauntedMudPatches").onlyOnTile(GrassTile).chance(0.8).placeTile(TileRegistry.mudID);
-        stack.startPlaceOnVein(this, region, random, "deadwoodTrees").onlyOnTile(GrassTile).chance(0.2).placeObject("deadwoodtree");
-        stack.startPlace(this, region, random).chance(0.003).placeObject("swampsurfacerock");
-        stack.startPlace(this, region, random).chance(0.005).placeObject("swampsurfacerocksmall");
+        stack.startPlaceOnVein(this, region, random, "deadwoodTrees").onlyOnTile(GrassTile).chance(0.25).placeObject("deadwoodtree");
+        stack.startPlace(this, region, random).chance(0.007).placeObject("swampsurfacerock");
+        stack.startPlace(this, region, random).chance(0.009).placeObject("swampsurfacerocksmall");
         region.updateLiquidManager();
         region.simulateWorldTime(10000000, true);
     }

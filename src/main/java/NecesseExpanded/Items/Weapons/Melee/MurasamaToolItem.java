@@ -165,13 +165,13 @@ public class MurasamaToolItem extends KatanaToolItem
         });
   }
 
- public InventoryItem onAttack(Level level, int x, int y, ItemAttackerMob attackerMob, int attackHeight, InventoryItem item, ItemAttackSlot slot, int animAttack, int seed, GNDItemMap mapContent) {
+  public InventoryItem onAttack(Level level, int x, int y, ItemAttackerMob attackerMob, int attackHeight, InventoryItem item, ItemAttackSlot slot, int animAttack, int seed, GNDItemMap mapContent) {
       if (!attackerMob.isPlayer && this.canDash(attackerMob)) {
          float stacksPercent = (float)attackerMob.buffManager.getStacks(BuffRegistry.KATANA_DASH_STACKS) / (float)this.maxDashStacks.getValue(this.getUpgradeTier(item));
          float animModifier = (float)GameMath.lerp(Math.min(Math.pow((double)(stacksPercent * 2.0F), 0.5), 1.0), 8L, 1L);
          int animTime = (int)((float)this.getAttackAnimTime(item, attackerMob) * animModifier);
          mapContent.setBoolean("chargeUp", true);
-         attackerMob.startAttackHandler(new KatanaDashAttackHandler(attackerMob, slot, item, this, animTime, new Color(172, 0, 0), seed));
+         attackerMob.startAttackHandler(new KatanaDashAttackHandler(attackerMob, slot, item, this, animTime, new Color(172, 0, 0), seed, x, y));
          return item;
       } else {
          boolean isSlash = item.getGndData().getBoolean("slash");
