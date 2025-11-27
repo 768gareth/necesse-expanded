@@ -1,7 +1,6 @@
 package NecesseExpanded.Registry;
 
 import NecesseExpanded.Mobs.Friendly.Human.FriendlyDryadMob;
-import NecesseExpanded.Mobs.Hostile.HauntedForest.HauntedZombie;
 import NecesseExpanded.Mobs.Hostile.Raiders.StabbyBushRaider;
 import NecesseExpanded.Mobs.Hostile.Raiders.AncientSkeletonRaiders.*;
 import NecesseExpanded.Mobs.Hostile.Raiders.GraveyardRaiders.*;
@@ -19,10 +18,6 @@ public class RegisterMobs
 {
     public static void Register()
     {
-        System.out.println("[Necesse Expanded] Registering new mobs...");
-
-        MobRegistry.registerMob("haunted_zombie", HauntedZombie.class, true);
-
         System.out.println("[Necesse Expanded] Registering new human mobs...");
         
         MobRegistry.registerMob("friendly_dryad", FriendlyDryadMob.class, true);

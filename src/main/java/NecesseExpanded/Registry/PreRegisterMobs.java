@@ -6,6 +6,9 @@ import NecesseExpanded.Mobs.Friendly.Critters.SlimeCaveling;
 import NecesseExpanded.Mobs.Friendly.Husbandry.HoneySlimeHusbandryMob;
 import NecesseExpanded.Mobs.Hostile.Desert.AncientWarrior;
 import NecesseExpanded.Mobs.Hostile.Forest.ZombieMiner;
+import NecesseExpanded.Mobs.Hostile.HauntedForest.HauntedZombie;
+import NecesseExpanded.Mobs.Hostile.Jungle.ZombiePirate;
+import NecesseExpanded.Mobs.Hostile.Jungle.ZombiePirateGunner;
 import NecesseExpanded.Mobs.Hostile.Snow.FrozenDwarf;
 import NecesseExpanded.Mobs.Hostile.Snow.FrozenDwarfMage;
 import NecesseExpanded.Mobs.Hostile.Snow.IceGolemMob;
@@ -36,6 +39,13 @@ public class PreRegisterMobs
 
         // Desert
         MobRegistry.registerMob("ancient_warrior", AncientWarrior.class, true);
+
+        // Haunted Forest
+        MobRegistry.registerMob("haunted_zombie", HauntedZombie.class, true);
+
+        // Tropical
+        MobRegistry.registerMob("zombie_pirate", ZombiePirate.class, true);
+        MobRegistry.registerMob("zombie_pirate_gunner", ZombiePirateGunner.class, true);
 
         // Summons
         MobRegistry.registerMob("necromancer_minion", NecromancerMinion.class, false);

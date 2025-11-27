@@ -14,6 +14,7 @@ import necesse.engine.util.LevelIdentifier;
 import necesse.engine.world.biomeGenerator.BiomeGeneratorStack;
 import necesse.engine.world.biomeGenerator.GeneratorPlaceFactory;
 import necesse.entity.mobs.PlayerMob;
+import necesse.inventory.lootTable.LootTablePresets;
 import necesse.level.gameObject.GameObject;
 import necesse.level.gameTile.GameTile;
 import necesse.level.maps.Level;
@@ -23,6 +24,9 @@ import necesse.level.maps.biomes.FishingSpot;
 import necesse.level.maps.biomes.MobSpawnTable;
 import necesse.level.maps.presets.RandomCaveChestRoom;
 import necesse.level.maps.presets.caveRooms.CaveRuins;
+import necesse.level.maps.presets.set.ChestRoomSet;
+import necesse.level.maps.presets.set.FurnitureSet;
+import necesse.level.maps.presets.set.WallSet;
 import necesse.level.maps.regionSystem.Region;
 
 public class TropicalBiome extends Biome 
@@ -30,9 +34,9 @@ public class TropicalBiome extends Biome
     public static FishingLootTable SurfaceFish = new FishingLootTable().addAll(Biome.defaultSurfaceFish);
     public static FishingLootTable CaveFish = new FishingLootTable().addAll(Biome.defaultCaveFish);
     public static FishingLootTable DeepCaveFish = new FishingLootTable().addWater(100, "heartfish");
-    public static MobSpawnTable SurfaceMobs = new MobSpawnTable().add(25, "zombie");
-    public static MobSpawnTable CaveMobs = new MobSpawnTable().add(25, "zombie");
-    public static MobSpawnTable DeepCaveMobs = new MobSpawnTable().add(25, "zombie");
+    public static MobSpawnTable SurfaceMobs = new MobSpawnTable().add(80, "zombie_pirate").add(20, "zombie_pirate_gunner");
+    public static MobSpawnTable CaveMobs = new MobSpawnTable().add(25, "zombie").add(25, "zombiearcher");
+    public static MobSpawnTable DeepCaveMobs = new MobSpawnTable().add(25, "skeleton");
     public static MobSpawnTable SurfaceCritters = new MobSpawnTable()
     .add(100, "swampslug")
     .add(100, "crab")
@@ -102,9 +106,20 @@ public class TropicalBiome extends Biome
     }
 
     @Override
-    public AbstractMusicList getLevelMusic(Level level, PlayerMob perspective) 
+    public AbstractMusicList getLevelMusic(Level Level, PlayerMob perspective) 
     {
-        return new MusicList(MusicRegistry.ByTheField);
+        if (Level.getIdentifier() == LevelIdentifier.DEEP_CAVE_IDENTIFIER)
+        {
+            return new MusicList(MusicRegistry.PiratesHorizon);
+        }
+        else if (Level.isCave)
+        {
+            return new MusicList(MusicRegistry.MurkyMire);
+        }
+        else
+        {
+            return new MusicList(MusicRegistry.WatersideSerenade);
+        }
     }
 
     @Override
@@ -254,23 +269,35 @@ public class TropicalBiome extends Biome
         region.simulateWorldTime(10000000, true);
     }
 
-    @Override
-    public CaveRuins getNewCaveRuinsPreset(GameRandom random, AtomicInteger lootRotation) {
-        return null;
+    public RandomCaveChestRoom getNewCaveChestRoomPreset(GameRandom random, AtomicInteger lootRotation) 
+    {
+        RandomCaveChestRoom chestRoom = new RandomCaveChestRoom(random, LootTablePresets.basicCaveChest, lootRotation, new ChestRoomSet[] { ChestRoomSet.stone, ChestRoomSet.wood });
+        chestRoom.replaceTile(TileRegistry.stoneFloorID, ((Integer)random.getOneOf((Object[])new Integer[] { Integer.valueOf(TileRegistry.stoneFloorID), Integer.valueOf(TileRegistry.stoneBrickFloorID) })).intValue());
+        return chestRoom;
     }
-
-    @Override
-    public CaveRuins getNewDeepCaveRuinsPreset(GameRandom random, AtomicInteger lootRotation) {
-        return null;
+  
+    public RandomCaveChestRoom getNewDeepCaveChestRoomPreset(GameRandom random, AtomicInteger lootRotation) 
+    {
+        RandomCaveChestRoom chestRoom = new RandomCaveChestRoom(random, LootTablePresets.deepCaveChest, lootRotation, new ChestRoomSet[] { ChestRoomSet.deepStone, ChestRoomSet.obsidian });
+        chestRoom.replaceTile(TileRegistry.deepStoneFloorID, ((Integer)random.getOneOf((Object[])new Integer[] { Integer.valueOf(TileRegistry.deepStoneFloorID), Integer.valueOf(TileRegistry.deepStoneBrickFloorID) })).intValue());
+        return chestRoom;
     }
-
-    @Override
-    public RandomCaveChestRoom getNewCaveChestRoomPreset(GameRandom random, AtomicInteger lootRotation) {
-        return null;
+  
+    public CaveRuins getNewCaveRuinsPreset(GameRandom random, AtomicInteger lootRotation) 
+    {
+        WallSet wallSet = (WallSet)random.getOneOf((Object[])new WallSet[] { WallSet.stone, WallSet.wood });
+        FurnitureSet furnitureSet = FurnitureSet.palm;
+        String floorStringID = (String)random.getOneOf((Object[])new String[] { "woodfloor", "woodfloor", "stonefloor", "stonebrickfloor" });
+        return ((CaveRuins.CaveRuinGetter)random.getOneOf(CaveRuins.caveRuinGetters))
+        .get(random, wallSet, furnitureSet, floorStringID, LootTablePresets.basicCaveRuinsChest, lootRotation);
     }
-
-    @Override
-    public RandomCaveChestRoom getNewDeepCaveChestRoomPreset(GameRandom random, AtomicInteger lootRotation) {
-        return null;
+  
+    public CaveRuins getNewDeepCaveRuinsPreset(GameRandom random, AtomicInteger lootRotation) 
+    {
+        WallSet wallSet = (WallSet)random.getOneOf((Object[])new WallSet[] { WallSet.deepStone, WallSet.obsidian });
+        FurnitureSet furnitureSet = FurnitureSet.bamboo;
+        String floorStringID = (String)random.getOneOf((Object[])new String[] { "deepstonefloor", "deepstonebrickfloor" });
+        return ((CaveRuins.CaveRuinGetter)random.getOneOf(CaveRuins.caveRuinGetters))
+        .get(random, wallSet, furnitureSet, floorStringID, LootTablePresets.basicDeepCaveRuinsChest, lootRotation);
     }
 }

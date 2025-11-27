@@ -1,6 +1,5 @@
 package NecesseExpanded.Objects;
 
-import java.awt.Color;
 import java.awt.Rectangle;
 import java.util.List;
 import java.util.stream.Stream;
@@ -25,7 +24,7 @@ import necesse.level.maps.Level;
 import necesse.level.maps.levelData.settlementData.SettlementWorkstationObject;
 import necesse.level.maps.light.GameLight;
 
-public class KegObject extends GameObject implements SettlementWorkstationObject
+public class CustomKegObject extends GameObject implements SettlementWorkstationObject
 {
     GameTexture texture;
   
@@ -33,21 +32,18 @@ public class KegObject extends GameObject implements SettlementWorkstationObject
   
     public int spriteCount;
 
-    public KegObject()
+    public CustomKegObject()
     {
-        super(new Rectangle(4, 6, 24, 20));
-        setItemCategory(new String[] { "objects", "craftingstations" });
-        setCraftingCategory(new String[] { "craftingstations" });
-        this.mapColor = new Color(100, 80, 25);
-        this.objectHealth = 50;
+        super(new Rectangle(2, 2, 28, 28));
+        this.displayMapTooltip = true;
+        this.stackSize = 10;
+        this.objectHealth = 100;
         this.isLightTransparent = true;
-        this.rarity = Item.Rarity.UNCOMMON;
+        this.rarity = Item.Rarity.NORMAL;
         this.toolType = ToolType.PICKAXE;
         this.spriteCount = 4;
-        this.replaceCategories.add("workstation");
-        this.canReplaceCategories.add("workstation");
-        this.canReplaceCategories.add("wall");
-        this.canReplaceCategories.add("furniture");
+        setItemCategory(new String[] { "objects", "craftingstations" });
+        setCraftingCategory(new String[] { "craftingstations" });
     }
 
     public ObjectEntity getNewObjectEntity(Level level, int x, int y) 
@@ -79,16 +75,16 @@ public class KegObject extends GameObject implements SettlementWorkstationObject
         int drawY = camera.getTileDrawY(tileY);
         rotation = (byte)(rotation % this.texture.getWidth() / spriteWidth);
         this.texture.initDraw()
-          .sprite(rotation, 0, spriteWidth, this.texture.getHeight())
-          .alpha(alpha)
-          .draw(drawX, drawY - this.texture.getHeight() + 32);
-      }
+        .sprite(rotation, 0, spriteWidth, this.texture.getHeight())
+        .alpha(alpha)
+        .draw(drawX, drawY - this.texture.getHeight() + 32);
+    }
 
     @Override
     public void loadTextures() 
     {
         super.loadTextures();
-        texture = GameTexture.fromFile("objects/keg");
+        texture = GameTexture.fromFile("objects/custom_keg");
     }
 
     public boolean canInteract(Level level, int x, int y, PlayerMob player) 

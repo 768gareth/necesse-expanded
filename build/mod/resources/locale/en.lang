@@ -85,7 +85,8 @@ vampire_bullet_tip=10% chance on hit to absorb the target's life essence, healin
 fishian_tile=Fishian Tile
 frost_shard_gravel=Frost Shard Gravel
 life_quartz_gravel=Life Quartz Gravel
-
+haunted_grass_tile=Haunted Grass Tile
+haunted_rock_tile=Haunted Rock Tile
 
 [object]
 keg=Keg
@@ -226,6 +227,10 @@ friendly_dryadname=Friendly Dryad
 
 // Desert
 ancient_warrior=Ancient Warrior
+
+// Tropical
+zombie_pirate=Zombie Pirate
+zombie_pirate_gunner=Zombie Pirate Gunner
 
 // Friendly
 settlement_dog=Dog

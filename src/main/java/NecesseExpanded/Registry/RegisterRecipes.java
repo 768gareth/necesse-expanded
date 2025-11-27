@@ -65,6 +65,21 @@ public class RegisterRecipes
         Recipes.registerModRecipe(new Recipe("obsidianflametrap", 1, RecipeTechRegistry.TUNGSTEN_LANDSCAPING, new Ingredient[] { new Ingredient("obsidian", 5), new Ingredient("firemone", 5), new Ingredient("wire", 5) }));
         Recipes.registerModRecipe(new Recipe("obsidiansawtrap", 1, RecipeTechRegistry.TUNGSTEN_LANDSCAPING, new Ingredient[] { new Ingredient("obsidian", 5), new Ingredient("ironbar", 1), new Ingredient("wire", 5) }));
         
+        Recipes.registerModRecipe(new Recipe("dawnwall", 5, RecipeTechRegistry.FALLEN_LANDSCAPING, new Ingredient[] { new Ingredient("rock", 10), new Ingredient("solar_essence", 1) }));
+        Recipes.registerModRecipe(new Recipe("dawndoor", 1, RecipeTechRegistry.FALLEN_LANDSCAPING, new Ingredient[] { new Ingredient("rock", 2), new Ingredient("solar_essence", 1) }));
+        Recipes.registerModRecipe(new Recipe("dawnpath", 5, RecipeTechRegistry.FALLEN_LANDSCAPING, new Ingredient[] { new Ingredient("rock", 10), new Ingredient("solar_essence", 1) }));
+        Recipes.registerModRecipe(new Recipe("lavapath", 5, RecipeTechRegistry.FALLEN_LANDSCAPING, new Ingredient[] { new Ingredient("rock", 10), new Ingredient("solar_essence", 1) }));
+
+        Recipes.registerModRecipe(new Recipe("duskwall", 5, RecipeTechRegistry.FALLEN_LANDSCAPING, new Ingredient[] { new Ingredient("rock", 10), new Ingredient("lunar_essence", 1) }));
+        Recipes.registerModRecipe(new Recipe("duskdoor", 1, RecipeTechRegistry.FALLEN_LANDSCAPING, new Ingredient[] { new Ingredient("rock", 2), new Ingredient("lunar_essence", 1) }));
+        Recipes.registerModRecipe(new Recipe("moonpath", 5, RecipeTechRegistry.FALLEN_LANDSCAPING, new Ingredient[] { new Ingredient("rock", 10), new Ingredient("lunar_essence", 1) }));
+        Recipes.registerModRecipe(new Recipe("darkmoonpath", 5, RecipeTechRegistry.FALLEN_LANDSCAPING, new Ingredient[] { new Ingredient("rock", 10), new Ingredient("lunar_essence", 1) }));
+        Recipes.registerModRecipe(new Recipe("darkfullmoonpath", 5, RecipeTechRegistry.FALLEN_LANDSCAPING, new Ingredient[] { new Ingredient("rock", 10), new Ingredient("lunar_essence", 1) }));
+
+        Recipes.registerModRecipe(new Recipe("ancientruinwall", 5, RecipeTechRegistry.FALLEN_LANDSCAPING, new Ingredient[] { new Ingredient("rock", 10), new Ingredient("omnicrystal", 1) }));
+        Recipes.registerModRecipe(new Recipe("ancientruinfloor", 5, RecipeTechRegistry.FALLEN_LANDSCAPING, new Ingredient[] { new Ingredient("rock", 10), new Ingredient("omnicrystal", 1) }));
+        Recipes.registerModRecipe(new Recipe("ancientruindoor", 1, RecipeTechRegistry.FALLEN_LANDSCAPING, new Ingredient[] { new Ingredient("rock", 2), new Ingredient("omnicrystal", 1) }));
+
         Recipes.registerModRecipe(new Recipe("traptrack", 10, RecipeTechRegistry.LANDSCAPING, new Ingredient[] { new Ingredient("ironbar", 1) }));
         Recipes.registerModRecipe(new Recipe("spiketrap", 5, RecipeTechRegistry.LANDSCAPING, new Ingredient[] { new Ingredient("ironbar", 1), new Ingredient("wire", 5) }));
         
