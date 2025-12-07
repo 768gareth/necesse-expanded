@@ -4,14 +4,11 @@ import java.awt.Point;
 import java.awt.Rectangle;
 import java.util.List;
 import java.util.ArrayList;
-import java.awt.Color;
 
 import necesse.engine.GameTileRange;
 import necesse.engine.gameLoop.tickManager.TickManager;
-import necesse.engine.registries.MobRegistry;
-import necesse.engine.sound.PrimitiveSoundEmitter;
-import necesse.engine.sound.SoundEffect;
-import necesse.engine.sound.SoundManager;
+import necesse.engine.save.LoadData;
+import necesse.engine.save.SaveData;
 import necesse.engine.sound.SoundSettings;
 import necesse.engine.util.GameMath;
 import necesse.engine.util.GameRandom;
@@ -48,7 +45,6 @@ import necesse.inventory.lootTable.LootTable;
 import necesse.level.gameObject.ProcessObjectHandler;
 import necesse.level.maps.Level;
 import necesse.level.maps.light.GameLight;
-import necesse.level.maps.multiTile.MultiTile;
 
 public class HoneySlimeHusbandryMob extends HusbandryMob 
 {
@@ -60,28 +56,19 @@ public class HoneySlimeHusbandryMob extends HusbandryMob
 
   public long nextPlortLayingTime;
 
-  public boolean nextPlortIsFertilized;
-
   protected MobProcessObjectHandler layPlortHandler = new MobProcessObjectHandler((Mob) this) {
-    public void tickInProgress() {
+    public void tickInProgress() 
+    {
       super.tickInProgress();
-      if (!HoneySlimeHusbandryMob.this.isServer() && GameRandom.globalRandom.nextInt(20) == 0)
-        HoneySlimeHusbandryMob.this.spawnLayPlortParticles();
     }
 
     public void onCompleted() {
       super.onCompleted();
       if (!HoneySlimeHusbandryMob.this.isClient() &&
-          this.target != null && this.target.canProcess()) {
+          this.target != null && this.target.canProcess() && (HoneySlimeHusbandryMob.this.hunger > 0f)) {
         this.target.process();
         HoneySlimeHusbandryMob.this.refreshNextPlortLayingTime();
         HoneySlimeHusbandryMob.this.ai.blackboard.submitEvent("wanderNow", new AIEvent());
-      }
-      if (!HoneySlimeHusbandryMob.this.isServer()) {
-        SoundManager.playSound(GameResources.pop, (SoundEffect) SoundEffect
-            .effect((PrimitiveSoundEmitter) HoneySlimeHusbandryMob.this).volume(0.3F).pitch(0.7F));
-        for (int i = 0; i < 5; i++)
-          HoneySlimeHusbandryMob.this.spawnLayPlortParticles();
       }
     }
   };
@@ -117,37 +104,21 @@ public class HoneySlimeHusbandryMob extends HusbandryMob
     }
   }
 
+  public void addSaveData(SaveData save) 
+  {
+    super.addSaveData(save);
+    save.addLong("nextPlortLayingTime", this.nextPlortLayingTime);
+  }
+  
+  public void applyLoadData(LoadData save) 
+  {
+    super.applyLoadData(save);
+    this.nextPlortLayingTime = save.getLong("nextPlortLayingTime", 0L, true);
+  }
+
   public LootTable getLootTable() 
   {
     return new LootTable();
-  }
-
-  public void spawnLayPlortParticles() {
-    if (this.layPlortHandler.isTargetOnTile) {
-      spawnPlortParticles(getLevel(), this.layPlortHandler.tileX, this.layPlortHandler.tileY);
-    } else {
-      spawnPlortParticles(getLevel(), this.x + GameRandom.globalRandom
-          .getIntBetween(-10, 10), this.y
-              + GameRandom.globalRandom
-                  .getIntBetween(-5, 5));
-    }
-  }
-
-  public static void spawnPlortParticles(Level level, int tileX, int tileY) {
-    MultiTile multiTile = level.getObject(tileX, tileY).getMultiTile(level, 0, tileX, tileY);
-    Point offset = new Point(multiTile.getCenterXOffset() * 16, multiTile.getCenterYOffset() * 16);
-    spawnPlortParticles(level, tileX * 32.0F + offset.x + GameRandom.globalRandom
-        .nextInt(32), tileY * 32.0F + offset.y + 32.0F);
-  }
-
-  public static void spawnPlortParticles(Level level, float posX, float posY) {
-    int startHeight = 8 + GameRandom.globalRandom.nextInt(24);
-    level.entityManager
-        .addParticle(posX, posY, Particle.GType.COSMETIC)
-
-        .color(new Color(255, 239, 157, 255))
-        .heightMoves(startHeight, (startHeight + 40))
-        .lifeTime(2000);
   }
 
   public InventoryItem onFed(InventoryItem item) {
@@ -169,7 +140,9 @@ public class HoneySlimeHusbandryMob extends HusbandryMob
   @SuppressWarnings({ "rawtypes", "unchecked" })
   public void init() {
     super.init();
-    this.ai = new BehaviourTreeAI((Mob) this, (AINode) new HoneySlimeAI<>(30000), new AIMover());
+    this.ai = new BehaviourTreeAI((Mob)this, (AINode)new HoneySlimeAI<>(30000), new AIMover());
+    if (this.nextPlortLayingTime == 0L)
+      refreshNextPlortLayingTime(); 
   }
 
   protected SoundSettings getAmbientSound() {
@@ -201,9 +174,6 @@ public class HoneySlimeHusbandryMob extends HusbandryMob
     int dir = getDir();
     Point sprite = getAnimSprite(x, y, dir);
     drawY += getBobbing(x, y);
-    TextureDrawOptionsEnd textureDrawOptionsEnd1 = MobRegistry.Textures.swampSlime_shadow.initDraw().sprite(0, dir, 64)
-        .light(light).pos(drawX, drawY);
-    tileList.add(tm -> textureDrawOptionsEnd1.draw());
     drawY += level.getTile(getTileCoordinate(x), getTileCoordinate(y)).getMobSinkingAmount((Mob) this);
     swimMask = getSwimMaskShaderOptions(inLiquidFloat(x, y));
     final TextureDrawOptionsEnd options = Texture.initDraw().sprite(sprite.x, sprite.y, 64).light(light)
@@ -231,7 +201,7 @@ public class HoneySlimeHusbandryMob extends HusbandryMob
 
   public boolean canLayPlort() 
   {
-    return (isGrown() && this.nextPlortLayingTime <= getWorldTime() && !isLayingPlort());
+    return (this.nextPlortLayingTime <= getWorldTime());
   }
 
   public void refreshNextPlortLayingTime() 
@@ -274,33 +244,6 @@ public class HoneySlimeHusbandryMob extends HusbandryMob
       if (blackboard.mover.isCurrentlyMovingFor((AINode) this))
         return AINodeResult.SUCCESS;
       if (this.target == null && mob.canLayPlort()) {
-        List<HusbandryMob> nearbyMobs = mob.getNearbyHusbandryMobs();
-        final boolean instant = (mob.getRopeMob() != null || mob.isBeingInteractedWith());
-        if (instant || !((HoneySlimeHusbandryMob) mob).nextPlortIsFertilized
-            || nearbyMobs.size() > HusbandryMob.maxCloseMobsToBirth) {
-          this.target = new ProcessObjectHandler(mob.getTileX(), mob.getTileY(), null) {
-            public boolean canProcess() {
-              return true;
-            }
-
-            public void process() {
-              InventoryItem product = new InventoryItem("honey_plort");
-              Level level = ((HoneySlimeHusbandryMob) HoneySlimeHusbandryMob.HoneySlimeLayPlortAINode.this.mob())
-                  .getLevel();
-              level.entityManager.pickups.add((PickupEntity) product.getPickupEntity(level,
-                  ((HoneySlimeHusbandryMob) HoneySlimeHusbandryMob.HoneySlimeLayPlortAINode.this.mob()).x,
-                  ((HoneySlimeHusbandryMob) HoneySlimeHusbandryMob.HoneySlimeLayPlortAINode.this.mob()).y));
-            }
-
-            public boolean isValid() {
-              return true;
-            }
-
-            public int getTimeItTakesInMilliseconds() {
-              return instant ? 0 : 4000;
-            }
-          };
-        } else 
           {
           ArrayList<ProcessObjectHandler> validTiles = new ArrayList<>();
           if (!validTiles.isEmpty()) {

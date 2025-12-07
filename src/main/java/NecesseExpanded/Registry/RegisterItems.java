@@ -15,6 +15,7 @@ import necesse.inventory.item.Item;
 import necesse.inventory.item.Item.Rarity;
 import necesse.inventory.item.matItem.EssenceMatItem;
 import necesse.inventory.item.matItem.MatItem;
+import necesse.inventory.item.placeableItem.StonePlaceableItem;
 import necesse.inventory.item.placeableItem.consumableItem.food.FoodConsumableItem;
 import necesse.inventory.item.placeableItem.fishingRodItem.FishingRodItem;
 import necesse.inventory.item.placeableItem.mapItem.WorldPresetMapItem;
@@ -105,6 +106,7 @@ public class RegisterItems
         // Crafting Materials
         ItemRegistry.registerItem("lunar_essence", new EssenceMatItem(250, Rarity.LEGENDARY, 3), 35.0F, true);
         ItemRegistry.registerItem("solar_essence", new EssenceMatItem(250, Rarity.LEGENDARY, 3), 35.0F, true);
+        ItemRegistry.registerItem("haunted_stone", new StonePlaceableItem(5000), 0.1F, true);
         ItemRegistry.registerItem("honey_plort", (new MatItem(500, Rarity.UNCOMMON, new String[0])).setItemCategory(new String[]{"materials", "mobdrops"}), 12.0F, true);
         
         // Miscellaneous

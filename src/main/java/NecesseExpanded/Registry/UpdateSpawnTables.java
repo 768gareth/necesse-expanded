@@ -21,5 +21,7 @@ public class UpdateSpawnTables
         SnowBiome.deepSnowCaveMobs.add(30, "ice_golem");
 
         TempleBiome.templeMobs.add(15, "ancient_warrior");
+
+        // Biome.defaultSurfaceCritters.add(5, "honey_slime");
     }
 }

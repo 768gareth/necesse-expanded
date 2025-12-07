@@ -3,7 +3,7 @@ package NecesseExpanded.Registry;
 import NecesseExpanded.Mobs.Friendly.Critters.CrystalCaveling;
 import NecesseExpanded.Mobs.Friendly.Critters.ShardCaveling;
 import NecesseExpanded.Mobs.Friendly.Critters.SlimeCaveling;
-import NecesseExpanded.Mobs.Friendly.Husbandry.HoneySlimeHusbandryMob;
+// import NecesseExpanded.Mobs.Friendly.Husbandry.HoneySlimeHusbandryMob;
 import NecesseExpanded.Mobs.Hostile.Desert.AncientWarrior;
 import NecesseExpanded.Mobs.Hostile.Forest.ZombieMiner;
 import NecesseExpanded.Mobs.Hostile.HauntedForest.HauntedZombie;
@@ -56,6 +56,6 @@ public class PreRegisterMobs
         MobRegistry.registerMob("slime_caveling", SlimeCaveling.class, true);
 
         // Slimes
-        MobRegistry.registerMob("honey_slime", HoneySlimeHusbandryMob.class, true);
+        // MobRegistry.registerMob("honey_slime", HoneySlimeHusbandryMob.class, true);
     }
 }

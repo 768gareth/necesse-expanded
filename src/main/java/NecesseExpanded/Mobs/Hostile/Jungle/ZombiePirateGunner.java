@@ -50,7 +50,7 @@ public class ZombiePirateGunner extends HostileItemAttackerMob
         this.swimMaskMove = 16;
         this.swimMaskOffset = -2;
         this.swimSinkOffset = -4;
-        this.weapon = new InventoryItem("flintlock");
+        this.weapon = new InventoryItem("handgun");
         this.chest = new InventoryItem("pirateshirt");
         this.boots = new InventoryItem("pirateboots");
         this.ai = new BehaviourTreeAI

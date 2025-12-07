@@ -34,11 +34,7 @@ public class HauntedForestBiome extends Biome
     public static MobSpawnTable SurfaceMobs = new MobSpawnTable().add(80, "haunted_zombie").add(20, "voidapprentice");
     public static MobSpawnTable CaveMobs = new MobSpawnTable().add(50, "enchantedzombie").add(50, "enchantedzombiearcher");
     public static MobSpawnTable DeepCaveMobs = new MobSpawnTable().add(25, "skeleton");
-    public static MobSpawnTable SurfaceCritters = new MobSpawnTable()
-    .add(100, "swampslug")
-    .add(80, "frog")
-    .add(40, "bird")
-    .add(40, "cardinalbird");
+    public static MobSpawnTable SurfaceCritters = new MobSpawnTable().add(100, "spider").add(100, "mouse");
     public static MobSpawnTable CaveCritters = new MobSpawnTable().include(defaultCaveCritters);
     public static MobSpawnTable DeepCaveCritters = new MobSpawnTable().include(defaultCaveCritters);
 
@@ -167,7 +163,7 @@ public class HauntedForestBiome extends Biome
   
     public int getGenerationDeepCaveRockObjectID() 
     {
-    return ObjectRegistry.getObjectID("haunted_rock");
+    return ObjectRegistry.getObjectID("deep_haunted_rock");
     }
 
     public int getGenerationBeachTileID() 
@@ -207,8 +203,8 @@ public class HauntedForestBiome extends Biome
         int GrassTile = TileRegistry.getTileID("haunted_grass_tile");
         stack.startPlaceOnVein(this, region, random, "hauntedMudPatches").onlyOnTile(GrassTile).chance(0.8).placeTile(TileRegistry.mudID);
         stack.startPlaceOnVein(this, region, random, "deadwoodTrees").onlyOnTile(GrassTile).chance(0.25).placeObject("deadwoodtree");
-        stack.startPlace(this, region, random).chance(0.007).placeObject("swampsurfacerock");
-        stack.startPlace(this, region, random).chance(0.009).placeObject("swampsurfacerocksmall");
+        stack.startPlace(this, region, random).chance(0.004).placeObject("haunted_rock_small");
+        stack.startPlace(this, region, random).chance(0.002).placeObject("haunted_rock_large");
         region.updateLiquidManager();
         region.simulateWorldTime(10000000, true);
     }
@@ -222,10 +218,9 @@ public class HauntedForestBiome extends Biome
         stack.startPlaceOnVein(this, region, random, "hauntedCopper").onlyOnObject(RockID).placeObjectForced("copper_ore_haunted_rock");
         stack.startPlaceOnVein(this, region, random, "hauntedIron").onlyOnObject(RockID).placeObjectForced("iron_ore_haunted_rock");
         stack.startPlaceOnVein(this, region, random, "hauntedGold").onlyOnObject(RockID).placeObjectForced("gold_ore_haunted_rock");
-        stack.startPlace(this, region, random).chance(0.003).placeObject("surfacerock");
-        stack.startPlace(this, region, random).chance(0.005).placeObject("surfacerocksmall");
+        stack.startPlace(this, region, random).chance(0.004).placeObject("haunted_rock_small");
+        stack.startPlace(this, region, random).chance(0.002).placeObject("haunted_rock_large");
         region.updateLiquidManager();
-        region.simulateWorldTime(10000000, true);
     }
 
     @Override
@@ -240,10 +235,9 @@ public class HauntedForestBiome extends Biome
         stack.startPlaceOnVein(this, region, random, "hauntedDeepObsidian").onlyOnObject(RockID).placeObjectForced("obsidianrock");
         stack.startPlaceOnVein(this, region, random, "hauntedDeepTungsten").onlyOnObject(RockID).placeObjectForced("tungsten_ore_deep_haunted_rock");
         stack.startPlaceOnVein(this, region, random, "hauntedDeepLifeQuartz").onlyOnObject(RockID).placeObjectForced("life_quartz_deep_haunted_rock");
-        stack.startPlace(this, region, random).chance(0.003).placeObject("surfacerock");
-        stack.startPlace(this, region, random).chance(0.005).placeObject("surfacerocksmall");
+        stack.startPlace(this, region, random).chance(0.004).placeObject("haunted_rock_small");
+        stack.startPlace(this, region, random).chance(0.003).placeObject("haunted_rock_large");
         region.updateLiquidManager();
-        region.simulateWorldTime(10000000, true);
     }
 
     public RandomCaveChestRoom getNewCaveChestRoomPreset(GameRandom random, AtomicInteger lootRotation) {
@@ -261,7 +255,7 @@ public class HauntedForestBiome extends Biome
   public CaveRuins getNewCaveRuinsPreset(GameRandom random, AtomicInteger lootRotation) {
     WallSet wallSet = (WallSet)random.getOneOf((Object[])new WallSet[] { WallSet.stone, WallSet.wood });
     FurnitureSet furnitureSet = FurnitureSet.deadwood;
-    String floorStringID = (String)random.getOneOf((Object[])new String[] { "woodfloor", "woodfloor", "stonefloor", "stonebrickfloor" });
+    String floorStringID = (String)random.getOneOf((Object[])new String[] { "stonefloor", "stonebrickfloor" });
     return ((CaveRuins.CaveRuinGetter)random.getOneOf(CaveRuins.caveRuinGetters))
       .get(random, wallSet, furnitureSet, floorStringID, LootTablePresets.basicCaveRuinsChest, lootRotation);
   }

@@ -3,7 +3,7 @@ package NecesseExpanded;
 import customsettingslib.components.settings.IntSetting;
 import customsettingslib.settings.CustomModSettings;
 import customsettingslib.settings.CustomModSettingsGetter;
-import NecesseExpanded.Mobs.Friendly.Husbandry.HoneySlimeHusbandryMob;
+// import NecesseExpanded.Mobs.Friendly.Husbandry.HoneySlimeHusbandryMob;
 import NecesseExpanded.Mobs.Hostile.Snow.IceGolemMob;
 import NecesseExpanded.Registry.*;
 import necesse.engine.modLoader.ModSettings;
@@ -40,7 +40,7 @@ public class Main
     public void initResources()
     {
         IceGolemMob.texture = GameTexture.fromFile("mobs/ice_golem");
-        HoneySlimeHusbandryMob.Texture = GameTexture.fromFile("mobs/honey_slime");
+        // HoneySlimeHusbandryMob.Texture = GameTexture.fromFile("mobs/honey_slime");
     }
 
     public void postInit()

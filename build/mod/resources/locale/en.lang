@@ -106,6 +106,10 @@ fishian_brazier=Fishian Brazier
 fishian_walltrap=Fishian Trap
 
 haunted_grass=Haunted Grass
+haunted_rock=Haunted Rock
+haunted_rock_small=Small Haunted Rock
+haunted_rock_large=Large Haunted Rock
+
 
 [buff]
 murasama_revenge_buff=Murasama's Revenge
@@ -198,6 +202,7 @@ pearl=Pearl
 seaweed=Seaweed
 slime=Slime
 honey_plort=Honey Plort
+haunted_stone=Haunted Stone
 
 // Misc
 dryad_map=Dryad's Map

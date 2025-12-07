@@ -9,6 +9,8 @@ import necesse.level.gameObject.CrystalClusterSmallObject;
 import necesse.level.gameObject.GameObject;
 import necesse.level.gameObject.RockObject;
 import necesse.level.gameObject.RockOreObject;
+import necesse.level.gameObject.SingleRockObject;
+import necesse.level.gameObject.SingleRockSmall;
 import necesse.level.gameObject.WallObject;
 
 public class RegisterObjects 
@@ -37,17 +39,23 @@ public class RegisterObjects
 
         ObjectRegistry.registerObject("haunted_grass", (GameObject)new HauntedGrassObject(), -1.0F, false);
 
-        ObjectRegistry.registerObject("haunted_rock", new RockObject("haunted_rock", new Color(50, 50, 150), "haunted_stone", genericRocksCategory), 0, false);
-        ObjectRegistry.registerObject("deep_haunted_rock", new RockObject("deep_haunted_rock", new Color(50, 50, 150), "haunted_stone", genericRocksCategory), 0, false);
+        RockObject HauntedRock;
+        RockObject DeepHauntedRock;
 
-        ObjectRegistry.registerObject("iron_ore_haunted_rock", new RockOreObject(new RockObject("haunted_rock", new Color(50, 50, 150), "haunted_stone", genericRocksCategory), "oremask", "ironore", new Color(169, 128, 106), "ironore", genericRocksCategory), -1.0F, false);
-        ObjectRegistry.registerObject("copper_ore_haunted_rock", new RockOreObject(new RockObject("haunted_rock", new Color(50, 50, 150), "haunted_stone", genericRocksCategory), "oremask", "copperore", new Color(161, 83, 42), "copperore", genericRocksCategory), -1.0F, false);
-        ObjectRegistry.registerObject("gold_ore_haunted_rock", new RockOreObject(new RockObject("haunted_rock", new Color(50, 50, 150), "haunted_stone", genericRocksCategory), "oremask", "goldore", new Color(198, 145, 47), "goldore", genericRocksCategory), -1.0F, false);
+        ObjectRegistry.registerObject("haunted_rock", HauntedRock = new RockObject("haunted_rock", new Color(50, 50, 150), "haunted_stone", genericRocksCategory), 0, false);
+        ObjectRegistry.registerObject("deep_haunted_rock", DeepHauntedRock = new RockObject("deep_haunted_rock", new Color(50, 50, 150), "haunted_stone", genericRocksCategory), 0, false);
+
+        ObjectRegistry.registerObject("haunted_rock_small", new SingleRockSmall(HauntedRock, "haunted_rock_small", new Color(70, 70, 152), genericRocksCategory), -1.0F, false);
+        SingleRockObject.registerSurfaceRock(HauntedRock, "haunted_rock_large", new Color(49, 142, 184), -1.0F, false, genericRocksCategory);
+
+        ObjectRegistry.registerObject("iron_ore_haunted_rock", new RockOreObject(HauntedRock, "oremask", "ironore", new Color(169, 128, 106), "ironore", genericRocksCategory), -1.0F, false);
+        ObjectRegistry.registerObject("copper_ore_haunted_rock", new RockOreObject(HauntedRock, "oremask", "copperore", new Color(161, 83, 42), "copperore", genericRocksCategory), -1.0F, false);
+        ObjectRegistry.registerObject("gold_ore_haunted_rock", new RockOreObject(HauntedRock, "oremask", "goldore", new Color(198, 145, 47), "goldore", genericRocksCategory), -1.0F, false);
        
-        ObjectRegistry.registerObject("iron_ore_deep_haunted_rock", new RockOreObject(new RockObject("deep_haunted_rock", new Color(50, 50, 150), "haunted_stone", genericRocksCategory), "oremask", "ironore", new Color(169, 128, 106), "ironore", genericRocksCategory), -1.0F, false);
-        ObjectRegistry.registerObject("copper_ore_deep_haunted_rock", new RockOreObject(new RockObject("deep_haunted_rock", new Color(50, 50, 150), "haunted_stone", genericRocksCategory), "oremask", "copperore", new Color(161, 83, 42), "copperore", genericRocksCategory), -1.0F, false);
-        ObjectRegistry.registerObject("gold_ore_deep_haunted_rock", new RockOreObject(new RockObject("deep_haunted_rock", new Color(50, 50, 150), "haunted_stone", genericRocksCategory), "oremask", "goldore", new Color(198, 145, 47), "goldore", genericRocksCategory), -1.0F, false);
-        ObjectRegistry.registerObject("tungsten_ore_deep_haunted_rock", new RockOreObject(new RockObject("deep_haunted_rock", new Color(50, 50, 150), "haunted_stone", genericRocksCategory), "oremask", "tungstenore", new Color(40, 49, 57), "tungstenore", genericRocksCategory), -1.0F, false);
-        ObjectRegistry.registerObject("life_quartz_deep_haunted_rock", new RockOreObject(new RockObject("deep_haunted_rock", new Color(50, 50, 150), "haunted_stone", genericRocksCategory), "oremask", "lifequartzore", new Color(180, 50, 61), "lifequartz", 1, 1, 1, genericRocksCategory), -1.0F, false);
+        ObjectRegistry.registerObject("iron_ore_deep_haunted_rock", new RockOreObject(DeepHauntedRock, "oremask", "ironore", new Color(169, 128, 106), "ironore", genericRocksCategory), -1.0F, false);
+        ObjectRegistry.registerObject("copper_ore_deep_haunted_rock", new RockOreObject(DeepHauntedRock, "oremask", "copperore", new Color(161, 83, 42), "copperore", genericRocksCategory), -1.0F, false);
+        ObjectRegistry.registerObject("gold_ore_deep_haunted_rock", new RockOreObject(DeepHauntedRock, "oremask", "goldore", new Color(198, 145, 47), "goldore", genericRocksCategory), -1.0F, false);
+        ObjectRegistry.registerObject("tungsten_ore_deep_haunted_rock", new RockOreObject(DeepHauntedRock, "oremask", "tungstenore", new Color(40, 49, 57), "tungstenore", genericRocksCategory), -1.0F, false);
+        ObjectRegistry.registerObject("life_quartz_deep_haunted_rock", new RockOreObject(DeepHauntedRock, "oremask", "lifequartzore", new Color(180, 50, 61), "lifequartz", 1, 1, 1, genericRocksCategory), -1.0F, false);
     }
 }
