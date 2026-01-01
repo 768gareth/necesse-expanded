@@ -1,0 +1,356 @@
+[settingsui]
+ne_settings_separator_1=Necesse Expanded: Paramètres de raid personnalisés
+raids_enabled=Activer les raids personnalisés?
+raids_tip=Si activé, remplace le système de raids vanilla par celui de Necesse Expanded, offrant huit nouveaux raids complexes avec plusieurs types d'ennemis.
+
+include_vanilla_raids=Les raids vanilla peuvent-ils apparaître?
+vanilla_raids_tip=Si activé, les raids vanilla ont une chance configurable d'apparaître, contrairement aux raids personnalisés. Veuillez noter que le multiplicateur de raid n'affecte pas les raids vanilla ; le nombre de raiders est calculé différemment.
+
+vanilla_raid_chance=Pourcentage de chances d'apparition des raids vanilla (%):
+vanilla_raid_chance_tip=Si les raids personnalisés et les raids vanilla sont activés, cette valeur détermine la chance d'apparition des raids vanilla.
+
+raider_bombs_destructive=Les bombes lancées par les raiders personnalisés peuvent-elles détruire des objets ?
+bombs_tip=Si cette option est activée, certains raiders personnalisés peuvent utiliser des explosifs classiques et détruire les murs et autres objets lors des raids. Si elle est désactivée, ils utiliseront des explosifs personnalisés qui n'infligent aucun dégât.
+
+raid_size_multiplier=Multiplicateur de taille du raid:
+raid_size_tip=Calcul de la taille du raid: Population de la colonie * Multiplicateur de taille du raid * Facteur de réussite du raid. Le facteur de réussite du raid est basé sur les performances précédentes de la colonie face aux pillards, allant de 0,5 (très mauvais) à 1,25 (parfait).
+
+ne_settings_separator_2=Necesse Expanded: Ajustements du gameplay
+
+happiness_changes_enabled=Activer le système de bonheur des colons modifié?
+happiness_changes_tip=Si cette option est activée, rééquilibre les calculs du bonheur des colons et implémente de nouveaux modificateurs de bonheur. Les colons ont des attentes réduites concernant la taille des pièces et la variété de leur alimentation, et leur bonheur augmente avec une population de colonie plus importante.
+
+starter_equipment_enabled=Activer un meilleur équipement de départ?
+starter_equipment_tip=Si cette option est activée, les nouveaux joueurs commencent avec des fournitures de base, des outils en fer, un livre de recettes et des épées en cuir.
+
+starter_kit_enabled=Activer le kit de démarrage de colonie?
+starter_kit_tip=Si activé, la maison de l'ancien contiendra un drapeau de colonie, ainsi que des matériaux de construction, des ateliers d'artisanat, des graines et des terres agricoles.
+
+player_speed_patch=Augmenter la vitesse de déplacement du joueur ?
+player_speed_tip=Si cette option est activée, la vitesse du personnage peut être modifiée via l'option ci-dessous.
+
+player_speed_value=Vitesse de déplacement du joueur :
+player_speed_value_tip=La valeur par défaut est de 40. Une valeur de 40 à 60 est recommandée. Redémarrez le jeu pour appliquer la valeur.
+
+chest_size_value=Emplacements de rangement du coffre:
+chest_size_tip=La valeur par défaut est de 40. 40 à 80 emplacements sont recommandés. Retirez les objets des emplacements ajoutés avant de réduire la valeur. Si un emplacement ajouté est retiré avec un objet à l'intérieur, celui-ci est définitivement perdu. Rechargez le monde pour appliquer la valeur.
+
+[ui]
+keg_active=Fermentation...
+keg_inactive=Disponible pour la fermentation!
+
+[itemtooltip]
+// Bibelots
+blood_crystal_tooltip=Restaure 5% de votre santé maximale après avoir tué un ennemi.
+shadow_crystal_tooltip=Accorde un bonus de 20% aux dégâts d'attaque pendant dix secondes après avoir tué un ennemi.
+shadow_crystal_bonus=Bonus temporaire de 20% aux dégâts.
+sandworm_tooth_tooltip=Les attaques au corps à corps ont 25% de chances d'infliger un poison mortel aux cibles.
+lucky_ring_tip=Tuer un ennemi (hors boss) vous fait perdre 10% de votre santé maximale en pièces.
+necromancer_ring_tip=Tuer un ennemi (hors boss) vous confère une invocation temporaire pendant 8 secondes.
+forgotten_relic_tooltip=Lorsque vous subissez des dégâts, votre mana est restauré à hauteur de 10 % des dégâts reçus, avec un minimum de 1 point de mana par coup.
+forgotten_relic_lore_tooltip=Une petite statue d'une ancienne divinité fishienne associée à la mer.
+berserker_ring_tooltip=Lorsque vous subissez des dégâts, vous gagnez un cumul d'Endurance, augmentant votre gain de résilience de 10 % par cumul.
+
+// Consommables
+mana_elixir_tip=Augmente votre mana maximum de 10, jusqu'à un maximum de 200.
+greater_mana_elixir_tip=Augmente votre mana maximum de 10, jusqu'à un maximum de 300.
+pearl_oyster=Contient une perle précieuse!
+pearl_oyster_tip=Équipez-vous et utilisez cet objet pour l'ouvrir!
+chest_tip=Équipez-vous et utilisez cet objet pour l'ouvrir!
+treasure_chest=Contient un objet unique rare, ainsi que des pièces.
+stamina_potion=Augmente la capacité d'endurance et la régénération.
+
+// Armes
+juggernaut_axe_tooltip=Pour les moments où la puissance de la musique ne suffit pas.
+frostbolt_tip=Lance un projectile givrant à tête chercheuse qui ralentit les ennemis pendant deux secondes.
+inferno_tip=Lance un jet de lave en fusion, infligeant un malus de brûlure aux ennemis.
+winterwrath_tip=Lance trois glaçons à tête chercheuse pour transpercer et ralentir les ennemis.
+brimstone_tip_1=Lance une puissante boule de feu qui explose à l'impact, enflammant tous les ennemis pris dans le rayon d'explosion.
+brimstone_tip_2=L'explosion de la boule de feu peut infliger des dégâts aux joueurs et aux ennemis pris dans le rayon d'explosion.
+brimstone_tip_3=Ne peut pas être utilisé en cas d'épuisement de mana.
+glacial_spear_tip=Lorsqu'il est touché, les ennemis sont ralentis pendant trois secondes et subissent des dégâts de givre sur la durée.
+murasama_tip_1=Maintenez [input=mouse2] pour charger une charge et trancher les ennemis. Toucher un ennemi réinitialise le temps de recharge et accélère la charge suivante jusqu'à <stacks> charges consécutives.
+murasama_tip_2=Possédée par un esprit sanguinaire, cette lame maudite confère une charge de Vengeance de Murasama à chaque élimination, augmentant ainsi le gain de résilience et les dégâts infligés.
+
+// Munitions
+venom_bullet_tip=10 % de chances d'infliger un puissant poison à l'impact, augmentant les dégâts infligés à la victime de 20 % pendant cinq secondes.
+vampire_bullet_tip=10 % de chances d'absorber l'essence vitale de la cible à l'impact, vous soignant de 1 % de vos points de vie maximum.
+solar_bullet_tip=10% chance on hit for the target to gain a stack of Sunlight's Judgement, dealing increasing damage over time based on the number of stacks, and lasting until all stacks have depleted.
+lunar_bullet_tip=Inflicts the Moonlight Curse, halving the victim's armour, and causing them to take 25% more damage for five seconds.
+
+[object]
+keg=Baril
+
+frostshard_cluster=Amas d'éclats de givre
+frostshard_cluster_pure=Amas d'éclats de givre purs
+frostshard_cluster_small=Petit amas d'éclats de givre
+
+life_quartz_cluster=Amas de quartz de vie
+life_quartz_cluster_pure=Amas de quartz de vie pur
+life_quartz_cluster_small=Petit amas de quartz de vie
+
+fishian_wall=Fishian Wall
+fishian_door=Fishian Door
+fishian_arrowtrap=Fishian Arrow Trap
+
+[buff]
+murasama_revenge_buff=La vengeance de Murasama
+endurance_stack_buff=Endurance
+
+[item]
+// Bibelots
+blood_crystal=Cristal de sang
+shadow_crystal=Cristal d'ombre
+sandworm_tooth=Dent de ver des sables
+lucky_ring=Bague porte-bonheur
+necromancer_ring=Anneau de nécromancien
+lensmaker_glasses=Lunettes de fabricant de lentilles
+ancient_tablet=Tablette ancienne
+warrior_ring=Anneau de guerrier
+summoner_grimoire=Grimoire d'invocateur
+berserker_ring=Anneau de berserker
+forgotten_relic=Relique oubliée
+leather_scabbard=Fourreau en cuir
+
+// Armes de corps à corps
+juggernaut_axe=Hache de mastodonte
+glacial_spear=Lance de glace
+murasama=Murasama
+
+// Armes à distance
+
+// Armes magiques
+frostbolt=Éclair de givre
+inferno=Enfer
+winterwrath=La colère de l'hiver
+brimstone=Soufre
+
+// Armes d'invocation
+
+// Munitions
+vampire_bullet=Balle de vampire
+venom_bullet=Balle de venin
+solar_bullet=
+lunar_bullet=
+
+// Outils
+crystal_fishing_rod=Canne à pêche en cristal
+
+// Consommables
+greater_mana_elixir=Élixir de mana supérieur
+mana_elixir=Élixir de mana
+oyster=Huître
+pearl_oyster=Huître perlée
+fruit_jam=Confiture de fruits
+jam_donut=Beignet à la confiture
+angler_fish_stew=Ragoût de pêche
+heartfish_stew=Ragoût de Poisson-cœur
+pearlfish_stew=Ragoût de Poisson-perle
+mushroom_stew=Ragoût de champignons
+beer=Bière
+cider=Cidre
+mead=Hydromel
+blueberry_wine=Vin de myrtille
+raspberry_wine=Vin de framboise
+blackberry_wine=Vin de mûre
+whiskey=Whisky
+elder_coffee=Café de sureau
+miner_brew=Bière de mineur
+pearlescent_wine=Nacre Vin
+rum=Rhum de pirate
+surface_treasure_chest=Coffre au trésor de surface
+cave_treasure_chest=Coffre au trésor de la grotte
+deep_treasure_chest=Coffre au trésor de la grotte profonde
+incursion_treasure_chest=Coffre au trésor de l'incursion
+stamina_potion=Potion d'endurance
+
+// Effets de statut
+shadow_crystal_bonus=Bonus aux dégâts du cristal d'ombre
+venom_bullet_debuff=Débuff de balle venimeuse
+stamina_potion_buff=Potion d'endurance
+
+// Matériaux d'artisanat
+lunar_essence=Essence lunaire
+solar_essence=Essence solaire
+demonfish=Poisson-démon
+heartfish=Poisson-cœur
+glacierfish=Poisson-glacier
+pearlfish=Poisson-perle
+swamp_eel=Anguille des marais
+slimefish=Poisson-boue
+saltwater_shark=Requin marin
+pearl=Perle
+seaweed=Algue
+slime=Boue
+
+[mob]
+// Forêt
+zombie_miner=Mineur zombie
+
+// Neige
+frozen_dwarf=Nain gelé
+frozen_dwarf_mage=Mage nain gelé
+ice_golem=Golem de glace
+
+// Donjon
+
+// Plaines
+
+// Marais
+
+// Désert
+ancient_warrior=Guerrier ancien
+
+// Créatures
+crystal_caveling=Cave de cristal
+shard_caveling=Cave d'éclat
+slime_caveling=Cave de boue
+
+// Invocations
+necromancer_minion=Serviteur nécromantique
+
+// Raiders
+stabby_bush_raider=Guerrier du buisson poignardé
+
+// Raiders zombies
+zombie_raider=Raider zombie
+zombie_archer_raider=Raiders archers zombies
+
+// Runebound Raiders
+runebound_boss=Capitaine Runebound
+runebound_berserker=Berserker Runebound
+runebound_trapper=Trappeur Runebound
+runebound_warrior=Guerrier Runebound
+
+// Pirate raiders
+pirate_brawler=Pirate Brawler
+pirate_sharpshooter=Pirate Sharpshooter
+pirate_grenadier=Pirate Grenadier
+pirate_gunner=Pirate Gunner
+
+// Skeleton raiders
+skeleton_raider=Skeleton Raider
+skeleton_summoner_raider=Skeleton Summoner Raider
+skeleton_miner_raider=Skeleton Miner Raider
+
+// Pirates pillards
+pirate_brawler=Pirate bagarreur
+pirate_sharpshooter=Pirate tireur d'élite
+pirate_grenadier=Pirate grenadier
+pirate_gunner=Pirate artilleur
+
+// Squelettes pillards
+skeleton_raider=Squelette pillard
+skeleton_summoner_raider=Squelette pillard invocateur
+skeleton_miner_raider=Squelette pillard mineur
+
+// Ninja pillards
+ninja_raider=Ninja pillard
+
+// Squelettes pillards anciens
+ancient_skeleton_raider=Squelette pillard ancien
+ancient_skeleton_summoner_raider=Squelette pillard invocateur ancien
+ancient_skeleton_miner_raider=Squelette pillard mineur ancien
+
+// Squelettes pillards de cimetière
+vampire_raider=Vampire pillard ancien
+
+// Spiderkin Raiders
+spiderkin_warrior_raider=Raider Guerrier Spiderkin
+spiderkin_archer_raider=Raider Archer Spiderkin
+spiderkin_mage_raider=Raider Mage Spiderkin
+spiderkin_summoner_raider=Invocateur Spiderkin
+spiderkin_healer_raider=Soigneur Spiderkin
+
+// Raiders Slime
+mage_slime_raider=Raider Mage Slime
+warrior_slime_raider=Raider Guerrier Slime
+
+[misc]
+zombie_raiders=Zombies
+runebound_raiders=Le Runebound
+pirate_raiders=Pirates
+skeleton_raiders=Squelettes
+ninja_raiders=Ninjas
+ancient_skeleton_raiders=Squelettes anciens
+spiderkin_raiders=Raiders du Royaume des Araignées
+slimecave_raiders=Raiders des Grottes de Gelée
+graveyard_raiders=Puissants pillards morts-vivants
+
+[journal]
+snow_defeatmages=[mob=frozen_dwarf_mage]Vaincre trois mages nains gelés.
+defepiratecaptain=[mob=piratecaptain]Vaincre le capitaine pirate !
+findpiratetrinket=[item=foolsgambit]Trouvez un bijou unique dans un village pirate.
+snow_defeatgolems=[mob=ice_golem]Vaincre cinq golems de glace.
+
+[settlement]
+pensées=Modificateurs de bonheur :
+
+moodveryunhappy=misérable
+moodunhappy=malheureux
+moodsomewhathappy=content
+moodveryhappy=très heureux
+moodextremelyhappy=extrêmement heureux
+moodhappiness=Ce colon est <happiness>.
+
+nobed=Aucun lit n'a été attribué à ce colon !
+bedoutside=Le lit de ce colon est à l'extérieur !
+
+roommissingfloor=La chambre de ce colon n'a pas un étage complet.
+roommissinglights=La chambre de ce colon manque de lumière.
+
+sharingroom=Ce colon partage sa chambre avec d'autres colons.
+
+// Taille de la pièce
+sizebaby=minuscule.
+sizetiny=très petite.
+sizesmall=petite.
+sizemediocre=de taille moyenne.
+sizedecent=assez grande.
+sizelarge=très grande !
+sizehuge=énorme !
+sizemood=La chambre de ce colon mesure <taille>
+
+nofoodmood=Ce colon n'a pas mangé récemment.
+dietsame=Le régime alimentaire de ce colon n'a pas varié du tout.
+dietslightly=Le régime alimentaire de ce colon a été légèrement varié.
+dietsomewhat=Le régime alimentaire de ce colon a été quelque peu varié.
+dietnicely=Le régime alimentaire de ce colon a été agréablement varié.
+dietextremely=Le régime alimentaire de ce colon était extrêmement varié.
+
+// Qualité de la chambre.
+roomplain=minimal
+roomdull=terne
+roomsimple=simple
+roomnormal=normal
+roomgood=bon
+roomimpressive=impressionnant
+roomwonderful=merveilleux
+roomunrivaled=inégalable
+roommood=La chambre de ce colon possède une variété de meubles de <quality>.
+
+// Régime alimentaire
+simplemeal=Ce colon a consommé pour la dernière fois un repas simple de qualité.
+finemeal=Ce colon a consommé pour la dernière fois un repas raffiné.
+gourmetmeal=Ce colon a consommé pour la dernière fois un repas gastronomique.
+perfectmeal=Ce colon a mangé pour la dernière fois un repas de qualité parfaite!
+
+foodperfect=Parfait
+
+// Bonus de progression
+progression_bonus=Vous avez terminé plusieurs niveaux de quête pour cette colonie.
+
+// Effets de raid
+well_defended_bonus=Cette colonie a été bien défendue contre les pillards.
+settlement_survived_raid=Cette colonie a récemment survécu à un raid.
+
+// Taille de la colonie.
+tinysettlement=Ce colon vit dans une toute petite colonie.
+smallsettlement=Ce colon vit dans une petite colonie.
+averagesettlement=Ce colon vit dans une colonie de taille moyenne.
+largesettlement=Ce colon vit dans une grande colonie.
+hugesettlement=Ce colon vit dans une immense colonie.
+
+// Misc happiness effects
+travel_bonus=Cette colonie a accès à un réseau de transport rapide.
+recent_settler_death=A settler recently died at this settlement.

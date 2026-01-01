@@ -1,0 +1,413 @@
+[settingsui]
+ne_settings_separator_1=Raid Configuration
+raids_enabled=Enable custom raids?
+raids_tip=If enabled, replaces the vanilla raid system with Necesse Expanded's custom raid system, offering nine new complex raids with multiple types of enemies.
+
+include_vanilla_raids=Can vanilla raids spawn?
+vanilla_raids_tip=If enabled, vanilla raids have a configurable chance to spawn rather than custom raids. Please note that the raid multiplier does NOT affect vanilla raids, the number of raiders for those is calculated differently.
+
+vanilla_raid_chance=Percent chance of vanilla raids (%):
+vanilla_raid_chance_tip=If custom raids + vanilla raids are enabled, this value determines the chance of vanilla raids spawning.
+
+raider_bombs_destructive=Can custom raiders' thrown bombs destroy objects?
+bombs_tip=If enabled, certain custom raiders can use vanilla explosives, and will be able to destroy walls and other objects during raids. If disabled, they'll use custom explosives that do not damage anything.
+
+raid_size_multiplier=Raid size multiplier:
+raid_size_tip=Raid size calculation: Settlement population * raid size multiplier * raid success factor. The raid success factor is based on how the settlement has previously fared against raiders, ranging from 0.5 (very poorly) to 1.25 (perfect).
+
+ne_settings_separator_2=Settlements
+
+happiness_changes_enabled=Enable modified settler happiness system?
+happiness_changes_tip=If enabled, rebalances settler happiness calculations and implements new happiness modifiers. Settlers have reduced expectations regarding room size and diet variety, and gain happiness from larger settlement population.
+
+settlers_share_rooms_without_penalty=Disable shared bedroom happiness penalty?
+settlers_sharing_room_tip=If enabled, any number of settlers can share a bedroom without suffering a happiness penalty. This can make settlement building significantly easier, but is unbalanced. Disabled by default in accordance with vanilla. Requires modified happiness system to be enabled.
+
+ne_settings_separator_3=Miscellaneous
+
+starter_equipment_enabled=Enable better starting equipment?
+starter_equipment_tip=If enabled, new players start with some basic supplies, iron tools, a recipe book, and leather dashers.
+
+starter_kit_enabled=Enable settlement starter kit?
+starter_kit_tip=If enabled, the elder's house will contain a settlement flag, plus building materials, crafting stations, seeds, and farmland.
+
+player_speed_patch=Increase player movement speed?
+player_speed_tip=If enabled, player character speed can be modified using the entry below.
+
+player_speed_value=Player movement speed:
+player_speed_value_tip=The default vanilla value is 40. 40 to 60 is recommended.
+
+chest_size_value=Chest storage slots:
+chest_size_tip=Default vanilla value is 40. 40 to 80 slots recommended. Remove items from added slots before decreasing value. If an added slot is removed with an item inside, the item is permanently lost. Reload the world to apply.
+
+[ui]
+keg_active=Fermenting...
+keg_inactive=Available for fermenting!
+
+[itemtooltip]
+// Trinkets
+blood_crystal_tooltip=Restores 5% of your maximum health after killing an enemy.
+shadow_crystal_tooltip=Grants a 20% bonus to attack damage for ten seconds after killing an enemy.
+shadow_crystal_bonus=Temporary 20% bonus to damage.
+sandworm_tooth_tooltip=Melee attacks have a 25% chance to inflict a deadly poison upon targets.
+lucky_ring_tip=Killing any non-boss enemy drops 10% of their maximum health in coins.
+necromancer_ring_tip=Killing any non-boss enemy grants a temporary summon for 8 seconds.
+forgotten_relic_tooltip=On taking damage, your mana is restored by 10% of damage received, at a minimum of 1 point of mana per hit.
+forgotten_relic_lore_tooltip=A small statue of an ancient Fishian deity associated with the sea.
+berserker_ring_tooltip=On taking damage, gain a stack of Endurance, increasing your resilience gain by 10% per stack.
+
+// Consumables
+mana_elixir_tip=Increases your maximum mana by 10, up to a maximum of 200.
+greater_mana_elixir_tip=Increases your maximum mana by 10, up to a maximum of 300.
+pearl_oyster=Contains a valuable pearl!
+pearl_oyster_tip=Equip and use this item to open it!
+chest_tip=Equip and use this item to open it!
+treasure_chest=Contains a rare unique item, plus coins.
+stamina_potion=Increases stamina capacity and regeneration.
+
+// Weapons
+juggernaut_axe_tooltip=For when the power of music isn't quite enough for the job.
+frostbolt_tip=Launches a homing freezing projectile that slows enemies for two seconds.
+inferno_tip=Launches a stream of molten lava, inflicting a burning debuff on enemies.
+winterwrath_tip=Launches three homing icicles to pierce and slow enemies.
+brimstone_tip_1=Launches a powerful fireball that explodes on impact, igniting any enemies caught within the blast radius.
+brimstone_tip_2=The fireball explosion can damage both players and enemies caught within the blast radius.
+brimstone_tip_3=Cannot be used when suffering from mana exhaustion.
+glacial_spear_tip=On hit, enemies are slowed for three seconds, and suffer frost damage over time.
+murasama_tip_1=Hold [input=mouse2] to charge up a dash to slice through enemies. Hitting an enemy refreshes the cooldown and makes next dash faster up to <stacks> consecutive dashes
+murasama_tip_2=Possessed by a bloodthirsty spirit, this accursed blade grants a stack of Murasama's Revenge on kill, increasing resilience gain and damage dealt.
+
+// Ammunition
+venom_bullet_tip=Inflict a powerful poison, causing the victim to take 20% more damage for five seconds.
+vampire_bullet_tip=10% chance on hit to absorb the target's life essence, healing you for 1% of your maximum health.
+
+[tile]
+fishian_tile=Fishian Tile
+frost_shard_gravel=Frost Shard Gravel
+life_quartz_gravel=Life Quartz Gravel
+haunted_grass_tile=Haunted Grass Tile
+haunted_rock_tile=Haunted Rock Tile
+
+[object]
+keg=Keg
+
+frostshard_cluster=Frost Shard Cluster
+frostshard_cluster_pure=Pure Frost Shard Cluster
+frostshard_cluster_small=Small Frost Shard Cluster
+
+life_quartz_cluster=Life Quartz Cluster
+life_quartz_cluster_pure=Pure Life Quartz Cluster
+life_quartz_cluster_small=Small Life Quartz Cluster
+
+fishian_wall=Fishian Wall
+fishian_door=Fishian Door
+fishian_venom_trap=Fishian Venom Trap
+fishian_brazier=Fishian Brazier
+fishian_walltrap=Fishian Trap
+
+haunted_grass=Haunted Grass
+haunted_rock=Haunted Rock
+haunted_rock_small=Small Haunted Rock
+haunted_rock_large=Large Haunted Rock
+
+
+[buff]
+murasama_revenge_buff=Murasama's Revenge
+endurance_stack_buff=Endurance
+
+[item]
+// Trinkets
+blood_crystal=Blood Crystal
+shadow_crystal=Shadow Crystal
+sandworm_tooth=Sandworm's Tooth
+lucky_ring=Lucky Ring
+necromancer_ring=Necromancer's Ring
+lensmaker_glasses=Lensmaker's Glasses
+ancient_tablet=Ancient Tablet
+warrior_ring=Warrior's Ring
+summoner_grimoire=Summoner's Grimoire
+berserker_ring=Berserker's Ring
+forgotten_relic=Forgotten Relic
+leather_scabbard=Leather Scabbard
+void_amulet=Void Amulet
+
+// Melee Weapons
+juggernaut_axe=Juggernaut's Axe
+glacial_spear=Glacial Spear
+murasama=Murasama
+
+// Ranged Weapons
+
+// Magic Weapons
+frostbolt=Frost Bolt
+inferno=Inferno
+winterwrath=Winter's Wrath
+brimstone=Brimstone
+
+// Summon Weapons
+
+// Ammunition
+vampire_bullet=Vampire Bullet
+venom_bullet=Venom Bullet
+solar_bullet=Solar Bullet
+lunar_bullet=Lunar Bullet
+
+// Tools
+crystal_fishing_rod=Crystal Fishing Rod
+
+// Consumables
+greater_mana_elixir=Greater Mana Elixir
+mana_elixir=Mana Elixir
+oyster=Oyster
+pearl_oyster=Pearl Oyster
+fruit_jam=Fruit Jam
+jam_donut=Jam Donut
+angler_fish_stew=Angler's Fish Stew
+heartfish_stew=Heartfish Stew
+pearlfish_stew=Pearlfish Stew
+mushroom_stew=Mushroom Stew
+beer=Beer
+cider=Cider
+mead=Mead
+blueberry_wine=Blueberry Wine
+raspberry_wine=Raspberry Wine
+blackberry_wine=Blackberry Wine
+whiskey=Whiskey
+elder_coffee=Elder's Coffee
+miner_brew=Miner's Brew
+pearlescent_wine=Pearlescent Wine
+rum=Pirate's Rum
+surface_treasure_chest=Surface Treasure Chest
+cave_treasure_chest=Cave Treasure Chest
+deep_treasure_chest=Deep Cave Treasure Chest
+incursion_treasure_chest=Incursion Treasure Chest
+stamina_potion=Stamina Potion
+
+// Status effects
+shadow_crystal_bonus=Shadow Crystal damage bonus
+venom_bullet_debuff=Venom Bullet debuff
+stamina_potion_buff=Stamina potion
+
+// Crafting materials
+lunar_essence=Lunar Essence
+solar_essence=Solar Essence
+demonfish=Demonfish
+heartfish=Heartfish
+glacierfish=Glacierfish
+pearlfish=Pearlfish
+swamp_eel=Swamp Eel
+slimefish=Slimefish
+saltwater_shark=Saltwater Shark
+pearl=Pearl
+seaweed=Seaweed
+slime=Slime
+honey_plort=Honey Plort
+haunted_stone=Haunted Stone
+
+// Misc
+dryad_map=Dryad's Map
+fishian_map=Fishian Biome Entrance Map
+haunted_grass_seed=Haunted Grass Seed
+
+[mob]
+// Forest
+zombie_miner=Zombie Miner
+
+// Snow
+frozendwarf=Frozen Dwarf Thrower
+frozen_dwarf=Frozen Dwarf
+frozen_dwarf_mage=Frozen Dwarf Mage
+ice_golem=Ice Golem
+
+// Haunted Forest
+haunted_zombie=Haunted Zombie
+
+// Dungeon
+
+// Plains
+friendly_dryad=Friendly Dryad
+friendly_dryadname=Friendly Dryad
+
+// Swamp
+
+// Desert
+ancient_warrior=Ancient Warrior
+
+// Tropical
+zombie_pirate=Zombie Pirate
+zombie_pirate_gunner=Zombie Pirate Gunner
+
+// Friendly
+settlement_dog=Dog
+settlement_dogname=Dog
+honey_slime=Honey Slime
+
+// Critters
+crystal_caveling=Crystal Caveling
+shard_caveling=Shard Caveling
+slime_caveling=Slime Caveling
+
+// Summons
+necromancer_minion=Necromantic Minion
+
+// Raiders
+stabby_bush_raider=Stabby Bush Warrior
+
+// Zombie raiders
+zombie_raider=Zombie Raider
+zombie_archer_raider=Zombie Archer Raiders
+
+// Runebound raiders
+runebound_boss=Runebound Captain
+runebound_berserker=Runebound Berserker
+runebound_trapper=Runebound Trapper
+runebound_warrior=Runebound Warrior
+
+// Pirate raiders
+pirate_brawler=Pirate Brawler
+pirate_sharpshooter=Pirate Sharpshooter
+pirate_grenadier=Pirate Grenadier
+pirate_gunner=Pirate Gunner
+
+// Skeleton raiders
+skeleton_raider=Skeleton Raider
+skeleton_summoner_raider=Skeleton Summoner Raider
+skeleton_miner_raider=Skeleton Miner Raider
+
+// Ninja raiders
+ninja_raider=Ninja Raider
+
+// Ancient skeleton raiders
+ancient_skeleton_raider=Ancient Skeleton Raider
+ancient_skeleton_summoner_raider=Ancient Skeleton Summoner Raider
+ancient_skeleton_miner_raider=Ancient Skeleton Miner Raider
+
+// Graveyard raiders
+vampire_raider=Ancient Vampire Raider
+
+// Spiderkin Raiders
+spiderkin_warrior_raider=Spiderkin Warrior Raider
+spiderkin_archer_raider=Spiderkin Archer Raider
+spiderkin_mage_raider=Spiderkin Mage Raider
+spiderkin_summoner_raider=Spiderkin Summoner
+spiderkin_healer_raider=Spiderkin Healer
+
+// Slime raiders
+mage_slime_raider=Slime Mage Raider
+warrior_slime_raider=Slime Warrior Raider
+
+[misc]
+zombie_raiders=Zombies
+runebound_raiders=The Runebound
+pirate_raiders=Pirates
+skeleton_raiders=Skeletons
+ninja_raiders=Ninjas
+ancient_skeleton_raiders=Ancient skeletons
+spiderkin_raiders=Raiders from the Spider Kingdom
+slimecave_raiders=Raiders from the Slime Caves
+graveyard_raiders=Powerful undead raiders
+
+[journal]
+snow_defeatmages=[mob=frozen_dwarf_mage]Defeat three Frozen Dwarven Mages.
+defeatpiratecaptain=[mob=piratecaptain]Defeat the Pirate Captain!
+findpiratetrinket=[item=foolsgambit]Find a unique trinket from a pirate village.
+snow_defeatgolems=[mob=ice_golem]Defeat five Ice Golems.
+
+[settlement]
+thoughts=Happiness modifiers:
+
+moodveryunhappy=miserable
+moodunhappy=unhappy
+moodsomewhathappy=content
+moodveryhappy=very happy
+moodextremelyhappy=extremely happy
+moodhappiness=This settler is <happiness>.
+
+nobed=This settler hasn't been assigned a bed!
+bedoutside=This settler's bed is outside!
+
+roommissingfloor=This settler's bedroom does not have a complete floor.
+roommissinglights=This settler's bedroom lacks a light source.
+
+sharingroom=This settler is sharing a bedroom with other settlers.
+
+// Room size
+sizebaby=tiny.
+sizetiny=very small.
+sizesmall=small. 
+sizemediocre=of mediocore size.
+sizedecent=comfortably large.
+sizelarge=very large!
+sizehuge=huge!
+sizemood=This settler's bedroom is <size>
+
+nofoodmood=This settler has not eaten recently.
+dietsame=This settler's diet has not been varied at all.
+dietslightly=This settler's diet has been slightly varied.
+dietsomewhat=This settler's diet has been somewhat varied.
+dietnicely=This settler's diet has been nicely varied.
+dietextremely=This settler's diet has been extremely varied.
+
+// Room quality.
+roomplain=minimal
+roomdull=dull
+roomsimple=simple
+roomnormal=normal
+roomgood=good
+roomimpressive=impressive
+roomwonderful=wonderful
+roomunrivaled=unrivaled
+roommood=This settler's bedroom has a <quality> variety of furniture.
+
+// Diet
+simplemeal=This settler last consumed a simple quality meal.
+finemeal=This settler last consumed a fine quality meal.
+gourmetmeal=This settler last consumed a gourmet quality meal.
+perfectmeal=This settler last ate a perfect quality meal!
+
+foodperfect=Perfect
+
+// Progression bonuses
+progression_bonus=You've completed multiple quest tiers for this settlement.
+
+// Raid effects
+well_defended_bonus=This settlement has been well defended from raiders.
+poorly_defended_penalty=This settlement has been poorly defended from raiders.
+settlement_survived_raid=This settlement has recently survived a raid.
+
+// Settlement size.
+tinysettlement=This settler lives in a tiny settlement.
+smallsettlement=This settler lives in a small settlement.
+averagesettlement=This settler lives in an average sized settlement.
+largesettlement=This settler lives in a large settlement.
+hugesettlement=This settler lives in a huge settlement.
+
+// Misc effects
+travel_bonus=This settlement has access to a fast travel network.
+recent_settler_death=A settler recently died at this settlement.
+settlement_pet_bonus=This settlement owns at least one pet.
+
+// Food happiness effects.
+
+[mobmsg]
+// Dryad
+dryadgreeting1=Count only the happy hours.
+dryadgreeting2=Better to suffer a wrong than to do one.
+dryadgreeting3=Engrave upon thy eye the image of injustice.
+
+// Elder general talk.
+elder_daytalk_1=Good day, <player>! Was there something you needed?
+elder_daytalk_2=Make sure you're prepared before you travel. Have you got everything you need? 
+elder_daytalk_3=Preparation is key to success, <player>. Make sure you're well prepared for the challenges ahead.
+
+elder_nighttalk_1=Travel with caution at night, <player>. Who knows what awaits you in the dark?
+elder_nighttalk_2=Remember to take regular breaks from adventuring, <player>. Your health is important!
+elder_nighttalk_3=When was the last time you had a drink of water, <player>?
+
+// Elder mod references
+elder_aphorea_mod=I've heard rumours of forests afflicted by a strange curse. That eerie glow... Perhaps you should take a look?
+elder_scorched_mod=I've heard rumours of dangerous things living in the volcanic wastes, where the lava reaches the surface. Tread carefully!
+
+[biome]
+dryad_house=Dryad House
+fishian_biome_entrance=Fishian Biome Entrance

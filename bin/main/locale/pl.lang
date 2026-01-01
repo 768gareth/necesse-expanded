@@ -1,0 +1,346 @@
+[settingsui]
+ne_settings_separator_1=Konfiguracja najazdów
+raids_enabled=Włączyć niestandardowe najazdy?
+raids_tip=Jeśli włączone, zastępuje waniliowy system najazdów niestandardowym systemem najazdów z Necesse Expanded, oferując dziewięć nowych, złożonych najazdów z wieloma typami wrogów.
+
+include_vanilla_raids=Czy mogą pojawiać się waniliowe najazdy?
+vanilla_raids_tip=Jeśli włączone, waniliowe najazdy mają konfigurowalną szansę na pojawienie się zamiast niestandardowych najazdów. Pamiętaj, że mnożnik najazdów NIE ma wpływu na waniliowe najazdy, liczba najeźdźców jest dla nich obliczana inaczej.
+
+vanilla_raid_chance=Szansa procentowa na waniliowe najazdy (%):
+vanilla_raid_chance_tip=Jeśli włączone są najazdy niestandardowe + waniliowe, ta wartość określa szansę na pojawienie się waniliowych najazdów.
+
+raider_bombs_destructive=Czy bomby rzucane przez niestandardowych najeźdźców mogą niszczyć obiekty?
+bombs_tip=Jeśli włączone, niektórzy niestandardowi najeźdźcy mogą używać waniliowych materiałów wybuchowych i będą mogli niszczyć ściany i inne obiekty podczas najazdów. Jeśli wyłączone, użyją niestandardowych materiałów wybuchowych, które niczego nie uszkadzają.
+
+raid_size_multiplier=Mnożnik rozmiaru najazdu:
+raid_size_tip=Obliczenie rozmiaru najazdu: Populacja osady * mnożnik rozmiaru najazdu * współczynnik sukcesu najazdu. Współczynnik sukcesu najazdu jest oparty na tym, jak osada wcześniej radziła sobie z najeźdźcami, w zakresie od 0.5 (bardzo źle) do 1.25 (doskonale).
+
+ne_settings_separator_2=Osady i osadnicy
+
+happiness_changes_enabled=Włączyć zmodyfikowany system szczęścia osadników?
+happiness_changes_tip=Jeśli włączone, przywraca równowagę obliczeń szczęścia osadników i wprowadza nowe modyfikatory szczęścia. Osadnicy mają zmniejszone oczekiwania co do wielkości pokoju i różnorodności diety, a także zyskują szczęście z większej populacji osady.
+
+ne_settings_separator_3=Różne
+
+starter_equipment_enabled=Włączyć lepsze wyposażenie początkowe?
+starter_equipment_tip=Jeśli włączone, nowi gracze zaczynają z podstawowymi zapasami, żelaznymi narzędziami, książką z przepisami i skórzanymi butami.
+
+starter_kit_enabled=Włączyć zestaw startowy osady?
+starter_kit_tip=Jeśli włączone, w domu starszego znajdzie się flaga osady, a także materiały budowlane, stanowiska rzemieślnicze, nasiona i pole uprawne.
+
+player_speed_patch=Zwiększyć prędkość ruchu gracza?
+player_speed_tip=Jeśli włączone, prędkość postaci gracza może być modyfikowana za pomocą poniższego wpisu.
+
+player_speed_value=Prędkość ruchu gracza:
+player_speed_value_tip=Domyślna waniliowa wartość to 40. Zalecane jest od 40 do 60. Uruchom grę ponownie, aby zastosować.
+
+chest_size_value=Gniazda przechowywania w skrzyniach:
+chest_size_tip=Domyślna waniliowa wartość to 40. Zalecane jest od 40 do 80 gniazd. Usuń przedmioty z dodanych gniazd przed zmniejszeniem wartości. Jeśli dodane gniazdo zostanie usunięte z przedmiotem w środku, przedmiot zostanie trwale utracony. Przeładuj świat, aby zastosować.
+
+[ui]
+keg_active=Fermentuje...
+keg_inactive=Dostępne do fermentacji!
+
+[itemtooltip]
+// Trinkets
+blood_crystal_tooltip=Przywraca 5% twojego maksymalnego zdrowia po zabiciu wroga.
+shadow_crystal_tooltip=Przyznaje 20% premii do obrażeń od ataku na dziesięć sekund po zabiciu wroga.
+shadow_crystal_bonus=Tymczasowa 20% premia do obrażeń.
+sandworm_tooth_tooltip=Ataki w zwarciu mają 25% szans na zadanie celom śmiercionośnej trucizny.
+lucky_ring_tip=Zabicie dowolnego wroga niebędącego bossem upuszcza monety w wysokości 10% jego maksymalnego zdrowia.
+necromancer_ring_tip=Zabicie dowolnego wroga niebędącego bossem zapewnia tymczasowe przywołanie na 8 sekund.
+forgotten_relic_tooltip=Przy otrzymaniu obrażeń, twoja mana jest przywracana o 10% otrzymanych obrażeń, z minimum 1 punktem many na trafienie.
+forgotten_relic_lore_tooltip=Mały posąg starożytnego bóstwa Ryboludzi związanego z morzem.
+berserker_ring_tooltip=Po otrzymaniu obrażeń, zyskaj stos Wytrzymałości, zwiększając swój przyrost odporności o 10% za każdy stos.
+
+// Consumables
+mana_elixir_tip=Zwiększa twoją maksymalną manę o 10, do maksimum 200.
+greater_mana_elixir_tip=Zwiększa twoją maksymalną manę o 10, do maksimum 300.
+pearl_oyster=Zawiera cenną perłę!
+pearl_oyster_tip=Wyposaż i użyj tego przedmiotu, aby go otworzyć!
+chest_tip=Wyposaż i użyj tego przedmiotu, aby go otworzyć!
+treasure_chest=Zawiera rzadki unikalny przedmiot, plus monety.
+stamina_potion=Zwiększa pojemność i regenerację wytrzymałości.
+
+// Weapons
+juggernaut_axe_tooltip=Na wypadek, gdyby siła muzyki nie była wystarczająca do wykonania zadania.
+frostbolt_tip=Wystrzeliwuje naprowadzający, zamrażający pocisk, który spowalnia wrogów na dwie sekundy.
+inferno_tip=Wystrzeliwuje strumień stopionej lawy, nakładając na wrogów osłabienie podpalenia.
+winterwrath_tip=Wystrzeliwuje trzy naprowadzające sople lodu, które przebijają i spowalniają wrogów.
+brimstone_tip_1=Wystrzeliwuje potężną kulę ognia, która eksploduje przy uderzeniu, podpalając każdego wroga złapanego w promieniu wybuchu.
+brimstone_tip_2=Eksplozja kuli ognia może zranić zarówno graczy, jak i wrogów złapanych w promieniu wybuchu.
+brimstone_tip_3=Nie może być użyty, gdy cierpisz na wyczerpanie many.
+glacial_spear_tip=Po trafieniu wrogowie są spowolnieni na trzy sekundy i cierpią z powodu obrażeń od mrozu w czasie.
+murasama_tip_1=Przytrzymaj [input=mouse2], aby naładować doskok do przecięcia wrogów. Trafienie wroga odświeża czas odnowienia i przyspiesza następny doskok do <stacks> kolejnych doskoków.
+murasama_tip_2=Opętane przez krwiożerczego ducha, to przeklęte ostrze przyznaje stos Zemsty Murasamy po zabiciu, zwiększając przyrost odporności i zadawane obrażenia.
+
+// Ammunition
+venom_bullet_tip=Nakłada potężną truciznę, powodując, że ofiara otrzymuje 20% więcej obrażeń przez pięć sekund.
+vampire_bullet_tip=10% szans na trafienie, aby wchłonąć esencję życia celu, lecząc cię o 1% twojego maksymalnego zdrowia.
+solar_bullet_tip=10% szans na trafienie, aby cel zyskał stos Osądu Światła Słonecznego, zadając rosnące obrażenia w czasie w zależności od liczby stosów, i trwając, dopóki wszystkie stosy nie wyczerpią się.
+lunar_bullet_tip=Nakłada Klątwę Światła Księżyca, zmniejszając pancerz ofiary o połowę i powodując, że otrzymuje 25% więcej obrażeń przez pięć sekund.
+
+[object]
+keg=Beczka
+
+frostshard_cluster=Skupisko Odłamków Mrozu
+frostshard_cluster_pure=Czyste Skupisko Odłamków Mrozu
+frostshard_cluster_small=Małe Skupisko Odłamków Mrozu
+
+life_quartz_cluster=Skupisko Życiodajnego Kwarcu
+life_quartz_cluster_pure=Czyste Skupisko Życiodajnego Kwarcu
+life_quartz_cluster_small=Małe Skupisko Życiodajnego Kwarcu
+
+[buff]
+murasama_revenge_buff=Zemsta Murasamy
+endurance_stack_buff=Wytrzymałość
+
+[item]
+// Trinkets
+blood_crystal=Krwawy Kryształ
+shadow_crystal=Cienisty Kryształ
+sandworm_tooth=Ząb Piaskowego Robala
+lucky_ring=Pierścień Szczęścia
+necromancer_ring=Pierścień Nekromanty
+lensmaker_glasses=Okulary Optyka
+ancient_tablet=Starożytna Tablica
+warrior_ring=Pierścień Wojownika
+summoner_grimoire=Grimuar Przywoływacza
+berserker_ring=Pierścień Berserkera
+forgotten_relic=Zapomniany Relikt
+leather_scabbard=Skórzana Pochwa
+
+// Melee Weapons
+juggernaut_axe=Topór Goliata
+glacial_spear=Lodowcowa Włócznia
+murasama=Murasama
+
+// Ranged Weapons
+
+// Magic Weapons
+frostbolt=Mroźnocisk
+inferno=Inferno
+winterwrath=Szronogniew
+brimstone=Skała Siarkowa
+
+// Summon Weapons
+
+// Ammunition
+vampire_bullet=Wampiryczny Pocisk
+venom_bullet=Jadowity Pocisk
+solar_bullet=Słoneczny Pocisk
+lunar_bullet=Księżycowy Pocisk
+
+// Tools
+crystal_fishing_rod=Kryształowa Wędka
+
+// Consumables
+greater_mana_elixir=Większy Eliksir Many
+mana_elixir=Eliksir Many
+oyster=Ostryga
+pearl_oyster=Perłowa Ostryga
+fruit_jam=Dżem Owocowy
+jam_donut=Pączek z Dżemem
+angler_fish_stew=Gulasz z Żabnicy
+heartfish_stew=Gulasz z Sercki
+pearlfish_stew=Gulasz z Perełki
+mushroom_stew=Gulasz Grzybowy
+beer=Piwo
+cider=Cydr
+mead=Miód Pitny
+blueberry_wine=Wino Jagodowe
+raspberry_wine=Wino Malinowe
+blackberry_wine=Wino Jeżynowe
+whiskey=Whisky
+elder_coffee=Kawa Starszego
+miner_brew=Piwo Górnika
+pearlescent_wine=Perłowe Wino
+rum=Rum Piratów
+surface_treasure_chest=Skrzynia Skarbów Powierzchni
+cave_treasure_chest=Skrzynia Skarbów Jaskini
+deep_treasure_chest=Skrzynia Skarbów Głębokiej Jaskini
+incursion_treasure_chest=Skrzynia Skarbów Inwazji
+stamina_potion=Mikstura Wytrzymałości
+
+// Status effects
+shadow_crystal_bonus=Premia do obrażeń Kryształu Cienia
+venom_bullet_debuff=Osłabienie Jadowitego Pocisku
+stamina_potion_buff=Mikstura Wytrzymałości
+
+// Crafting materials
+lunar_essence=Księżycowa Esencja
+solar_essence=Słoneczna Esencja
+demonfish=Rybodemon
+heartfish=Sercka
+glacierfish=Ryba Lodowcowa
+pearlfish=Perełka
+swamp_eel=Węgorz Bagienny
+slimefish=Śluzoryb
+saltwater_shark=Rekin Słonowodny
+pearl=Perła
+seaweed=Wodorosty
+slime=Śluz
+
+[mob]
+// Forest
+zombie_miner=Zombie Górnik
+
+// Snow
+frozen_dwarf=Zamrożony Krasnolud
+frozen_dwarf_mage=Zamrożony Krasnoludzki Mag
+ice_golem=Lodowy Golem
+
+// Dungeon
+
+// Plains
+
+// Swamp
+
+// Desert
+ancient_warrior=Starożytny Wojownik
+
+// Critters
+crystal_caveling=Kryształowy Jaskiniowiec
+shard_caveling=Odłamkowy Jaskiniowiec
+slime_caveling=Śluzowy Jaskiniowiec
+
+// Summons
+necromancer_minion=Nekromantyczny Pomocnik
+
+// Raiders
+stabby_bush_raider=Wojownik Kłującego Krzewu
+
+// Zombie raiders
+zombie_raider=Zombie Najeźdźca
+zombie_archer_raider=Zombie Łucznik Najeźdźca
+
+// Runebound raiders
+runebound_boss=Kapitan Powiązanych Runami
+runebound_berserker=Berserker Powiązanych Runami
+runebound_trapper=Łowca Powiązanych Runami
+runebound_warrior=Wojownik Powiązanych Runami
+
+// Pirate raiders
+pirate_brawler=Pirat Zbir
+pirate_sharpshooter=Pirat Strzelec Wyborowy
+pirate_grenadier=Pirat Grenadier
+pirate_gunner=Pirat Strzelec
+
+// Skeleton raiders
+skeleton_raider=Szkielet Najeźdźca
+skeleton_summoner_raider=Szkielet Przywoływacz Najeźdźca
+skeleton_miner_raider=Szkielet Górnik Najeźdźca
+
+// Ninja raiders
+ninja_raider=Ninja Najeźdźca
+
+// Ancient skeleton raiders
+ancient_skeleton_raider=Starożytny Szkielet Najeźdźca
+ancient_skeleton_summoner_raider=Starożytny Szkielet Przywoływacz Najeźdźca
+ancient_skeleton_miner_raider=Starożytny Szkielet Górnik Najeźdźca
+
+// Graveyard raiders
+vampire_raider=Starożytny Wampir Najeźdźca
+
+// Spiderkin Raiders
+spiderkin_warrior_raider=Pajęczak Wojownik Najeźdźca
+spiderkin_archer_raider=Pajęczak Łucznik Najeźdźca
+spiderkin_mage_raider=Pajęczak Mag Najeźdźca
+spiderkin_summoner=Pajęczak Przywoływacz
+spiderkin_healer_raider=Pajęczak Uzdrowiciel
+
+// Slime raiders
+mage_slime_raider=Śluzowy Mag Najeźdźca
+warrior_slime_raider=Śluzowy Wojownik Najeźdźca
+
+[misc]
+zombie_raiders=Zombie
+runebound_raiders=Powiązani Runami
+pirate_raiders=Piraci
+skeleton_raiders=Szkielety
+ninja_raiders=Ninja
+ancient_skeleton_raiders=Starożytne szkielety
+spiderkin_raiders=Najeźdźcy z Królestwa Pająków
+slimecave_raiders=Najeźdźcy z Jaskiń Śluzu
+graveyard_raiders=Potężni nieumarli najeźdźcy
+
+[journal]
+snow_defeatmages=[mob=frozen_dwarf_mage]Pokonaj trzech Zamrożonych Magów Krasnoludów.
+defeatpiratecaptain=[mob=piratecaptain]Pokonaj Kapitana Piratów!
+findpiratetrinket=[item=foolsgambit]Znajdź unikalny talizman z pirackiej wioski.
+snow_defeatgolems=[mob=ice_golem]Pokonaj pięć Lodowych Golemów.
+
+[settlement]
+thoughts=Modyfikatory Szczęścia:
+
+moodveryunhappy=nieszczęśliwy
+moodunhappy=niezadowolony
+moodsomewhathappy=zadowolony
+moodveryhappy=bardzo szczęśliwy
+moodextremelyhappy=niezwykle szczęśliwy
+moodhappiness=Ten osadnik jest <happiness>.
+
+nobed=Temu osadnikowi nie przydzielono łóżka!
+bedoutside=Łóżko tego osadnika jest na zewnątrz!
+
+roommissingfloor=W sypialni tego osadnika brakuje kompletnej podłogi.
+roommissinglights=W sypialni tego osadnika brakuje źródła światła.
+
+sharingroom=Ten osadnik dzieli sypialnię z innymi osadnikami.
+
+// Room size
+sizebaby=malutki.
+sizetiny=bardzo mały.
+sizesmall=mały.
+sizemediocre=przeciętnej wielkości.
+sizedecent=komfortowo duży.
+sizelarge=bardzo duży!
+sizehuge=ogromny!
+sizemood=Sypialnia tego osadnika jest <size>
+
+nofoodmood=Ten osadnik ostatnio nie jadł.
+dietsame=Dieta tego osadnika w ogóle nie była urozmaicona.
+dietslightly=Dieta tego osadnika była lekko urozmaicona.
+dietsomewhat=Dieta tego osadnika była nieco urozmaicona.
+dietnicely=Dieta tego osadnika była ładnie urozmaicona.
+dietextremely=Dieta tego osadnika była niezwykle urozmaicona.
+
+// Room quality.
+roomplain=minimalna
+roomdull=nudna
+roomsimple=prosta
+roomnormal=normalna
+roomgood=dobra
+roomimpressive=imponująca
+roomwonderful=cudowna
+roomunrivaled=bezkonkurencyjna
+roommood=Sypialnia tego osadnika ma <quality> różnorodność mebli.
+
+// Diet
+simplemeal=Ten osadnik ostatnio spożył posiłek prostej jakości.
+finemeal=Ten osadnik ostatnio spożył posiłek dobrej jakości.
+gourmetmeal=Ten osadnik ostatnio spożył posiłek wykwintnej jakości.
+perfectmeal=Ten osadnik ostatnio jadł posiłek doskonałej jakości!
+
+foodperfect=Doskonały
+
+// Progression bonuses
+progression_bonus=Ukończyłeś wiele poziomów zadań dla tej osady.
+
+// Raid effects
+well_defended_bonus=Ta osada została dobrze obroniona przed najeźdźcami.
+poorly_defended_penalty=Ta osada została słabo obroniona przed najeźdźcami.
+settlement_survived_raid=Ta osada niedawno przetrwała najazd.
+
+// Settlement size.
+tinysettlement=Ten osadnik mieszka w malutkiej osadzie.
+smallsettlement=Ten osadnik mieszka w małej osadzie.
+averagesettlement=Ten osadnik mieszka w osadzie o przeciętnej wielkości.
+largesettlement=Ten osadnik mieszka w dużej osadzie.
+hugesettlement=Ten osadnik mieszka w ogromnej osadzie.
+
+// Misc effects
+travel_bonus=Ta osada ma dostęp do sieci szybkiej podróży.
+recent_settler_death=W tej osadzie niedawno zginął osadnik.
+
+// Food happiness effects.
