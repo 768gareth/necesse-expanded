@@ -20,6 +20,7 @@ import necesse.inventory.item.toolItem.ToolType;
 import necesse.inventory.recipe.Recipe;
 import necesse.inventory.recipe.Recipes;
 import necesse.level.gameObject.GameObject;
+import necesse.level.gameObject.ObjectHoverHitbox;
 import necesse.level.maps.Level;
 import necesse.level.maps.levelData.settlementData.SettlementWorkstationObject;
 import necesse.level.maps.light.GameLight;
@@ -52,33 +53,39 @@ public class CustomKegObject extends GameObject implements SettlementWorkstation
     }
 
     public void addDrawables(List<LevelSortedDrawable> list, OrderableDrawables tileList, Level level, int tileX, int tileY, TickManager tickManager, GameCamera camera, PlayerMob perspective) {
-        GameLight light = level.getLightLevel(tileX, tileY);
-        int spriteWidth = this.texture.getWidth() / this.spriteCount;
-        int drawX = camera.getTileDrawX(tileX) - this.statueXOffset;
-        int drawY = camera.getTileDrawY(tileY);
-        int rotation = level.getObjectRotation(tileX, tileY) % this.texture.getWidth() / spriteWidth;
-        final TextureDrawOptionsEnd options = this.texture.initDraw().sprite(rotation, 0, spriteWidth, this.texture.getHeight()).addObjectDamageOverlay(this, level, tileX, tileY).light(light).pos(drawX, drawY - this.texture.getHeight() + 32);
-        list.add(new LevelSortedDrawable(this, tileX, tileY) {
-              public int getSortY() {
-                return 16;
-              }
-              
-              public void draw(TickManager tickManager) {
-                options.draw();
-              }
-            });
-      }
-      
-      public void drawPreview(Level level, int tileX, int tileY, int rotation, float alpha, PlayerMob player, GameCamera camera) {
-        int spriteWidth = this.texture.getWidth() / this.spriteCount;
-        int drawX = camera.getTileDrawX(tileX) - this.statueXOffset;
-        int drawY = camera.getTileDrawY(tileY);
-        rotation = (byte)(rotation % this.texture.getWidth() / spriteWidth);
-        this.texture.initDraw()
-        .sprite(rotation, 0, spriteWidth, this.texture.getHeight())
-        .alpha(alpha)
-        .draw(drawX, drawY - this.texture.getHeight() + 32);
-    }
+    GameLight light = level.getLightLevel(tileX, tileY);
+    int spriteWidth = this.texture.getWidth() / this.spriteCount;
+    int drawX = camera.getTileDrawX(tileX) - this.statueXOffset;
+    int drawY = camera.getTileDrawY(tileY);
+    int rotation = level.getObjectRotation(tileX, tileY) % this.texture.getWidth() / spriteWidth;
+    final TextureDrawOptionsEnd options = this.texture.initDraw().sprite(rotation, 0, spriteWidth, this.texture.getHeight()).addObjectDamageOverlay(this, level, tileX, tileY).light(light).pos(drawX, drawY - this.texture.getHeight() + 32);
+    list.add(new LevelSortedDrawable(this, tileX, tileY) {
+          public int getSortY() {
+            return 16;
+          }
+          
+          public void draw(TickManager tickManager) {
+            options.draw();
+          }
+        });
+  }
+  
+  public void drawPreview(Level level, int tileX, int tileY, int rotation, float alpha, PlayerMob player, GameCamera camera) {
+    int spriteWidth = this.texture.getWidth() / this.spriteCount;
+    int drawX = camera.getTileDrawX(tileX) - this.statueXOffset;
+    int drawY = camera.getTileDrawY(tileY);
+    rotation = (byte)(rotation % this.texture.getWidth() / spriteWidth);
+    this.texture.initDraw()
+      .sprite(rotation, 0, spriteWidth, this.texture.getHeight())
+      .alpha(alpha)
+      .draw(drawX, drawY - this.texture.getHeight() + 32);
+  }
+  
+  public List<ObjectHoverHitbox> getHoverHitboxes(Level level, int layerID, int tileX, int tileY) {
+    List<ObjectHoverHitbox> list = super.getHoverHitboxes(level, layerID, tileX, tileY);
+    list.add(new ObjectHoverHitbox(layerID, tileX, tileY, 0, -16, 32, 32));
+    return list;
+  }
 
     @Override
     public void loadTextures() 

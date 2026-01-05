@@ -3,17 +3,15 @@ package NecesseExpanded.Registry;
 import NecesseExpanded.Mobs.Friendly.Critters.CrystalCaveling;
 import NecesseExpanded.Mobs.Friendly.Critters.ShardCaveling;
 import NecesseExpanded.Mobs.Friendly.Critters.SlimeCaveling;
-// import NecesseExpanded.Mobs.Friendly.Husbandry.HoneySlimeHusbandryMob;
-import NecesseExpanded.Mobs.Hostile.Desert.AncientWarrior;
-import NecesseExpanded.Mobs.Hostile.Forest.ZombieMiner;
-import NecesseExpanded.Mobs.Hostile.HauntedForest.HauntedZombie;
-import NecesseExpanded.Mobs.Hostile.Jungle.ZombiePirate;
-import NecesseExpanded.Mobs.Hostile.Jungle.ZombiePirateGunner;
-import NecesseExpanded.Mobs.Hostile.Snow.FrozenDwarf;
-import NecesseExpanded.Mobs.Hostile.Snow.FrozenDwarfMage;
-import NecesseExpanded.Mobs.Hostile.Snow.IceGolemMob;
 import NecesseExpanded.Mobs.Friendly.Summons.NecromancerMinion;
-
+import NecesseExpanded.Mobs.Hostile.Desert.AncientWarrior;
+import NecesseExpanded.Mobs.Hostile.Forest.ZombieMinerMob;
+import NecesseExpanded.Mobs.Hostile.Haunted.HauntedZombieMob;
+import NecesseExpanded.Mobs.Hostile.Snow.CustomFrozenDwarfMob;
+import NecesseExpanded.Mobs.Hostile.Snow.FrozenDwarfMageMob;
+import NecesseExpanded.Mobs.Hostile.Snow.IceGolemMob;
+import NecesseExpanded.Mobs.Hostile.Tropical.ZombiePirateGunnerMob;
+import NecesseExpanded.Mobs.Hostile.Tropical.ZombiePirateMob;
 import necesse.engine.registries.MobRegistry;
 
 // preInit() registration of mobs for inclusion in journal. Must be used to ensure mobs appear in journal.
@@ -21,14 +19,14 @@ public class PreRegisterMobs
 {
     public static void Register()
     {
-        System.out.println("[Necesse Expanded] Pre-registering mobs...");
+        System.out.println("[Necesse Expanded] Pre-registering new mobs for vanilla biomes...");
 
         // Forest
-        MobRegistry.registerMob("zombie_miner", ZombieMiner.class, true);
+        MobRegistry.registerMob("zombie_miner", ZombieMinerMob.class, true);
 
         // Snow
-        MobRegistry.registerMob("frozen_dwarf", FrozenDwarf.class, true);
-        MobRegistry.registerMob("frozen_dwarf_mage", FrozenDwarfMage.class, true);
+        MobRegistry.registerMob("frozen_dwarf", CustomFrozenDwarfMob.class, true);
+        MobRegistry.registerMob("frozen_dwarf_mage", FrozenDwarfMageMob.class, true);
         MobRegistry.registerMob("ice_golem", IceGolemMob.class, true);
 
         // Dungeon
@@ -41,11 +39,11 @@ public class PreRegisterMobs
         MobRegistry.registerMob("ancient_warrior", AncientWarrior.class, true);
 
         // Haunted Forest
-        MobRegistry.registerMob("haunted_zombie", HauntedZombie.class, true);
+        MobRegistry.registerMob("haunted_zombie", HauntedZombieMob.class, true);
 
         // Tropical
-        MobRegistry.registerMob("zombie_pirate", ZombiePirate.class, true);
-        MobRegistry.registerMob("zombie_pirate_gunner", ZombiePirateGunner.class, true);
+        MobRegistry.registerMob("zombie_pirate", ZombiePirateMob.class, true);
+        MobRegistry.registerMob("zombie_pirate_gunner", ZombiePirateGunnerMob.class, true);
 
         // Summons
         MobRegistry.registerMob("necromancer_minion", NecromancerMinion.class, false);

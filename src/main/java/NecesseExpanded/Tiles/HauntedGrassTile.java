@@ -2,6 +2,7 @@ package NecesseExpanded.Tiles;
 
 import java.awt.Color;
 import java.awt.Point;
+
 import necesse.engine.registries.ObjectRegistry;
 import necesse.engine.util.GameMath;
 import necesse.engine.util.GameRandom;
@@ -49,7 +50,7 @@ public class HauntedGrassTile extends TerrainSplatterTile
     
     public void tickEffect(Level level, int x, int y) {
       super.tickEffect(level, x, y);
-      if (GameRandom.globalRandom.getChance(0.025F) && 
+      if (GameRandom.globalRandom.getChance(0.002F) && 
         !level.getObject(x, y).drawsFullTile() && level.getLightLevel(x, y).getLevel() > 0.0F) {
         int posX = x * 32 + GameRandom.globalRandom.nextInt(32);
         int posY = y * 32 + GameRandom.globalRandom.nextInt(32);

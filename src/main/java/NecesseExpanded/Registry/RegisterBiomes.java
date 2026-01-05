@@ -1,7 +1,7 @@
 package NecesseExpanded.Registry;
 
-import NecesseExpanded.World.Biomes.FishianDeepCaveBiome;
-import NecesseExpanded.World.Biomes.HauntedForestBiome;
+import NecesseExpanded.World.Biomes.FishianBiome;
+import NecesseExpanded.World.Biomes.HauntedBiome;
 import NecesseExpanded.World.Biomes.TropicalBiome;
 import necesse.engine.registries.BiomeRegistry;
 
@@ -11,8 +11,8 @@ public class RegisterBiomes
     {
         System.out.println("[Necesse Expanded] Registering new biomes...");
 
-        BiomeRegistry.registerBiome("fishian_cave", new FishianDeepCaveBiome(), true);
+        BiomeRegistry.registerBiome("fishian_biome", new FishianBiome(), true);
         BiomeRegistry.registerBiome("tropical_biome", new TropicalBiome().setGenerationWeight(0.75f), true);
-        BiomeRegistry.registerBiome("haunted_forest_biome", new HauntedForestBiome().setGenerationWeight(0.75f), true);
+        BiomeRegistry.registerBiome("haunted_biome", new HauntedBiome().setGenerationWeight(0.75f), true);
     }
 }

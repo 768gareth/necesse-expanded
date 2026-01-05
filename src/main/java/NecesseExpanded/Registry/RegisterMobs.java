@@ -1,16 +1,33 @@
 package NecesseExpanded.Registry;
 
 import NecesseExpanded.Mobs.Friendly.Human.FriendlyDryadMob;
-import NecesseExpanded.Mobs.Hostile.Raiders.StabbyBushRaider;
-import NecesseExpanded.Mobs.Hostile.Raiders.AncientSkeletonRaiders.*;
-import NecesseExpanded.Mobs.Hostile.Raiders.GraveyardRaiders.*;
+import NecesseExpanded.Mobs.Hostile.Fishian.FishianChampionMob;
+import NecesseExpanded.Mobs.Hostile.Raiders.AncientSkeletonRaiders.AncientSkeletonMinerRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.AncientSkeletonRaiders.AncientSkeletonRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.AncientSkeletonRaiders.AncientSkeletonSummonerRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.GraveyardRaiders.VampireRaider;
 import NecesseExpanded.Mobs.Hostile.Raiders.NinjaRaid.NinjaRaider;
-import NecesseExpanded.Mobs.Hostile.Raiders.PirateRaiders.*;
-import NecesseExpanded.Mobs.Hostile.Raiders.RuneboundRaiders.*;
-import NecesseExpanded.Mobs.Hostile.Raiders.SkeletonRaiders.*;
-import NecesseExpanded.Mobs.Hostile.Raiders.SlimeRaiders.*;
-import NecesseExpanded.Mobs.Hostile.Raiders.SpiderkinRaiders.*;
-import NecesseExpanded.Mobs.Hostile.Raiders.ZombieRaiders.*;
+import NecesseExpanded.Mobs.Hostile.Raiders.PirateRaiders.PirateBrawlerRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.PirateRaiders.PirateGrenadierRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.PirateRaiders.PirateGunnerRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.PirateRaiders.PirateSharpshooterRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.RuneboundRaiders.RuneboundBerserker;
+import NecesseExpanded.Mobs.Hostile.Raiders.RuneboundRaiders.RuneboundBoss;
+import NecesseExpanded.Mobs.Hostile.Raiders.RuneboundRaiders.RuneboundTrapper;
+import NecesseExpanded.Mobs.Hostile.Raiders.RuneboundRaiders.RuneboundWarrior;
+import NecesseExpanded.Mobs.Hostile.Raiders.SkeletonRaiders.SkeletonMinerRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.SkeletonRaiders.SkeletonRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.SkeletonRaiders.SkeletonSummonerRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.SlimeRaiders.SlimeMageRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.SlimeRaiders.SlimeWarriorRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.SpiderkinRaiders.SpiderkinArcherRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.SpiderkinRaiders.SpiderkinHealerRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.SpiderkinRaiders.SpiderkinMageRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.SpiderkinRaiders.SpiderkinSummonerRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.SpiderkinRaiders.SpiderkinWarriorRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.StabbyBushRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.ZombieRaiders.ZombieArcherRaider;
+import NecesseExpanded.Mobs.Hostile.Raiders.ZombieRaiders.ZombieRaider;
 import necesse.engine.registries.MobRegistry;
 
 // Registering raiders and other mobs that don't require a journal entry.
@@ -21,6 +38,10 @@ public class RegisterMobs
         System.out.println("[Necesse Expanded] Registering new human mobs...");
         
         MobRegistry.registerMob("friendly_dryad", FriendlyDryadMob.class, true);
+
+        System.out.println("[Necesse Expanded] Registering new enemies...");
+
+        MobRegistry.registerMob("fishian_champion", FishianChampionMob.class, true);
 
         System.out.println("[Necesse Expanded] Registering new raiders...");
 

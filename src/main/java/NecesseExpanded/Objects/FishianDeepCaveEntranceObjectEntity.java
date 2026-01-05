@@ -1,13 +1,13 @@
 package NecesseExpanded.Objects;
 
-import necesse.entity.objectEntity.PortalObjectEntity;
 import java.util.function.Function;
 
-import NecesseExpanded.World.Levels.FishianDeepCaveLevel;
+import NecesseExpanded.World.Levels.FishianBiomeLevel;
 import necesse.engine.network.server.Server;
 import necesse.engine.network.server.ServerClient;
 import necesse.engine.registries.ObjectRegistry;
 import necesse.engine.util.LevelIdentifier;
+import necesse.entity.objectEntity.PortalObjectEntity;
 import necesse.level.gameObject.GameObject;
 import necesse.level.maps.Level;
 
@@ -34,7 +34,7 @@ public class FishianDeepCaveEntranceObjectEntity extends PortalObjectEntity {
         Function<LevelIdentifier, Level> levelGenerator = identifier -> 
         {
             (getLevel()).childLevels.add(this.destinationIdentifier);
-            return (Level)(new FishianDeepCaveLevel(identifier, server.world.worldEntity));
+            return (Level)(new FishianBiomeLevel(identifier, server.world.worldEntity));
         };
         teleportClientToAroundDestination(client, levelGenerator, level -> 
         {

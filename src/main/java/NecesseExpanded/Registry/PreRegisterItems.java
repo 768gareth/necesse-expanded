@@ -1,6 +1,10 @@
 package NecesseExpanded.Registry;
 
-import NecesseExpanded.Items.Consumables.Misc.*;
+import NecesseExpanded.Items.Consumables.Misc.CaveTreasureChest;
+import NecesseExpanded.Items.Consumables.Misc.DeepTreasureChest;
+import NecesseExpanded.Items.Consumables.Misc.IncursionTreasureChest;
+import NecesseExpanded.Items.Consumables.Misc.PearlOyster;
+import NecesseExpanded.Items.Consumables.Misc.SurfaceTreasureChest;
 import necesse.engine.registries.ItemRegistry;
 import necesse.inventory.item.Item;
 import necesse.inventory.item.Item.Rarity;
@@ -11,7 +15,7 @@ public class PreRegisterItems
 {
     public static void Register()
     {
-        System.out.println("[Necesse Expanded] Pre-registering new items...");
+        System.out.println("[Necesse Expanded] Pre-registering items...");
 
         // Fishing consumables
         ItemRegistry.registerItem("surface_treasure_chest", new SurfaceTreasureChest(), 25.0F, true);

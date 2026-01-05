@@ -1,11 +1,29 @@
 package NecesseExpanded;
 
+import NecesseExpanded.Mobs.Hostile.Snow.IceGolemMob;
+import NecesseExpanded.Registry.PreRegisterItems;
+import NecesseExpanded.Registry.PreRegisterMobs;
+import NecesseExpanded.Registry.RegisterBiomes;
+import NecesseExpanded.Registry.RegisterBuffs;
+import NecesseExpanded.Registry.RegisterEvents;
+import NecesseExpanded.Registry.RegisterExpeditions;
+import NecesseExpanded.Registry.RegisterItems;
+import NecesseExpanded.Registry.RegisterJournal;
+import NecesseExpanded.Registry.RegisterLevels;
+import NecesseExpanded.Registry.RegisterMobs;
+import NecesseExpanded.Registry.RegisterObjects;
+import NecesseExpanded.Registry.RegisterProjectiles;
+import NecesseExpanded.Registry.RegisterRecipeTechs;
+import NecesseExpanded.Registry.RegisterRecipes;
+import NecesseExpanded.Registry.RegisterTiles;
+import NecesseExpanded.Registry.RegisterWorldPresets;
+import NecesseExpanded.Registry.UpdateAmmoTypes;
+import NecesseExpanded.Registry.UpdateHappinessMetrics;
+import NecesseExpanded.Registry.UpdateLootTables;
+import NecesseExpanded.Registry.UpdateSpawnTables;
 import customsettingslib.components.settings.IntSetting;
 import customsettingslib.settings.CustomModSettings;
 import customsettingslib.settings.CustomModSettingsGetter;
-// import NecesseExpanded.Mobs.Friendly.Husbandry.HoneySlimeHusbandryMob;
-import NecesseExpanded.Mobs.Hostile.Snow.IceGolemMob;
-import NecesseExpanded.Registry.*;
 import necesse.engine.modLoader.ModSettings;
 import necesse.engine.modLoader.annotations.ModEntry;
 import necesse.gfx.gameTexture.GameTexture;
@@ -35,6 +53,7 @@ public class Main
         RegisterBiomes.Register();
         RegisterLevels.Register();
         RegisterWorldPresets.Register();
+        RegisterJournal.Register();
     } 
 
     public void initResources()

@@ -76,6 +76,7 @@ brimstone_tip_3=Cannot be used when suffering from mana exhaustion.
 glacial_spear_tip=On hit, enemies are slowed for three seconds, and suffer frost damage over time.
 murasama_tip_1=Hold [input=mouse2] to charge up a dash to slice through enemies. Hitting an enemy refreshes the cooldown and makes next dash faster up to <stacks> consecutive dashes
 murasama_tip_2=Possessed by a bloodthirsty spirit, this accursed blade grants a stack of Murasama's Revenge on kill, increasing resilience gain and damage dealt.
+voidbolt_tip=Launches a powerful homing bolt of void energy, at a high mana cost.
 
 // Ammunition
 venom_bullet_tip=Inflict a powerful poison, causing the victim to take 20% more damage for five seconds.
@@ -83,6 +84,7 @@ vampire_bullet_tip=10% chance on hit to absorb the target's life essence, healin
 
 [tile]
 fishian_tile=Fishian Tile
+fishian_path=Fishian Path
 frost_shard_gravel=Frost Shard Gravel
 life_quartz_gravel=Life Quartz Gravel
 haunted_grass_tile=Haunted Grass Tile
@@ -104,12 +106,15 @@ fishian_door=Fishian Door
 fishian_venom_trap=Fishian Venom Trap
 fishian_brazier=Fishian Brazier
 fishian_walltrap=Fishian Trap
+fishian_statue=Fishian Statue
 
 haunted_grass=Haunted Grass
 haunted_rock=Haunted Rock
 haunted_rock_small=Small Haunted Rock
 haunted_rock_large=Large Haunted Rock
+deep_haunted_rock=Deep Haunted Rock
 
+demonic_ore=Demonic Ore
 
 [buff]
 murasama_revenge_buff=Murasama's Revenge
@@ -201,8 +206,8 @@ saltwater_shark=Saltwater Shark
 pearl=Pearl
 seaweed=Seaweed
 slime=Slime
-honey_plort=Honey Plort
 haunted_stone=Haunted Stone
+demonic_ore=Demonic Ore
 
 // Misc
 dryad_map=Dryad's Map
@@ -219,7 +224,10 @@ frozen_dwarf=Frozen Dwarf
 frozen_dwarf_mage=Frozen Dwarf Mage
 ice_golem=Ice Golem
 
-// Haunted Forest
+// Fishian
+fishian_champion=Fishian Champion
+
+// Haunted
 haunted_zombie=Haunted Zombie
 
 // Dungeon
@@ -409,5 +417,6 @@ elder_aphorea_mod=I've heard rumours of forests afflicted by a strange curse. Th
 elder_scorched_mod=I've heard rumours of dangerous things living in the volcanic wastes, where the lava reaches the surface. Tread carefully!
 
 [biome]
-dryad_house=Dryad House
-fishian_biome_entrance=Fishian Biome Entrance
+fishian_biome=Fishian Biome
+haunted_biome=Haunted Biome
+tropical_biome=Tropical Biome

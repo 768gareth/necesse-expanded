@@ -188,9 +188,13 @@ public class TropicalBiome extends Biome
     {
         super.initializeGeneratorStack(stack);
         stack.addRandomSimplexVeinsBranch("tropicalPalmTrees", 2.0F, 0.2F, 0.4F, 0);
-        stack.addRandomVeinsBranch("tropicalBushes", 0.045F, 3, 5, 0.3F, 0, false);
-        stack.addRandomSimplexVeinsBranch("tropicalMudPatches", 2.0F, 0.5F, 0.7F, 2);
-        stack.addRandomSimplexVeinsBranch("tropicalGrassPatches", 5.5F, 0.85F, 0.9F, 2);
+        stack.addRandomVeinsBranch("tropicalBushes", 0.15F, 3, 5, 0.5F, 0, false);
+        stack.addRandomVeinsBranch("tropicalFlowers1", 0.2F, 5, 7, 0.7F, 0, false);
+        stack.addRandomVeinsBranch("tropicalFlowers2", 0.2F, 5, 7, 0.7F, 0, false);
+        stack.addRandomVeinsBranch("tropicalFlowers3", 0.2F, 5, 7, 0.7F, 0, false);
+        stack.addRandomVeinsBranch("tropicalReeds", 0.5F, 5, 7, 0.7F, 0, false);
+        stack.addRandomSimplexVeinsBranch("tropicalMudPatches", 2.4F, 0.7F, 0.7F, 2);
+        stack.addRandomSimplexVeinsBranch("tropicalGrassPatches", 1.2F, 0.7F, 0.7F, 2);
 
         stack.addRandomSimplexVeinsBranch("tropicalCaveWaterGrass", 2.0F, 0.33F, 1.0F, 0);
         stack.addRandomVeinsBranch("tropicalClay", 0.9F, 5, 10, 0.4F, 2, false);
@@ -211,9 +215,24 @@ public class TropicalBiome extends Biome
     public void generateRegionSurfaceTerrain(Region region, BiomeGeneratorStack stack, GameRandom random) 
     {
         super.generateRegionSurfaceTerrain(region, stack, random);
-        stack.startPlaceOnVein(this, region, random, "tropicalMudPatches").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.6).placeTile(TileRegistry.swampGrassID);
+        stack.startPlaceOnVein(this, region, random, "tropicalGrassPatches").onlyOnTile(TileRegistry.overgrownGrassID).placeTile(TileRegistry.grassID);
         stack.startPlaceOnVein(this, region, random, "tropicalPalmTrees").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.23).placeObject("palmtree");
-        stack.startPlaceOnVein(this, region, random, "tropicalPalmTrees").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.01).placeObject("bananatree");
+        stack.startPlaceOnVein(this, region, random, "tropicalPalmTrees").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.02).placeObject("bananatree");
+        stack.startPlaceOnVein(this, region, random, "tropicalFlowers1").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.5).placeObject("redflowerpatch");
+        stack.startPlaceOnVein(this, region, random, "tropicalFlowers2").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.5).placeObject("blueflowerpatch");
+        stack.startPlaceOnVein(this, region, random, "tropicalFlowers3").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.5).placeObject("whiteflowerpatch");
+        final GameObject reeds = ObjectRegistry.getObject("reeds");
+        stack.startPlaceOnVein(this, region, random, "tropicalReeds").onlyOnWater().customPlace(new GeneratorPlaceFactory.RegionPlaceFunction()
+        {
+            public void place(GameRandom random, Region region, int regionTileX, int regionTileY, Level level, int tileX, int tileY) {
+            if (random.getChance(0.8F) && reeds.canPlace(level, tileX, tileY, 0, false) == null)
+            {
+                reeds.placeObject(level, tileX, tileY, 0, false);
+            }
+              
+          }
+        }
+        );
         stack.startPlaceOnVein(this, region, random, "tropicalBushes").onlyOnTile(TileRegistry.overgrownGrassID).placeObjectFruitGrower("blueberrybush");
         stack.startPlaceOnVein(this, region, random, "tropicalBushes").onlyOnTile(TileRegistry.overgrownGrassID).placeObjectFruitGrower("blackberrybush");
         final GameObject wildMushroom = ObjectRegistry.getObject("wildmushroom");
@@ -257,7 +276,7 @@ public class TropicalBiome extends Biome
     public void generateRegionDeepCaveTerrain(Region region, BiomeGeneratorStack stack, GameRandom random) {
         super.generateRegionDeepCaveTerrain(region, stack, random);
         stack.startPlace(this, region, random).chance(0.029999999329447746D).placeCrates(new String[] { "crate" });
-        stack.startPlaceOnVein(this, region, random, "tropicalWildCaveGlow").onlyOnTile(TileRegistry.deepSwampRockID).chance(0.20000000298023224D).placeObject("wildcaveglow");
+        stack.startPlaceOnVein(this, region, random, "tropicalWildCaveGlow").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.20000000298023224D).placeObject("wildcaveglow"); // TODO: Implement custom wild caveglow that can grow on many types of surfaces.
         stack.startPlaceOnVein(this, region, random, "tropicalDeepCopper").onlyOnObject(ObjectRegistry.deepSwampRockID).placeObjectForced("copperoredeepswamprock");
         stack.startPlaceOnVein(this, region, random, "tropicalDeepIron").onlyOnObject(ObjectRegistry.deepSwampRockID).placeObjectForced("ironoredeepswamprock");
         stack.startPlaceOnVein(this, region, random, "tropicalDeepGold").onlyOnObject(ObjectRegistry.deepSwampRockID).placeObjectForced("goldoredeepswamprock");

@@ -1,9 +1,9 @@
 package NecesseExpanded.Items.Weapons.Melee;
 
 import java.awt.Color;
+import java.awt.geom.Point2D;
 import java.util.HashMap;
 import java.util.List;
-import java.awt.geom.Point2D;
 
 import necesse.engine.gameLoop.tickManager.TickManager;
 import necesse.engine.localization.Localization;
@@ -114,7 +114,7 @@ public class MurasamaToolItem extends KatanaToolItem
               int trailCount = 3;
               this.trails = new Trail[trailCount];
               for (int i = 0; i < this.trails.length; i++) {
-                Trail trail = new Trail(getVector(currentAttackProgress, attackRange, i, distancePerTrail, base, dir, sliceDir), this.level, new Color(244, 177, 255), fadeTime) {
+                Trail trail = new Trail(getVector(currentAttackProgress, attackRange, i, distancePerTrail, base, dir, sliceDir), this.level, new Color(255, 50, 50), fadeTime) {
                     public void addDrawables(OrderableDrawables list, int startTileY, int endTileY, TickManager tickManager, GameCamera camera) {
                       super.addDrawables(list, startTileY, endTileY, tickManager, camera);
                     }

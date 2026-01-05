@@ -1,7 +1,7 @@
 package NecesseExpanded.Patches.Gameplay;
 
 import necesse.engine.GameLoadingScreen;
-import necesse.engine.journal.*;
+import necesse.engine.journal.JournalEntry;
 import necesse.engine.localization.Localization;
 import necesse.engine.modLoader.annotations.ModMethodPatch;
 import necesse.engine.registries.BiomeRegistry;
@@ -169,9 +169,11 @@ public class JournalPatch
         
         // Tier 3 incursions
         JournalEntry sunArenaIncursion = JournalRegistry.registerJournalEntry("sunarenaincursion", new JournalEntry(BiomeRegistry.SUN_ARENA, IncursionBiomeRegistry.SUN_ARENA));
+        sunArenaIncursion.addBiomeLootEntry(new String[]{"sunlight_essence"});
         sunArenaIncursion.addMobEntries(new String[]{"sunlightchampion"});
 
         JournalEntry moonArenaIncursion = JournalRegistry.registerJournalEntry("moonarenaincursion", new JournalEntry(BiomeRegistry.MOON_ARENA, IncursionBiomeRegistry.MOON_ARENA));
+        moonArenaIncursion.addBiomeLootEntry(new String[]{"lunar_essence"});
         moonArenaIncursion.addMobEntries(new String[]{"moonlightdancer"});
 
         // Tier 4 incursions
