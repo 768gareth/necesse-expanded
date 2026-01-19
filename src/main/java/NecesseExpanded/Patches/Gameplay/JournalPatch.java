@@ -133,7 +133,7 @@ public class JournalPatch
         desertDeepCave.addEntryChallenges(new Integer[]{JournalChallengeRegistry.DESERT_DEEP_CAVES_CHALLENGES_ID});
 
         JournalEntry temple = JournalRegistry.registerJournalEntry("temple", new JournalEntry(BiomeRegistry.TEMPLE));
-        temple.addMobEntries(new String[]{"ancientskeleton", "ancientarmoredskeleton", "ancientskeletonthrower", "ancientskeletonmage", "beetcavecroppler", "fallenwizard"});
+        temple.addMobEntries(new String[]{"ancientskeleton", "ancientarmoredskeleton", "ancientskeletonthrower", "ancientskeletonmage", "ancient_warrior", "beetcavecroppler", "fallenwizard"});
         temple.addTreasureEntry(new LootTable[]{LootTablePresets.templeChest});
         temple.addEntryChallenges(new Integer[]{JournalChallengeRegistry.TEMPLE_CHALLENGES_ID});
 

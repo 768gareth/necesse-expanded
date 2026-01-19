@@ -7,6 +7,7 @@ import NecesseExpanded.Mobs.Friendly.Summons.NecromancerMinion;
 import NecesseExpanded.Mobs.Hostile.Desert.AncientWarrior;
 import NecesseExpanded.Mobs.Hostile.Forest.ZombieMinerMob;
 import NecesseExpanded.Mobs.Hostile.Haunted.HauntedZombieMob;
+import NecesseExpanded.Mobs.Hostile.Misc.WolfMob;
 import NecesseExpanded.Mobs.Hostile.Snow.CustomFrozenDwarfMob;
 import NecesseExpanded.Mobs.Hostile.Snow.FrozenDwarfMageMob;
 import NecesseExpanded.Mobs.Hostile.Snow.IceGolemMob;
@@ -23,6 +24,7 @@ public class PreRegisterMobs
 
         // Forest
         MobRegistry.registerMob("zombie_miner", ZombieMinerMob.class, true);
+        MobRegistry.registerMob("wolf", WolfMob.class, true);
 
         // Snow
         MobRegistry.registerMob("frozen_dwarf", CustomFrozenDwarfMob.class, true);

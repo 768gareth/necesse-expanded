@@ -67,7 +67,10 @@ public class RegisterObjects
         ObjectRegistry.registerObject("life_quartz_deep_haunted_rock", new RockOreObject(DeepHauntedRock, "oremask", "lifequartzore", new Color(180, 50, 61), "lifequartz", 1, 1, 1, genericRocksCategory), -1.0F, true);
 
         // Tropical Biome
-
+        RockObject TropicalRock;
+        RockObject DeepTropicalRock;
+        ObjectRegistry.registerObject("tropical_rock", TropicalRock = new RockObject("tropical_rock", new Color(122, 100, 0), "tropical_stone", genericRocksCategory), 0, true);
+        ObjectRegistry.registerObject("deep_tropical_rock", DeepTropicalRock = new RockObject("deep_tropical_rock", new Color(60, 49, 0), "tropical_stone", genericRocksCategory), 0, true);
         
 
         // Fishian Biome

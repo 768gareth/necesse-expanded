@@ -40,6 +40,22 @@ public class RegisterJournal
 
         JournalEntry TropicalSurface = JournalRegistry.registerJournalEntry("tropical_surface", new JournalEntry(BiomeRegistry.getBiome("tropical_biome"), LevelIdentifier.SURFACE_IDENTIFIER));
 
+        TropicalSurface.addBiomeLootEntry
+        (      
+            new String[] 
+            { 
+                "palm", "gobfish", "halffish", "furfish", "carp", "herring", 
+                "mackerel", "salmon", "trout" 
+            }
+        );
+
+        TropicalSurface.addMobEntries
+        (
+            new String[] 
+            { 
+                "zombie_pirate", "zombie_pirate_gunner", "swampslug", "crab", "frog", "bird", "cardinalbird"
+            }
+        );
 
         JournalEntry TropicalCaves = JournalRegistry.registerJournalEntry("tropical_caves", new JournalEntry(BiomeRegistry.getBiome("tropical_biome"), LevelIdentifier.CAVE_IDENTIFIER));
 

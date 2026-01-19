@@ -24,9 +24,12 @@ public class MagePatch
       ClearRegistry.Clear((GameRegistry<?>)Mob.shop.sellingShop);
       Mob.shop.addSellingItem("voidpouch", new SellingShopItem()).setStaticPriceBasedOnHappiness(750, 1000, 50);
       Mob.shop.addSellingItem("voidbag", new SellingShopItem()).setStaticPriceBasedOnHappiness(2500, 3000, 100);
+      Mob.shop.addSellingItem("recallflask", new SellingShopItem()).setStaticPriceBasedOnHappiness(1000, 1200, 50).addKilledMobRequirement("ancientvulture");
+      Mob.shop.addSellingItem("portalflask", new SellingShopItem()).setStaticPriceBasedOnHappiness(1600, 2400, 50).addKilledMobRequirement("pestwarden");
       Mob.shop.addSellingItem("homestone", new SellingShopItem()).setItem(MagePatch::GenerateHomestone).setStaticPriceBasedOnHappiness(1000, 1250, 100);
       Mob.shop.addSellingItem("waystone", new SellingShopItem()).setItem(MagePatch::GenerateWaystone).setStaticPriceBasedOnHappiness(250, 500, 100);
       Mob.shop.addSellingItem("recallscroll", new SellingShopItem()).setStaticPriceBasedOnHappiness(25, 50, 5);
+      Mob.shop.addSellingItem("teleportationscroll", new SellingShopItem()).setStaticPriceBasedOnHappiness(30, 55, 5);
       Mob.shop.addSellingItem("bloodbolt", new SellingShopItem()).setStaticPriceBasedOnHappiness(70, 100, 5);
       Mob.shop.addSellingItem("frostbolt", new SellingShopItem()).setStaticPriceBasedOnHappiness(90, 100, 5).addKilledMobRequirement("queenspider");
       Mob.shop.addSellingItem("brainonastick", new SellingShopItem()).setStaticPriceBasedOnHappiness(425, 500, 15);

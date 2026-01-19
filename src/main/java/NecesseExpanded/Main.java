@@ -1,5 +1,6 @@
 package NecesseExpanded;
 
+import NecesseExpanded.Mobs.Hostile.Misc.WolfMob;
 import NecesseExpanded.Mobs.Hostile.Snow.IceGolemMob;
 import NecesseExpanded.Registry.PreRegisterItems;
 import NecesseExpanded.Registry.PreRegisterMobs;
@@ -26,6 +27,7 @@ import customsettingslib.settings.CustomModSettings;
 import customsettingslib.settings.CustomModSettingsGetter;
 import necesse.engine.modLoader.ModSettings;
 import necesse.engine.modLoader.annotations.ModEntry;
+import necesse.entity.mobs.MobTexture;
 import necesse.gfx.gameTexture.GameTexture;
 
 @ModEntry
@@ -59,6 +61,7 @@ public class Main
     public void initResources()
     {
         IceGolemMob.texture = GameTexture.fromFile("mobs/ice_golem");
+        WolfMob.Texture = new MobTexture(GameTexture.fromFile("mobs/wolf"), GameTexture.fromFile("mobs/wolfshadow"));
         // HoneySlimeHusbandryMob.Texture = GameTexture.fromFile("mobs/honey_slime");
     }
 

@@ -33,7 +33,7 @@ import necesse.level.maps.light.GameLight;
 public class WolfMob extends HostileMob 
 {
     public LootTable Loot = new LootTable( new LootItemInterface[] { new LootItem("leather", 2)});
-    public MobTexture Texture;
+    public static MobTexture Texture;
 
     public WolfMob() 
     {
