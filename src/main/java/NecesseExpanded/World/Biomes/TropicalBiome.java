@@ -35,8 +35,8 @@ public class TropicalBiome extends Biome
     public static FishingLootTable SurfaceFish = new FishingLootTable().addAll(Biome.defaultSurfaceFish);
     public static FishingLootTable CaveFish = new FishingLootTable().addAll(Biome.defaultCaveFish);
     public static FishingLootTable DeepCaveFish = new FishingLootTable().addWater(100, "heartfish");
-    public static MobSpawnTable SurfaceMobs = new MobSpawnTable().add(80, "zombie_pirate").add(20, "zombie_pirate_gunner");
-    public static MobSpawnTable CaveMobs = new MobSpawnTable().add(25, "zombie").add(25, "zombiearcher");
+    public static MobSpawnTable SurfaceMobs = new MobSpawnTable().add(80, "zombie").add(20, "zombiearcher").add(10, "crocodile");;
+    public static MobSpawnTable CaveMobs = new MobSpawnTable().add(45, "zombie_pirate").add(45, "zombie_pirate_gunner").add(10, "crocodile");;
     public static MobSpawnTable DeepCaveMobs = new MobSpawnTable().add(25, "skeleton");
     public static MobSpawnTable SurfaceCritters = new MobSpawnTable()
     .add(100, "swampslug")
@@ -44,8 +44,12 @@ public class TropicalBiome extends Biome
     .add(80, "frog")
     .add(40, "bird")
     .add(40, "cardinalbird");
-    public static MobSpawnTable CaveCritters = new MobSpawnTable().include(defaultCaveCritters);
-    public static MobSpawnTable DeepCaveCritters = new MobSpawnTable().include(defaultCaveCritters);
+    public static MobSpawnTable CaveCritters = new MobSpawnTable()
+    .add(100, "swampslug")
+    .add(100, "crab");
+    public static MobSpawnTable DeepCaveCritters = new MobSpawnTable().include(defaultCaveCritters)
+    .add(100, "swampslug")
+    .add(100, "crab");
 
     public TropicalBiome() {  }
 
@@ -156,21 +160,21 @@ public class TropicalBiome extends Biome
     @Override
     public int getGenerationCaveRockObjectID() 
     {
-        return ObjectRegistry.swampRockID;
+        return ObjectRegistry.getObjectID("tropical_rock");
     }
 
     @Override
     public int getGenerationCaveTileID() 
     {
-        return TileRegistry.overgrownGrassID;
+        return TileRegistry.getTileID("tropical_rock_tile");
     }
 
     public int getGenerationDeepCaveTileID() {
-        return TileRegistry.overgrownGrassID;
+        return TileRegistry.getTileID("tropical_rock_tile");
      }
   
      public int getGenerationDeepCaveRockObjectID() {
-        return ObjectRegistry.deepSwampRockID;
+        return ObjectRegistry.getObjectID("deep_tropical_rock");
      }
 
     public int getGenerationBeachTileID() 
@@ -260,14 +264,15 @@ public class TropicalBiome extends Biome
     @Override
     public void generateRegionCaveTerrain(Region region, BiomeGeneratorStack stack, GameRandom random) {
         super.generateRegionCaveTerrain(region, stack, random);
+        int RockID = ObjectRegistry.getObjectID("tropical_rock");
         stack.startPlace(this, region, random).chance(0.029999999329447746D).placeCrates(new String[] { "crate" });
         stack.startPlace(this, region, random).chance(0.003).placeObject("swampsurfacerock");
         stack.startPlace(this, region, random).chance(0.005).placeObject("swampsurfacerocksmall");
         stack.startPlaceOnVein(this, region, random, "tropicalCaveWaterGrass").chance(0.30000001192092896D).placeObject("cavewatergrass");
-        stack.startPlaceOnVein(this, region, random, "tropicalClay").onlyOnObject(ObjectRegistry.rockID).placeObjectForced("clayrock");
-        stack.startPlaceOnVein(this, region, random, "tropicalCopper").onlyOnObject(ObjectRegistry.rockID).placeObjectForced("copperorerock");
-        stack.startPlaceOnVein(this, region, random, "tropicalIron").onlyOnObject(ObjectRegistry.rockID).placeObjectForced("ironorerock");
-        stack.startPlaceOnVein(this, region, random, "tropicalGold").onlyOnObject(ObjectRegistry.rockID).placeObjectForced("goldorerock");
+        stack.startPlaceOnVein(this, region, random, "tropicalClay").onlyOnObject(RockID).placeObjectForced("clayrock");
+        stack.startPlaceOnVein(this, region, random, "tropicalCopper").onlyOnObject(RockID).placeObjectForced("copper_ore_tropical_rock");
+        stack.startPlaceOnVein(this, region, random, "tropicalIron").onlyOnObject(RockID).placeObjectForced("iron_ore_tropical_rock");
+        stack.startPlaceOnVein(this, region, random, "tropicalGold").onlyOnObject(RockID).placeObjectForced("gold_ore_tropical_rock");
         region.updateLiquidManager();
         region.simulateWorldTime(10000000, true);
     }
@@ -275,16 +280,17 @@ public class TropicalBiome extends Biome
     @Override
     public void generateRegionDeepCaveTerrain(Region region, BiomeGeneratorStack stack, GameRandom random) {
         super.generateRegionDeepCaveTerrain(region, stack, random);
+        int RockID = ObjectRegistry.getObjectID("deep_tropical_rock");
         stack.startPlace(this, region, random).chance(0.029999999329447746D).placeCrates(new String[] { "crate" });
         stack.startPlaceOnVein(this, region, random, "tropicalWildCaveGlow").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.20000000298023224D).placeObject("wildcaveglow"); // TODO: Implement custom wild caveglow that can grow on many types of surfaces.
-        stack.startPlaceOnVein(this, region, random, "tropicalDeepCopper").onlyOnObject(ObjectRegistry.deepSwampRockID).placeObjectForced("copperoredeepswamprock");
-        stack.startPlaceOnVein(this, region, random, "tropicalDeepIron").onlyOnObject(ObjectRegistry.deepSwampRockID).placeObjectForced("ironoredeepswamprock");
-        stack.startPlaceOnVein(this, region, random, "tropicalDeepGold").onlyOnObject(ObjectRegistry.deepSwampRockID).placeObjectForced("goldoredeepswamprock");
-        stack.startPlaceOnVein(this, region, random, "tropicalDeepObsidian").onlyOnObject(ObjectRegistry.deepSwampRockID).placeObjectForced("obsidianrock");
-        stack.startPlaceOnVein(this, region, random, "tropicalDeepTungsten").onlyOnObject(ObjectRegistry.deepSwampRockID).placeObjectForced("tungstenoredeepswamprock");
-        stack.startPlaceOnVein(this, region, random, "tropicalDeepLifeQuartz").onlyOnObject(ObjectRegistry.deepSwampRockID).placeObjectForced("lifequartzdeepswamprock");
-        stack.startPlace(this, region, random).chance(0.003).placeObject("swampsurfacerock");
-        stack.startPlace(this, region, random).chance(0.005).placeObject("swampsurfacerocksmall");
+        stack.startPlaceOnVein(this, region, random, "tropicalDeepCopper").onlyOnObject(RockID).placeObjectForced("copper_ore_deep_tropical_rock");
+        stack.startPlaceOnVein(this, region, random, "tropicalDeepIron").onlyOnObject(RockID).placeObjectForced("iron_ore_deep_tropical_rock");
+        stack.startPlaceOnVein(this, region, random, "tropicalDeepGold").onlyOnObject(RockID).placeObjectForced("gold_ore_deep_tropical_rock");
+        stack.startPlaceOnVein(this, region, random, "tropicalDeepObsidian").onlyOnObject(RockID).placeObjectForced("obsidianrock");
+        stack.startPlaceOnVein(this, region, random, "tropicalDeepTungsten").onlyOnObject(RockID).placeObjectForced("tungsten_ore_deep_tropical_rock");
+        stack.startPlaceOnVein(this, region, random, "tropicalDeepLifeQuartz").onlyOnObject(RockID).placeObjectForced("life_quartz_deep_tropical_rock");
+        stack.startPlace(this, region, random).chance(0.003).placeObject("tropical_rock_large");
+        stack.startPlace(this, region, random).chance(0.005).placeObject("tropical_rock_small");
         region.updateLiquidManager();
         region.simulateWorldTime(10000000, true);
     }

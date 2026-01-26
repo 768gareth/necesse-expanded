@@ -4,6 +4,7 @@ import java.awt.Color;
 
 import NecesseExpanded.Tiles.HauntedGrassTile;
 import NecesseExpanded.Tiles.HauntedRockTile;
+import NecesseExpanded.Tiles.TropicalRockTile;
 import necesse.engine.registries.TileRegistry;
 import necesse.level.gameTile.CrystalGravelTile;
 import necesse.level.gameTile.GameTile;
@@ -20,5 +21,6 @@ public class RegisterTiles
         TileRegistry.registerTile("frost_shard_gravel", new CrystalGravelTile("frost_shard_gravel", new Color(255, 0, 0)), 10.0F, true);
         TileRegistry.registerTile("haunted_grass_tile", (GameTile) new HauntedGrassTile(), 0.0F, true);
         TileRegistry.registerTile("haunted_rock_tile", (GameTile) new HauntedRockTile(), 0, true);
+        TileRegistry.registerTile("tropical_rock_tile", (GameTile) new TropicalRockTile(), 0, true);
     }
 }

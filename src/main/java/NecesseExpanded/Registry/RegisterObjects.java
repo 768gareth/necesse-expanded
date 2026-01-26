@@ -3,6 +3,7 @@ package NecesseExpanded.Registry;
 import java.awt.Color;
 
 import NecesseExpanded.Objects.CustomKegObject;
+import NecesseExpanded.Objects.DryadSpiritLampObject;
 import NecesseExpanded.Objects.FishianBrazierObject;
 import NecesseExpanded.Objects.FishianDeepCaveEntranceObject;
 import NecesseExpanded.Objects.HauntedGrassObject;
@@ -11,11 +12,13 @@ import necesse.engine.registries.ObjectRegistry;
 import necesse.level.gameObject.CrystalClusterObject;
 import necesse.level.gameObject.CrystalClusterSmallObject;
 import necesse.level.gameObject.GameObject;
+import necesse.level.gameObject.RandomVaseObject;
 import necesse.level.gameObject.RockObject;
 import necesse.level.gameObject.RockOreObject;
 import necesse.level.gameObject.SingleRockObject;
 import necesse.level.gameObject.SingleRockSmall;
 import necesse.level.gameObject.StatueObject;
+import necesse.level.gameObject.TableDecorationObject;
 import necesse.level.gameObject.WallObject;
 
 public class RegisterObjects 
@@ -32,9 +35,11 @@ public class RegisterObjects
         ObjectRegistry.registerObject("keg", new CustomKegObject(), 10, true);
 
         // Functional objects
-        
+        ObjectRegistry.registerObject("fishian_vases", new RandomVaseObject("fishian_vases"), -1.0f, true);
+        ObjectRegistry.registerObject("dryad_spirit_lamp", new DryadSpiritLampObject(), -1.0f, true);
 
         // Decorative objects
+        ObjectRegistry.registerObject("crystal_ball", (GameObject)new TableDecorationObject("crystal_ball", new Color(134, 223, 255), 16, 18, 0, 4), -1.0F, true);
 
         // Crystal mini-biomes
         CrystalClusterObject.registerCrystalCluster("frostshard_cluster", new Color(82, 150, 255), 240.0F, "frostshard", 3, 4, 3, 15f, true, crystalsCategory);
@@ -71,6 +76,16 @@ public class RegisterObjects
         RockObject DeepTropicalRock;
         ObjectRegistry.registerObject("tropical_rock", TropicalRock = new RockObject("tropical_rock", new Color(122, 100, 0), "tropical_stone", genericRocksCategory), 0, true);
         ObjectRegistry.registerObject("deep_tropical_rock", DeepTropicalRock = new RockObject("deep_tropical_rock", new Color(60, 49, 0), "tropical_stone", genericRocksCategory), 0, true);
+
+        ObjectRegistry.registerObject("iron_ore_tropical_rock", new RockOreObject(TropicalRock, "oremask", "ironore", new Color(169, 128, 106), "ironore", genericRocksCategory), -1.0F, true);
+        ObjectRegistry.registerObject("copper_ore_tropical_rock", new RockOreObject(TropicalRock, "oremask", "copperore", new Color(161, 83, 42), "copperore", genericRocksCategory), -1.0F, true);
+        ObjectRegistry.registerObject("gold_ore_tropical_rock", new RockOreObject(TropicalRock, "oremask", "goldore", new Color(198, 145, 47), "goldore", genericRocksCategory), -1.0F, true);
+
+        ObjectRegistry.registerObject("iron_ore_deep_tropical_rock", new RockOreObject(DeepTropicalRock, "oremask", "ironore", new Color(169, 128, 106), "ironore", genericRocksCategory), -1.0F, true);
+        ObjectRegistry.registerObject("copper_ore_deep_tropical_rock", new RockOreObject(DeepTropicalRock, "oremask", "copperore", new Color(161, 83, 42), "copperore", genericRocksCategory), -1.0F, true);
+        ObjectRegistry.registerObject("gold_ore_deep_tropical_rock", new RockOreObject(DeepTropicalRock, "oremask", "goldore", new Color(198, 145, 47), "goldore", genericRocksCategory), -1.0F, true);
+        ObjectRegistry.registerObject("tungsten_ore_deep_tropical_rock", new RockOreObject(DeepTropicalRock, "oremask", "tungstenore", new Color(40, 49, 57), "tungstenore", genericRocksCategory), -1.0F, true);
+        ObjectRegistry.registerObject("life_quartz_deep_tropical_rock", new RockOreObject(DeepTropicalRock, "oremask", "lifequartzore", new Color(180, 50, 61), "lifequartz", 1, 1, 1, genericRocksCategory), -1.0F, true);
         
 
         // Fishian Biome
