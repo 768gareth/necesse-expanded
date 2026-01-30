@@ -171,7 +171,7 @@ public class HauntedBiome extends Biome
 
     public int getGenerationBeachTileID() 
     {
-        return TileRegistry.mudID;
+        return TileRegistry.sandID;
     }
 
     public SoundSettings getWindSound(Level level) 
@@ -183,7 +183,8 @@ public class HauntedBiome extends Biome
     public void initializeGeneratorStack(BiomeGeneratorStack stack) 
     {
         super.initializeGeneratorStack(stack);
-        stack.addRandomSimplexVeinsBranch("deadwoodTrees", 2.0F, 0.2F, 0.4F, 0);
+        stack.addRandomSimplexVeinsBranch("hauntedTrees", 2.0F, 0.2F, 0.4F, 0);
+        stack.addRandomSimplexVeinsBranch("hauntedGrass", 8.0F, 0.8F, 0.6F, 0);
         stack.addRandomSimplexVeinsBranch("hauntedMudPatches", 2.0F, 0.5F, 0.7F, 2);
         stack.addRandomVeinsBranch("hauntedReeds", 0.5F, 5, 7, 0.7F, 0, false);
         stack.addRandomVeinsBranch("hauntedClay", 0.9F, 5, 10, 0.4F, 2, false);
@@ -207,7 +208,8 @@ public class HauntedBiome extends Biome
         super.generateRegionSurfaceTerrain(region, stack, random);
         int GrassTile = TileRegistry.getTileID("haunted_grass_tile");
         stack.startPlaceOnVein(this, region, random, "hauntedMudPatches").onlyOnTile(GrassTile).chance(0.8).placeTile(TileRegistry.mudID);
-        stack.startPlaceOnVein(this, region, random, "deadwoodTrees").onlyOnTile(GrassTile).chance(0.25).placeObject("deadwoodtree");
+        stack.startPlaceOnVein(this, region, random, "hauntedTrees").onlyOnTile(GrassTile).chance(0.3).placeObject("haunted_tree");
+        stack.startPlaceOnVein(this, region, random, "hauntedGrass").onlyOnTile(GrassTile).chance(1).placeObject("haunted_grass");
         stack.startPlace(this, region, random).chance(0.004).placeObject("haunted_rock_small");
         stack.startPlace(this, region, random).chance(0.002).placeObject("haunted_rock_large");
         stack.startPlace(this, region, random).chance(0.002).onlyOnTile(GrassTile).placeObject("wild_pumpkin");
@@ -224,7 +226,6 @@ public class HauntedBiome extends Biome
         }
         );
         region.updateLiquidManager();
-        region.simulateWorldTime(10000000, true);
     }
 
     @Override

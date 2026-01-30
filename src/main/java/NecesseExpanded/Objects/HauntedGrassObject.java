@@ -1,6 +1,7 @@
 package NecesseExpanded.Objects;
 
 import java.awt.Color;
+
 import necesse.engine.registries.ObjectLayerRegistry;
 import necesse.engine.registries.TileRegistry;
 import necesse.inventory.lootTable.LootItemInterface;
@@ -12,16 +13,21 @@ import necesse.level.maps.Level;
 
 public class HauntedGrassObject extends GrassObject 
 {
-    public HauntedGrassObject() {
-      super("haunted_grass", 1);
+    public HauntedGrassObject() 
+    {
+      super("haunted_grass", 2);
       this.mapColor = new Color(30, 100, 25);
     }
     
     public LootTable getLootTable(Level level, int layerID, int tileX, int tileY) {
-      if (level.objectLayer.isPlayerPlaced(tileX, tileY))
-        return this.getLootTable(level, layerID, tileX, tileY); 
-      return new LootTable();
-    }
+    if (level.objectLayer.isPlayerPlaced(tileX, tileY))
+      return super.getLootTable(level, layerID, tileX, tileY); 
+    float baitChance = 35.0F;
+    if (level.weatherLayer.isRaining())
+      baitChance = 15.0F; 
+    String seedItem = "haunted_grass_seed";
+    return new LootTable(new LootItemInterface[] { (LootItemInterface)new ChanceLootItem(1.0F / baitChance, "wormbait"), (LootItemInterface)new ChanceLootItem(0.01F, seedItem) });
+  }
 
     public LootTable getLootTable(Level level, int tileX, int tileY) {
     return new LootTable(new LootItemInterface[] { (LootItemInterface)new ChanceLootItem(0.04F, "haunted_grass_seed") });

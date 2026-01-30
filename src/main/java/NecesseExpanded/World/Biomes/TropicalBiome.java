@@ -221,7 +221,7 @@ public class TropicalBiome extends Biome
         super.generateRegionSurfaceTerrain(region, stack, random);
         stack.startPlaceOnVein(this, region, random, "tropicalGrassPatches").onlyOnTile(TileRegistry.overgrownGrassID).placeTile(TileRegistry.grassID);
         stack.startPlaceOnVein(this, region, random, "tropicalPalmTrees").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.23).placeObject("palmtree");
-        stack.startPlaceOnVein(this, region, random, "tropicalPalmTrees").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.02).placeObject("bananatree");
+        stack.startPlace(this, region, random).chancePerRegion(0.03500000014901161D).onlyOnTile(TileRegistry.overgrownGrassID).placeObjectFruitGrower("appletree");
         stack.startPlaceOnVein(this, region, random, "tropicalFlowers1").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.5).placeObject("redflowerpatch");
         stack.startPlaceOnVein(this, region, random, "tropicalFlowers2").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.5).placeObject("blueflowerpatch");
         stack.startPlaceOnVein(this, region, random, "tropicalFlowers3").onlyOnTile(TileRegistry.overgrownGrassID).chance(0.5).placeObject("whiteflowerpatch");

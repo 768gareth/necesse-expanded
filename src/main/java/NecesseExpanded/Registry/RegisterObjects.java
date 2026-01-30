@@ -19,6 +19,7 @@ import necesse.level.gameObject.SingleRockObject;
 import necesse.level.gameObject.SingleRockSmall;
 import necesse.level.gameObject.StatueObject;
 import necesse.level.gameObject.TableDecorationObject;
+import necesse.level.gameObject.TreeObject;
 import necesse.level.gameObject.WallObject;
 
 public class RegisterObjects 
@@ -41,6 +42,7 @@ public class RegisterObjects
         // Decorative objects
         ObjectRegistry.registerObject("crystal_ball", (GameObject)new TableDecorationObject("crystal_ball", new Color(134, 223, 255), 16, 18, 0, 4), -1.0F, true);
 
+
         // Crystal mini-biomes
         CrystalClusterObject.registerCrystalCluster("frostshard_cluster", new Color(82, 150, 255), 240.0F, "frostshard", 3, 4, 3, 15f, true, crystalsCategory);
         CrystalClusterObject.registerCrystalCluster("frostshard_cluster_pure", new Color(82, 150, 255), 240.0F, "frostshard", 3, 4, 3, 15f, true, crystalsCategory);
@@ -51,7 +53,8 @@ public class RegisterObjects
         ObjectRegistry.registerObject("life_quartz_cluster_small", new CrystalClusterSmallObject("life_quartz_cluster_small", new Color(255, 100, 100), 0F, "lifequartz", 1, 2, 1, crystalsCategory), 5f, true);
 
         // Haunted Biome
-        ObjectRegistry.registerObject("haunted_grass", (GameObject)new HauntedGrassObject(), -1.0F, false);
+        ObjectRegistry.registerObject("haunted_grass", (GameObject)new HauntedGrassObject(), 0.0F, false, false, true, new String[0]);
+        ObjectRegistry.registerObject("haunted_tree", new TreeObject("haunted_tree", "haunted_log", "haunted_sapling", new Color(75, 65, 36), 32, 60, 120, "pineleaves"), 0.0F, false, false, true, new String[0]);
 
         RockObject HauntedRock;
         RockObject DeepHauntedRock;

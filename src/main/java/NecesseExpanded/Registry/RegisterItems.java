@@ -148,7 +148,9 @@ public class RegisterItems
         ItemRegistry.registerItem("lunar_essence", new EssenceMatItem(250, Rarity.LEGENDARY, 3), 35.0F, true);
         ItemRegistry.registerItem("solar_essence", new EssenceMatItem(250, Rarity.LEGENDARY, 3), 35.0F, true);
         ItemRegistry.registerItem("demonic_ore", (new MatItem(500, Item.Rarity.COMMON, new String[0])).setItemCategory(new String[] { "materials", "ore" }), 4.0F, true);
-        ItemRegistry.registerItem("haunted_stone", new StonePlaceableItem(5000), 0.1F, true);
+        ItemRegistry.registerItem("haunted_stone", new StonePlaceableItem(999), 0.1F, true);
+        ItemRegistry.registerItem("tropical_stone", new StonePlaceableItem(999), 0.1F, true);
+        ItemRegistry.registerItem("haunted_log", (new MatItem(500, new String[] { "anylog" })).setItemCategory(new String[] { "materials", "logs" }), 2.0F, true);
         
         // Miscellaneous
         ItemRegistry.registerItem("haunted_grass_seed", new GrassSeedItem("haunted_grass_tile"), 2.0F, true);
