@@ -1,0 +1,342 @@
+[settingsui]
+ne_settings_separator_1=Necesse Expanded: Saqueos nuevos
+raids_enabled=Activar los saqueos del mod?
+raids_tip=Si está activado, se sustituyen los saqueos con los de Necesse Expanded, ofreciendo nueve nuevos saqueos más complejos con múltiples enemigos diferentes.
+
+include_vanilla_raids=Pueden aparecer raids del juego base?
+vanilla_raids_tip=Si está activado, los saqueos normales también aparecerán. El multiplicador de tamaño de saqueos NO afecta los saqueos del juego base.
+
+vanilla_raid_chance=Probabilidad de saqueos normales (%):
+vanilla_raid_chance_tip=Si están activados ambos tipos de saqueo, este valor indica el porcentaje de que aparezca un saqueo normal.
+
+raider_bombs_destructive=Pueden las bombas de los nuevos saqueadores destruir cosas?
+bombs_tip=Si está activado, algunos saqueadores pueden usar explosivos que podrán destruir muros y otro tipo de objetos. Si está desactivado, usarán nuevos explosivos que no destruyen nada.
+
+raid_size_multiplier=Multiplicador de tamaño de saqueos:
+raid_size_tip=Cálculo del tamaño: Habitantes del asentamiento * multiplicador de tamaño de saqueos * factor de victoria del saqueo. El factor de victoria del saqueo está basado en qué tan bien te fue en anteriores saqueos, siendo 0.5 el mínimo y 1.25 el máximo, si el último saqueo no dió ningún problema.
+
+ne_settings_separator_2=Necesse Expanded: Cambio al gameplay
+
+happiness_changes_enabled=Activar el sistema cambiado de felicidad?
+happiness_changes_tip=Si está activado, se modifica el cálculo de felicidad de los colonos y añade nuevos modificadores a su felicidad. A los colonos no les importa tanto el tamaño de su habitación, su dieta y ahora ganarán felicidad conforme más grande sea el asentamiento.
+
+starter_equipment_enabled=Activar un mejor kit de inicio?
+starter_equipment_tip=Si está activado, los nuevos personajes empezarán con suministros básicos, herramientas de hierro, un libro de recetas, y botas de cuero veloces.
+
+starter_kit_enabled=Activar el kit de inicio para asentamientos?
+starter_kit_tip=Si está activado, la casa del hombre anciano tendrá una bandera de asentamiento, materiales de construcción, estaciones de creación, semillas y tierra de cultivo.
+
+player_speed_patch=Aumentar velocidad de los jugadores?
+player_speed_tip=Si está activado, la velocidad de los jugadores aumentarás según el valor de abajo.
+
+player_speed_value=Velocidad de jugador:
+player_speed_value_tip=El valor del juego base es 40. Se recomienda estar en un rango entre 40 y 60.
+
+chest_size_value=Tamaño de los cofres:
+chest_size_tip=El valor del juego base es 40. Se recomienda estar en un rango entre 40 y 80. Se eliminarán items que estuvieran en cofres si se reduce la cantidad, pudiendo perderlos para simpre. Reinicia el mundo para que funcione.
+
+[ui]
+keg_active=Fermentando...
+keg_inactive=Disponible para fermentar!
+
+[itemtooltip]
+// Trinkets
+blood_crystal_tooltip=Recupera el 5% de tu vida máxima al derrotar un enemigo.
+shadow_crystal_tooltip=Otorga +20% de daño por 10 segundos al derrotar un enemigo.
+shadow_crystal_bonus=Otorga +20% de daño temporalmente.
+sandworm_tooth_tooltip=Ataques cuerpo a cuerpo tienen un 25% de envenenar gravemente al objetivo.
+lucky_ring_tip=Derrotar un enemigo no jefe te dará el 10% de su vida máxima en monedas.
+necromancer_ring_tip=Derrotar un enemigo no jefe te dará una invocación temporal por 8 segundos.
+forgotten_relic_tooltip=Al recibir daño tu maná es recuperado en el 10% del daño recibido (mínimo 1).
+forgotten_relic_lore_tooltip=Una pequeña estatua de una antigua deidad pecina asociada con el mar.
+berserker_ring_tooltip=Al recibir daño ganas un punto de Aguante. Cada uno aumenta tu obtención de resiliencia en 10%.
+
+// Consumables
+mana_elixir_tip=Aumenta tu maná máximo en 10, hasta un máximo de 200.
+greater_mana_elixir_tip=Aumenta tu maná máximo en 10, hasta un máximo de 300.
+pearl_oyster=Contiene una perla precisoa!
+pearl_oyster_tip=Equipa este item y úsalo para abrirlo!
+chest_tip=Equipa este item y úsalo para abrirlo!
+treasure_chest=Contmiene items raros y únicos, además de monedas.
+stamina_potion=Aumenta la capacidad y regeneración de resistencia.
+
+// Weapons
+juggernaut_axe_tooltip=Para cuando el poder de la música no es suficiente para el trabajo.
+frostbolt_tip=Dispara un proyectil gélido que ralentiza a los enemigos durante 2 segundos.
+inferno_tip=Dispara un chorro de lava, quemando a los enemigos.
+winterwrath_tip=Dispara tres carábanos teledirgidos perforantes que ralentizan a los enemigos.
+brimstone_tip_1=Dispara una poderosa bola de fuego que explota al impactar, incendiando a cualquier enemigo en su rango.
+brimstone_tip_2=La explosión puede dañar tanto a jugadores como a enemigos.
+brimstone_tip_3=No se puede usar mientras tu maná esté agotado.
+glacial_spear_tip=Al golpear a un enmigo es ralentizado por tres segundos, recibiendo daño durante su druación.
+murasama_tip_1=Mantén [input=mouse2] para cargar una Embestida y cortar a través de los enemigos. Golpear a un enemigo reinicia el enfriamiento y hace que la siguiente Embestida sea más rápida hasta un máximo de <stacks> Acumulaciones
+murasama_tip_2=Propiedad de un espíritu sanginario. Esta hoja maldita otorga acumulación de Venganza al matar, aumentando daño y obtención de resiliencia.
+
+// Ammunition
+venom_bullet_tip=10% de probabilidad de envenenar al golpear, haciendo que la víctima reciba +20% de daño por 5 segundos.
+vampire_bullet_tip=10% de probabilidad al golpear de absorber la esencia vital del objetivo, curándote un 1% de tu vida máxima.
+solar_bullet_tip=10% chance on hit for the target to gain a stack of Sunlight's Judgement, dealing increasing damage over time based on the number of stacks, and lasting until all stacks have depleted.
+lunar_bullet_tip=Inflicts the Moonlight Curse, halving the victim's armour, and causing them to take 25% more damage for five seconds.
+
+[object]
+keg=Barril
+
+frostshard_cluster=Estructura de Fragmentos de Escarcha
+frostshard_cluster_pure=Estructura Puro de Fragmentos de Escarcha
+frostshard_cluster_small=Pequeña Estructura de Fragmentos de Escarcha
+
+life_quartz_cluster=Estructura de Cuarzo Vital
+life_quartz_cluster_pure=Estructura Puro de Cuarzo Vital
+life_quartz_cluster_small=Pequeña Estructura de Cuarzo Vital
+
+[buff]
+murasama_revenge_buff=Venganza de Murasama
+endurance_stack_buff=Aguante
+
+[item]
+// Trinkets
+blood_crystal=Cristal de Sangre
+shadow_crystal=Cristal Sombrío
+sandworm_tooth=Diente de Gusano de Arena
+lucky_ring=Anillo de la Suerte
+necromancer_ring=Anillo del Nigromante
+lensmaker_glasses=Gafas del Fabricante de Lentes
+ancient_tablet=Tabla Antigua
+warrior_ring=Anillo del Guerrero
+summoner_grimoire=Grimorio del Invocador
+berserker_ring=Anillo del Berserker
+forgotten_relic=Reliquia Olvidada
+leather_scabbard=Vaina de Cuero
+
+// Melee Weapons
+juggernaut_axe=Hacha del Juggernaut
+glacial_spear=Lanza Glacial
+murasama=Murasama
+
+// Ranged Weapons
+
+// Magic Weapons
+frostbolt=Proyectil de Escarcha
+inferno=Infierno
+winterwrath=Ira Invernal
+brimstone=Azufre
+
+// Summon Weapons
+
+// Ammunition
+vampire_bullet=Bala Vampírica
+venom_bullet=Bala Venenosa
+solar_bullet=
+lunar_bullet=
+
+// Tools
+crystal_fishing_rod=Caña de Pescar de Cristal
+
+// Consumables
+greater_mana_elixir=Elixir Mayor de Maná
+mana_elixir=Elixir de Maná
+oyster=Ostra
+pearl_oyster=Ostra de Perla
+fruit_jam=Mermelada de Frutas
+jam_donut=Donut con Mermelada
+angler_fish_stew=Estofado de Pescador
+heartfish_stew=Estofado de Pez Corazón
+pearlfish_stew=Estofado de Pez Perla
+mushroom_stew=Estofado de Hongos
+beer=Cerveza
+cider=Sidra
+mead=Hidromiel
+blueberry_wine=Vino de Arándanos
+raspberry_wine=Vino de Frambuesa
+blackberry_wine=Vino de Mora
+whiskey=Whisky
+elder_coffee=Café del Anciano
+miner_brew=Cerveza del Minero
+pearlescent_wine=Vino Nacarado
+rum=Ron Pirata
+surface_treasure_chest=Cofre del Tesoro de Superficie
+cave_treasure_chest=Cofre del Tesoro de Cueva
+deep_treasure_chest=Cofre del Tesoro de Cueva Profunda
+incursion_treasure_chest=Cofre del Tesoro de Incursión
+stamina_potion=Poción de Stamina
+
+// Status effects
+shadow_crystal_bonus=Bonificación de daño del Cristal Sombrío
+venom_bullet_debuff=Efecto de Veneno de Bala Venenosa
+stamina_potion_buff=Poción de Stamina
+
+// Crafting materials
+lunar_essence=Esencia Lunar
+solar_essence=Esencia Solar
+demonfish=Pez Demonio
+heartfish=Pez Corazón
+glacierfish=Pez Glaciar
+pearlfish=Pez Perla
+swamp_eel=Anguila del Pantano
+slimefish=Pez de Slime
+saltwater_shark=Tiburón de Agua Salada
+pearl=Perla
+seaweed=Alga Marina
+slime=Slime
+
+[mob]
+// Forest
+zombie_miner=Minero Zombi
+
+// Snow
+frozen_dwarf=Enano Congelado
+frozen_dwarf_mage=Mago Enano Congelado
+ice_golem=Gólem de Hielo
+
+// Dungeon
+
+// Plains
+
+// Swamp
+
+// Desert
+ancient_warrior=Guerrero Antiguo
+
+// Critters
+crystal_caveling=Chaneque de Cristal
+shard_caveling=Chaneque Fragmentado
+slime_caveling=Chaneque de Baba
+
+// Summons
+necromancer_minion=Esbirro Nigromántico
+
+// Raiders
+stabby_bush_raider=Arbusto Apuñalador Guerrero
+
+// Zombie raiders
+zombie_raider=Saqueador Zombi
+zombie_archer_raider=Arquero Zombi Saqueador
+
+// Runebound raiders
+runebound_boss=Capitán Rúnico
+runebound_berserker=Berserker Rúnico
+runebound_trapper=Cazador Rúnico
+runebound_warrior=Guerrero Rúnico
+
+// Pirate raiders
+pirate_brawler=Bravucón Pirata
+pirate_sharpshooter=Tirador Pirata
+pirate_grenadier=Granadero Pirata
+pirate_gunner=Artillero Pirata
+
+// Skeleton raiders
+skeleton_raider=Saqueador Esqueleto
+skeleton_summoner_raider=Invocador Esqueleto Saqueador
+skeleton_miner_raider=Minero Esqueleto Saqueador
+
+// Ninja raiders
+ninja_raider=Saqueador Ninja
+
+// Ancient skeleton raiders
+ancient_skeleton_raider=Saqueador Esqueleto Antiguo
+ancient_skeleton_summoner_raider=Invocador Esqueleto Antiguo
+ancient_skeleton_miner_raider=Minero Esqueleto Antiguo
+
+// Graveyard raiders
+vampire_raider=Saqueador Vampiro Antiguo
+
+// Spiderkin Raiders
+spiderkin_warrior_raider=Guerrero Arácnido Saqueador
+spiderkin_archer_raider=Arquero Arácnido Saqueador
+spiderkin_mage_raider=Mago Arácnido Saqueador
+spiderkin_summoner_raider=Invocador Arácnido
+spiderkin_healer_raider=Sanador Arácnido
+
+// Slime raiders
+mage_slime_raider=Slime Mago Saqueador
+warrior_slime_raider=Slime Guerrero Saqueador
+
+[misc]
+zombie_raiders=Zombis
+runebound_raiders=Los Rúnicos
+pirate_raiders=Piratas
+skeleton_raiders=Esqueletos
+ninja_raiders=Ninjas
+ancient_skeleton_raiders=Esqueletos Antiguos
+spiderkin_raiders=Saqueadores del Reino Arácnido
+slimecave_raiders=Saqueadores de las Cuevas de Baba
+graveyard_raiders=Poderosos no muertos saqueadores
+
+[journal]
+snow_defeatmages=[mob=frozen_dwarf_mage] Derrota a tres Magos Enanos Congelados.
+defeatpiratecaptain=[mob=piratecaptain] Derrota al Capitán Pirata!
+findpiratetrinket=[item=foolsgambit] Encuentra un amuleto único en un pueblo pirata.
+snow_defeatgolems=[mob=ice_golem] Derrota a cinco Gólems de Hielo.
+
+[settlement]
+thoughts=Modificadores de felicidad:
+
+moodveryunhappy=miserable
+moodunhappy=infeliz
+moodsomewhathappy=contento
+moodveryhappy=muy feliz
+moodextremelyhappy=extremadamente feliz
+moodhappiness=Este colono está <happiness>.
+
+nobed=Este colono no tiene una cama asignada!
+bedoutside=La cama de este colono está afuera!
+
+roommissingfloor=El dormitorio de este colono no tiene un suelo completo.
+roommissinglights=El dormitorio de este colono no tiene una fuente de luz.
+
+sharingroom=Este colono comparte dormitorio con otros colonos.
+
+// Room size
+sizebaby=tiny.
+sizetiny=muy pequeña.
+sizesmall=pequeña. 
+sizemediocre=de tamaño mediocre.
+sizedecent=cómodamente grande.
+sizelarge=muy grande!
+sizehuge=enorme!
+sizemood=El dormitorio de este colono es <size>
+
+nofoodmood=Este colono no ha comido recientemente.
+dietsame=La dieta de este colono no ha variado en absoluto.
+dietslightly=La dieta de este colono ha variado un poco.
+dietsomewhat=La dieta de este colono ha sido algo variada.
+dietnicely=La dieta de este colono ha sido bien variada.
+dietextremely=La dieta de este colono ha sido extremadamente variada.
+
+// Room quality.
+roomplain=mínima
+roomdull=sosa
+roomsimple=simple
+roomnormal=normal
+roomgood=buena
+roomimpressive=impresionante
+roomwonderful=maravillosa
+roomunrivaled=incomparable
+roommood=El dormitorio de este colono tiene una variedad de mobiliario <quality>.
+
+// Diet
+simplemeal=Este colono comió recientemente una comida de calidad simple.
+finemeal=Este colono comió recientemente una comida de calidad fina.
+gourmetmeal=Este colono comió recientemente una comida gourmet.
+perfectmeal=Este colono comió recientemente una comida de calidad perfecta!
+
+foodperfect=Perfecta
+
+// Progression bonuses
+progression_bonus=Has completado múltiples niveles de misiones para este asentamiento.
+
+// Raid effects
+well_defended_bonus=Este asentamiento ha sido bien defendido de los saqueadores.
+settlement_survived_raid=Este asentamiento ha sobrevivido recientemente a un saqueo.
+
+// Settlement size.
+tinysettlement=Este colono vive en un asentamiento diminuto.
+smallsettlement=Este colono vive en un asentamiento pequeño.
+averagesettlement=Este colono vive en un asentamiento de tamaño promedio.
+largesettlement=Este colono vive en un asentamiento grande.
+hugesettlement=Este colono vive en un asentamiento enorme.
+
+// Misc happiness effects
+travel_bonus=Este asentamiento tiene acceso a una red de viaje rápido.
+recent_settler_death=A settler recently died at this settlement.
+

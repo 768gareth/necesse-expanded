@@ -1,0 +1,342 @@
+[settingsui]
+ne_settings_separator_1=Necesse Expanded: Benutzerdefinierte Raid-Einstellungen
+raids_enabled=Benutzerdefinierte Raids aktivieren?
+raids_tip=Wenn aktiviert, wird das Standard-Raid-System durch das benutzerdefinierte Raid-System von Necesse Expanded ersetzt. Dadurch werden neun neue, komplexe Raids mit verschiedenen Gegnertypen ermöglicht.
+
+include_vanilla_raids=Können Vanilla-Raids spawnen?
+vanilla_raids_tip=Wenn aktiviert, haben Vanilla-Raids eine konfigurierbare Chance zu spawnen, im Gegensatz zu benutzerdefinierten Raids. Bitte beachten Sie, dass der Raid-Multiplikator Vanilla-Raids NICHT beeinflusst, da die Anzahl der Raider für diese anders berechnet wird.
+
+vanilla_raid_chance=Prozentuale Chance für Vanilla-Raids (%):
+vanilla_raid_chance_tip=Wenn benutzerdefinierte Raids und Vanilla-Raids aktiviert sind, bestimmt dieser Wert die Chance, dass Vanilla-Raids erscheinen.
+
+raider_bombs_destructive=Können die Bomben benutzerdefinierter Raider Objekte zerstören?
+bombs_tip=Wenn aktiviert, können bestimmte benutzerdefinierte Raider Vanilla-Sprengstoff verwenden und während Raids Wände und andere Objekte zerstören. Wenn deaktiviert, verwenden sie benutzerdefinierten Sprengstoff, der keinen Schaden anrichtet.
+
+raid_size_multiplier=Raidgrößenmultiplikator:
+raid_size_tip=Berechnung der Raidgröße: Siedlungsbevölkerung * Raidgrößenmultiplikator * Raiderfolgsfaktor. Der Raiderfolgsfaktor basiert auf der bisherigen Leistung der Siedlung gegenüber Raidern und reicht von 0,5 (sehr schlecht) bis 1,25 (perfekt).
+
+ne_settings_separator_2=Necesse Expanded: Gameplay-Optimierungen
+
+happiness_changes_enabled=Modifiziertes Siedlerzufriedenheitssystem aktivieren?
+happiness_changes_tip=Wenn aktiviert, werden die Berechnungen der Siedlerzufriedenheit neu ausbalanciert und neue Zufriedenheitsmodifikatoren implementiert. Siedler haben geringere Erwartungen hinsichtlich Raumgröße und Ernährungsvielfalt und gewinnen an Zufriedenheit durch eine größere Siedlungsbevölkerung.
+
+starter_equipment_enabled=Bessere Startausrüstung aktivieren?
+starter_equipment_tip=Wenn aktiviert, starten neue Spieler mit einigen Grundvorräten, Eisenwerkzeugen, einem Rezeptbuch und Lederschlägern.
+
+starter_kit_enabled=Siedlungs-Starterkit aktivieren?
+starter_kit_tip=Wenn aktiviert, enthält das Haus des Ältesten eine Siedlungsflagge sowie Baumaterialien, Handwerksstationen, Saatgut und Ackerland.
+
+player_speed_patch=Bewegungsgeschwindigkeit des Spielers erhöhen?
+player_speed_tip=Wenn aktiviert, kann die Geschwindigkeit des Spielercharakters mit dem folgenden Eintrag geändert werden.
+
+player_speed_value=Bewegungsgeschwindigkeit des Spielers:
+player_speed_value_tip=Der Standardwert ist 40. 40 bis 60 werden empfohlen. Starten Sie das Spiel neu, um den Wert anzuwenden.
+
+chest_size_value=Truhen-Aufbewahrungsplätze:
+chest_size_tip=Der Standardwert ist 40. 40 bis 80 slots empfohlen. Entfernen Sie Gegenstände aus den hinzugefügten slots, bevor Sie den Wert verringern. Wenn ein hinzugefügter Slot mit einem darin befindlichen Gegenstand entfernt wird, geht dieser dauerhaft verloren. Laden Sie die Welt neu, um den Wert anzuwenden.
+
+[ui]
+keg_active=Gären...
+keg_inactive=Verfügbar zum Gären!
+
+[itemtooltip]
+// Schmuckstücke
+blood_crystal_tooltip=Stellt 5 % deiner maximalen Gesundheit wieder her, nachdem du einen Gegner getötet hast.
+shadow_crystal_tooltip=Gewährt 20 % Bonus auf Angriffsschaden für 10 Sekunden nach dem Töten eines Gegners.
+shadow_crystal_bonus=Temporärer 20 % Bonus auf Schaden.
+sandworm_tooth_tooltip=Nahkampfangriffe haben eine 25 %ige Chance, Ziele mit tödlichem Gift zu vergiften.
+lucky_ring_tip=Beim Töten eines Gegners (kein Boss) verliert dieser 10 % seiner maximalen Gesundheit in Münzen.
+necromancer_ring_tip=Das Töten eines Gegners (kein Boss) gewährt eine temporäre Beschwörung für 8 Sekunden.
+forgotten_relic_tooltip=Beim Erleiden von Schaden wird dein Mana um 10 % des erlittenen Schadens wiederhergestellt, mindestens jedoch um 1 Manapunkt pro Treffer.
+forgotten_relic_lore_tooltip=Eine kleine Statue einer alten Fischgottheit, die mit dem Meer in Verbindung gebracht wird.
+berserker_ring_tooltip=Wenn du Schaden erleidest, erhältst du einen Stapel Ausdauer, wodurch sich deine Widerstandsfähigkeit um 10 % pro Stapel erhöht.
+
+// Verbrauchsgüter
+mana_elixir_tip=Erhöht dein maximales Mana um 10, bis maximal 200.
+greater_mana_elixir_tip=Erhöht dein maximales Mana um 10, bis maximal 300.
+pearl_oyster=Enthält eine wertvolle Perle!
+pearl_oyster_tip=Rüste sie aus und benutze diesen Gegenstand, um sie zu öffnen!
+chest_tip=Rüste sie aus und benutze diesen Gegenstand, um sie zu öffnen!
+treasure_chest=Enthält einen seltenen, einzigartigen Gegenstand und Münzen.
+stamina_potion=Erhöht Ausdauer und Regeneration.
+
+// Waffen
+juggernaut_axe_tooltip=Wenn die Kraft der Musik nicht ausreicht.
+frostbolt_tip=Feuert ein zielsuchendes Gefrierprojektil, das Gegner zwei Sekunden lang verlangsamt.
+inferno_tip=Feuert einen Strom geschmolzener Lava, der Gegnern einen brennenden Debuff zufügt.
+winterwrath_tip=Feuert drei zielsuchende Eiszapfen, die Gegner durchbohren und verlangsamen.
+brimstone_tip_1=Feuert einen mächtigen Feuerball, der beim Aufprall explodiert und alle Gegner im Explosionsradius in Brand setzt.
+brimstone_tip_2=Die Feuerballexplosion kann sowohl Spielern als auch Gegnern im Explosionsradius Schaden zufügen.
+brimstone_tip_3=Kann nicht bei Mana-Erschöpfung eingesetzt werden.
+glacial_spear_tip=Bei einem Treffer werden Gegner drei Sekunden lang verlangsamt und erleiden Frostschaden über Zeit.
+murasama_tip_1=Halte [input=mouse2] gedrückt, um einen Sprint aufzuladen und Gegner zu durchschneiden. Ein Treffer erneuert die Abklingzeit und beschleunigt den nächsten Sprint bis zu <stacks> aufeinanderfolgenden Sprints.
+murasama_tip_2=Diese verfluchte Klinge, die von einem blutrünstigen Geist besessen ist, gewährt bei Tötung einen Stapel Murasamas Rache, wodurch Widerstandsfähigkeit und Schaden erhöht werden.
+
+// Munition
+venom_bullet_tip=10 % Chance, bei einem Treffer ein starkes Gift zu verursachen, das dem Opfer fünf Sekunden lang 20 % mehr Schaden zufügt.
+vampire_bullet_tip=10 % Chance, bei einem Treffer die Lebensessenz des Ziels zu absorbieren und dich um 1 % deiner maximalen Gesundheit zu heilen.
+solar_bullet_tip=10% chance on hit for the target to gain a stack of Sunlight's Judgement, dealing increasing damage over time based on the number of stacks, and lasting until all stacks have depleted.
+lunar_bullet_tip=Inflicts the Moonlight Curse, halving the victim's armour, and causing them to take 25% more damage for five seconds.
+
+[object]
+keg=Fass
+
+frostshard_cluster=Frostsplitter-Cluster
+frostshard_cluster_pure=Reinen Frostsplitter-Cluster
+frostshard_cluster_small=Kleinen Frostsplitter-Cluster
+
+life_quartz_cluster=Lebensquarz-Cluster
+life_quartz_cluster_pure=Reinen Lebensquarz-Cluster
+life_quartz_cluster_small=Kleinen Lebensquarz-Cluster
+
+[buff]
+murasama_revenge_buff=Murasamas Rache
+endurance_stack_buff=Ausdauer
+
+[item]
+// Schmuck
+blood_crystal=Blutkristall
+shadow_crystal=Schattenkristall
+sandworm_tooth=Sandwurmzahn
+lucky_ring=Glücksring
+necromancer_ring=Nekromantenring
+lensmaker_glasses=Linsenmacherbrille
+ancient_tablet=Uralte Tafel
+warrior_ring=Kriegerring
+summoner_grimoire=Beschwörer-Grimoire
+berserker_ring=Berserkerring
+forgotten_relic=Vergessenes Relikt
+leather_scabbard=Lederscheide
+
+// Nahkampfwaffen
+juggernaut_axe=Juggernaut-Axt
+glacial_spear=Gletscherspeer
+murasama=Murasama
+
+// Fernkampfwaffen
+
+// Magische Waffen
+frostbolt=Frostblitz
+inferno=Inferno
+winterwrath=Winter Zorn
+brimstone=Schwefel
+
+// Waffen beschwören
+
+// Munition
+vampire_bullet=Vampirkugel
+venom_bullet=Giftkugel
+solar_bullet=
+lunar_bullet=
+
+// Werkzeuge
+crystal_fishing_rod=Kristallangelrute
+
+// Verbrauchsgüter
+greater_mana_elixir=Großes Mana-Elixier
+mana_elixir=Mana-Elixier
+oyster=Auster
+pearl_oyster=Perlenauster
+fruit_jam=Fruchtmarmelade
+jam_donut=Marmeladendonut
+angler_fish_stew=Anglerfisch-Eintopf
+heartfish_stew=Herzfisch-Eintopf
+pearlfish_stew=Perlenfisch-Eintopf
+mushroom_stew=Pilz Eintopf
+beer=Bier
+cider=Apfelwein
+mead=Met
+blueberry_wine=Blaubeerwein
+raspberry_wine=Himbeerwein
+blackberry_wine=Brombeerwein
+whiskey=Whiskey
+elder_coffee=Holunderkaffee
+miner_brew=Bergarbeitergebräu
+pearlescent_wine=Perlwein
+rum=Piratenrum
+surface_treasure_chest=Oberflächen-Schatztruhe
+cave_treasure_chest=Höhlen-Schatztruhe
+deep_treasure_chest=Tiefe Höhlen-Schatztruhe
+incursion_treasure_chest=Incursion-Schatztruhe
+stamina_potion=Ausdauertrank
+
+// Statuseffekte
+shadow_crystal_bonus=Schattenkristall-Schadensbonus
+venom_bullet_debuff=Giftgeschoss-Debuff
+stamina_potion_buff=Ausdauertrank
+
+// Herstellungsmaterialien
+lunar_essence=Mondessenz
+solar_essence=Sonnenessenz
+demonfish=Dämonenfisch
+heartfish=Herzfisch
+glacierfish=Gletscherfisch
+pearlfish=Perlfisch
+swamp_eel=Sumpfaal
+slimefish=Schleimfisch
+saltwater_shark=Salzwasserhai
+pearl=Perle
+seaweed=Seetang
+slime=Schleim
+
+[mob]
+// Wald
+zombie_miner=Zombie-Bergmann
+
+// Schnee
+frozen_dwarf=Gefrorener Zwerg
+frozen_dwarf_mage=Gefrorener Zwergmagier
+ice_golem=Eisgolem
+
+// Verlies
+
+// Ebene
+
+// Sumpf
+
+// Wüste
+ancient_warrior=Uralter Krieger
+
+// Kreaturen
+crystal_caveling=Kristallhöhlenforscher
+shard_caveling=Scherbenhöhlenforscher
+slime_caveling=Schleimhöhlenforscher
+
+// Beschwörungen
+necromancer_minion=Nekromantischer Diener
+
+// Plünderer
+stabby_bush_raider=Stichender Buschkrieger
+
+// Zombie-Plünderer
+zombie_raider=Zombie-Plünderer
+zombie_archer_raider=Zombie-Bogenschützen-Plünderer
+
+// Runengebundene Plünderer
+runebound_boss=Runengebunden Kapitän
+runebound_berserker=Runengebundener Berserker
+runebound_trapper=Runengebundener Fallensteller
+runebound_warrior=Runengebundener Krieger
+
+// Piratenräuber
+pirate_brawler=Piratenschläger
+pirate_sharpshooter=Piratenscharfschütze
+pirate_grenadier=Piratengrenadier
+pirate_gunner=Piratenschütze
+
+// Skeletträuber
+skeleton_raider=Skeletträuber
+skeleton_summoner_raider=Skelettbeschwörerräuber
+skeleton_miner_raider=Skelettbergbauräuber
+
+// Ninja-Räuber
+ninja_raider=Ninja-Räuber
+
+// Uralte Skelett-Räuber
+ancient_skeleton_raider=Uralter Skelett-Räuber
+ancient_skeleton_summoner_raider=Uralter Skelett-Beschwörer-Räuber
+ancient_skeleton_miner_raider=Uralter Skelett-Bergmann-Räuber
+
+// Friedhofs-Räuber
+vampire_raider=Uralter Vampir-Räuber
+
+// Spinnenwesen-Räuber
+spiderkin_warrior_raider=Spinnwesen-Krieger-Räuber
+spiderkin_archer_raider=Spinnwesen-Bogenschütze-Räuber
+spiderkin_mage_raider=Spinnwesen-Magier-Räuber
+spiderkin_summoner_raider=Spinnwesen-Beschwörer
+spiderkin_healer_raider=Spinnwesen-Heiler
+
+// Schleim-Räuber
+mage_slime_raider=Schleim-Magier Raider
+warrior_slime_raider=Schleimkrieger-Raider
+
+[misc]
+zombie_raiders=Zombies
+runebound_raiders=Die Runengebundenen
+pirate_raiders=Piraten
+skeleton_raiders=Skelette
+ninja_raiders=Ninjas
+ancient_skeleton_raiders=Uralte Skelette
+spiderkin_raiders=Räuber aus dem Spinnenkönigreich
+slimecave_raiders=Räuber aus den Schleimhöhlen
+graveyard_raiders=Mächtige untote Räuber
+
+[journal]
+snow_defeatmages=[mob=frozen_dwarf_mage]Besiege drei gefrorene Zwergenmagier.
+defeatpiratecaptain=[mob=piratecaptain]Besiege den Piratenkapitän!
+findpiratetrinket=[item=foolsgambit]Finde ein einzigartiges Schmuckstück aus einem Piratendorf.
+snow_defeatgolems=[mob=ice_golem]Besiege fünf Eisgolems.
+
+[settlement]
+thoughts=Zufriedenheitsmodifikatoren:
+
+moodveryunhappy=miserabel
+moodunhappy=unglücklich
+moodsomewhathappy=zufrieden
+moodveryhappy=sehr glücklich
+moodextremelyhappy=extrem glücklich
+moodhappiness=Dieser Siedler ist <happiness>.
+
+nobed=Diesem Siedler wurde kein Bett zugewiesen!
+bedoutside=Das Bett dieses Siedlers steht draußen!
+
+roommissingfloor=Das Schlafzimmer dieses Siedlers hat kein komplettes Stockwerk.
+roommissinglights=Das Schlafzimmer dieses Siedlers hat keine Lichtquelle.
+
+sharingroom=Dieser Siedler teilt sich ein Schlafzimmer mit anderen Siedlern.
+
+// Zimmergröße
+sizebaby=winzig.
+sizetiny=sehr klein.
+sizesmall=klein.
+sizemediocre=mittelgroß.
+sizedecent=angenehm groß.
+sizelarge=sehr groß!
+sizehuge=riesig!
+sizemood=Das Schlafzimmer dieses Siedlers ist <size> groß.
+
+nofoodmood=Dieser Siedler hat in letzter Zeit nichts gegessen.
+dietsame=Die Ernährung dieses Siedlers war überhaupt nicht abwechslungsreich.
+dietslightly=Die Ernährung dieses Siedlers war leicht abwechslungsreich.
+dietsomewhat=Die Ernährung dieses Siedlers war etwas abwechslungsreich.
+dietnicely=Die Ernährung dieses Siedlers war angenehm abwechslungsreich.
+dietextremely=Die Ernährung dieses Siedlers war extrem abwechslungsreich.
+
+// Zimmerqualität.
+roomplain=minimal
+roomdull=langweilig
+roomsimple=einfach
+roomnormal=normal
+roomgood=gut
+roomimpressive=beeindruckend
+roomwonderful=wunderbar
+roomunrivaled=konkurrenzlos
+roommood=Das Schlafzimmer dieses Siedlers verfügt über eine <quality>-Auswahl an Möbeln.
+
+// Ernährung
+simplemeal=Dieser Siedler hat zuletzt eine einfache Mahlzeit verzehrt.
+finemeal=Dieser Siedler hat zuletzt eine Mahlzeit gehobener Qualität verzehrt.
+gourmetmeal=Dieser Siedler hat zuletzt eine Gourmet-Mahlzeit verzehrt.
+perfectmeal=Dieser Siedler hat zuletzt eine Mahlzeit perfekter Qualität gegessen!
+
+foodperfect=Perfekt
+
+// Fortschrittsboni
+progression_bonus=Du hast mehrere Queststufen für diese Siedlung abgeschlossen.
+
+// Überfalleffekte
+well_defended_bonus=Diese Siedlung wurde gut gegen Plünderer verteidigt.
+settler_survived_raid=Diese Siedlung hat kürzlich einen Überfall überlebt.
+
+// Siedlungsgröße.
+tinysettlement=Dieser Siedler lebt in einer winzigen Siedlung.
+smallsettlement=Dieser Siedler lebt in einer kleinen Siedlung.
+averagesettlement=Dieser Siedler lebt in einer Siedlung durchschnittlicher Größe.
+largesettlement=Dieser Siedler lebt in einer großen Siedlung.
+hugesettlement=Dieser Siedler lebt in einer riesigen Siedlung.
+
+// Misc happiness effects
+travel_bonus=Diese Siedlung verfügt über ein Schnellreisenetz.
+recent_settler_death=A settler recently died at this settlement.
+
